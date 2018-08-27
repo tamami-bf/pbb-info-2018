@@ -1,0 +1,3 @@
+repository lokal untuk ini adalah AnalisisSiSisBphtb
+jadi kalo add remote pake ini :
+git remote add AnalisisSiSisBphtb git@github.com:tamami/analisis-si-sis-bphtb.git

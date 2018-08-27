@@ -1,0 +1,19 @@
+\chapter{KEAMANAN \textit{DATABASE}}
+
+Rancangan keamanan yang dilakukan pada sistem basis data, harus dapat menjamin ketersediaan, kehandalan, dan integritas layanan dari sistem basis data itu sendiri. Rancangan tersebut melihat dari beberapa poin penting yang diberikan adalah seperti berikut :
+
+\section{Ketersediaan}
+
+Ketersediaan koneksi atau sambungan ke sistem basis data menggunakan protokol TCP/IP dengan nomor \textit{port} 1521, untuk terhubung dengan sistem basis data, aplikasi perlu melakukan \textit{login} dengan menggunakan nama pengguna dan kata kunci (\textit{password}).
+
+Nama pengguna dan kata kunci akan terbagi menjadi 2 (dua) bagian, yang pertama adalah nama pengguna dan kata kunci yang akan digunakan oleh aplikasi untuk \textit{login} ke dalam sistem basis data. Sedangkan nama pengguna dan kata kunci yang kedua digunakan oleh tiap pengguna yang diberikan akses untuk melakukan \textit{login} ke dalam aplikasi, pembatasan operasi akan dilakukan pada tingkat atau lapisan ini.
+
+\section{Kehandalan}
+
+Dari sisi kehandalan, sistem basis data memiliki fitur \textit{flash recovery area}, yang fungsinya adalah apabila ada kesalahan operasi terhadap data pada sistem basis data, data masih dapat dikembalikan berdasarkan waktu terjadinya perubahan / operasi data.
+
+Kondisi lain yang dapat dilakukan pada fitur \textit{flash recovery area} adalah mampu melakukan \textit{recovery} atau pemulihan data per tanggal dan jam yang diinginkan dengan kondisi sistem basis data dalam keadaan melayani.
+
+\section{Integritas Layanan}
+
+Kondisi integrasi layanan untuk sistem basis data ini dilakukan melalui protokol TCP/IP dengan \textit{port} 1521. Parameter lain yang digunakan untuk terhubung dengan sistem basis data ini adalah \textit{tnsnames} dengan nama SID \texttt{sismiop}.

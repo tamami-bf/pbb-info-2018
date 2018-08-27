@@ -1,0 +1,40 @@
+\chapter{INSTALASI PROGRAM}
+
+Agar aplikasi atau sistem informasi berjalan dengan semestinya, ada beberapa perangkat lunak yang diperlukan seperti berikut :
+
+\begin{itemize}
+	\item Java Development Kit 1.8 atau yang lebih baru
+	
+Ini digunakan untuk menjalankan \textit{service} atau layanan yang berada pada ujung-belakang (\textit{backend}).	
+	
+	\item \textit{Web Server} (dalam hal ini menggunakan Nginx web server)
+	
+Ini digunakan untuk melayani aplikasi \textit{web} pada bagian ujung-depan (\textit{frontend}), jadi sesungguhnya, saat awal pengguna terhubung dengan sistem informasi pembayaran PBB-P2 ini, mereka akan melakukan akses ke \textit{web server} ini, setelah mendapatkan halaman dari aplikasi \textit{web}, aplikasi \textit{web} inilah yang akan melakukan komunikasi dengan \textit{service} atau layanan yang berada pada ujung-belakang (\textit{backend}).
+\end{itemize}
+
+Langkah instalasi atau pemasangannya cukup mudah, hanya tinggal \textit{copy-paste} (salin-tempel) aplikasi bagian-belakang (\textit{backend}) yang memiliki ekstensi \texttt{jar} ke peladen, kemudian jalankan dengan perintah berikut :
+
+\begin{lstlisting}[language=java]
+java -jar e-pbb.jar &
+\end{lstlisting}
+
+Aplikasi ini memiliki sebuah \textit{servlet container} yang terintegrasi berupa Apache Tomcat karena dibangun menggunakan Springboot, sehingga apabila dijalankan atau dieksekusi langsung seperti di atas, \textit{servlet container} akan otomatis dijalankan untuk melayani pengguna (dalam hal ini adalah aplikasi bagian-depan / \textit{frontend}).
+
+Untuk instalasi atau pemasangan aplikasi bagian-depan (\textit{frontend}), karena dibangun menggunakan Angular 5, maka hasil \textit{build} dari kode yang telah dibangun adalah seperti berikut :
+
+\begin{lstlisting}[language=sh]
+favicon.ico
+index.html
+inline.bundle.js
+inline.bundle.js.map
+main.bundle.js
+main.bundle.js.map
+polyfills.bundle.js
+polyfills.bundle.js.map
+styles.bundle.js
+styles.bundle.js.map
+vendor.bundle.js
+vendor.bundle.js.map
+\end{lstlisting}
+
+Seluruh \textit{file} / berkas tersebut dipindahkan ke kandar / direktori \textit{root} dari \textit{web server}. Sampai langkah ini aplikasi baik bagian-depan (\textit{frontend}) maupun bagian-belakang (\textit{backend}) sudah siap untuk melayani.

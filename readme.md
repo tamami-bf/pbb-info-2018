@@ -1,0 +1,29 @@
+# Daftar Bukti Fisik
+
+- III.A.1. 05022018-Menyusun Rencana Studi Kelayakan Pengolahan Data - OK 
+- III.A.2. 06022018-Melaksanakan Studi Kelayakan Pendahuluan Pengolahan Data - OK
+- III.C.1. Menyusun Studi Kelayakan Sistem Komputer - perlukah?
+- III.A.3. Melakukan Studi Kelayakan Rinci Pengolahan Data - OK
+- III.A.4. Melaksanakan Analisis Sistem Informasi - OK
+- III.A.5. Merancang Pengujian Verifikasi atau Validasi Analisis Sistem Informasi - pass
+- III.A.6. Mengolah dan Menganalisis Hasil Verifikasi atau Validasi Sistem Informasi - pass
+- III.B.1. Membuat Rancangan Sistem Informasi - OK
+- III.B.2. Membuat Rancangan Rinci Sistem Informasi - OK
+- III.B.4. Membuat Dokumentasi Rincian Sistem Informasi - OK
+- III.D.1. Merancang Sistem Database - OK
+- III.D.7. Membuat Dokumentasi rancangan Database - OK
+- III.B.5. Membuat spesifikasi Program - OK
+- III.B.6. Merancang Pengujian Verifikasi atau Validasi Program - OK
+- III.B.7. Melakukan Verifikasi Spesifikasi Program (Harus beda orang dengan III.B.6) - pass
+- III.B.8. Mengolah dan Menganalisis Hasil Verifikasi atau Validasi Program - pass
+- III.B.9. Membuat Algoritma Pemrograman (UML) - OK
+- II.A.1. Menelaah spesifikasi teknis komponen sistem komputer untuk pengembangan aplikasi informasi PBB mobile dan web - OK
+- II.A.2. Mengatur Alokasi Area Dalam Media Komputer untuk kebutuhan pengembangan aplikasi informasi PBB mobile dan web - OK
+- II.B.1. mengimplementasi Rancangan DB - OK
+- II.A.6. Melakukan Uji coba program paket - bisa multiproses - OK
+- II.B.3. Membuat Otorisasi Akses Kepada Pemakai - pass
+- II.A.8. Membuat Petunjuk Operasional Sistem Komputr - OK
+- II.A.4. Membuat Program Paket - OK
+- II.A.9. Membuat Dokumentasi program paket - OK
+- III.B.10. Memeriksa Dokumentasi Program dan Petunjuk Pengoperasian Program - OK
+- III.A.7. Memberikan Pengarahan Penerapan Sistem Informasi - pass

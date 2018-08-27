@@ -1,0 +1,33 @@
+\chapter{TAHAPAN IMPLEMENTASI}
+
+Tahapan dari implementasi sistem basis data untuk sistem informasi pembayaran Pajak Bumi dan Bangunan Perdesaan dan Perkotaan (PBB-P2) meliputi kegiatan-kegiatan seperti berikut ini :
+
+\section{Persiapan Perangkat Keras}
+
+Persiapan yang dilakukan terhadap perangkat keras tentunya menyediakan ruang untuk sistem basis data dipasangkan, baik perangkat keras peladen, besarnya memori yang diperlukan, serta ruang simpanan pada media \textit{harddisk}.
+
+Karena sistem informasi yang dibangun masih menggunakan sistem basis data milik SISMIOP (Sistem Manajemen Informasi Objek Pajak) untuk Pajak Bumi dan Bangunan Perdesaan dan Perkotaan (PBB-P2), artinya perangkat keras untuk implementasi telah siap dan dapat digunakan.
+
+\section{Persiapan Perangkat Lunak}
+
+Persiapan perangkat lunak yang diperlukan dalam hal ini adalah sistem operasi dan sistem basis data yang akan digunakan.
+
+Karena sistem basis data yang diakses oleh sistem informasi ini menggunakan satu basis data yang sama dengan SISMIOP (Sistem Manajemen Informasi Objek Pajak) untuk Pajak Bumi dan Bangunan Perdesaan dan Perkotaan (PBB-P2), maka perangkat lunaknya telah siap terpasang dan siap untuk digunakan.
+
+Perangkat lunak yang digunakan sebagai sistem operasi adalah Windows Server 2008 R2, sedangkan sistem basis data menggunakan Oracle 11g.
+
+\section{Persiapan Basis Data}
+
+Sistem basis data yang digunakan akan berjenis \textit{Relational Database Management System} (RDBMS), dengan menggunakan Oracle 11g.
+
+Sistem informasi yang dibangun akan menggunakan pencatatan pembayaran dari SISMIOP (Sistem Manajemen Informasi Objek Pajak) milik Pajak Bumi dan Bangunan Perdesaan dan Perkotaan (PBB-P2), sehingga struktur basis datanya telah terbentuk hanya tinggal melakukan akses saja ke beberapa tabel yang berhubungan dengan pencatatan pembayaran Pajak Bumi dan Bangunan Perdesaan dan Perkotaan (PBB-P2).
+
+\section{Persiapan Fasilitas Fisik}
+
+Persiapan fisik pun telah dilakukan diantaranya kesiapan jaringan sehingga peladen aplikasi dapat dan mampu melakukan akses ke peladen sistem basis data.
+
+Kondisi jaringan dipastikan stabil menggunakan kabel UTP (\textit{Unshielded Twisted Pair}), karena nantinya peladen aplikasi akan selalu melakukan akses ke peladen sistem basis data setiap ada permintaan atau \textit{request} dari klien.
+
+\section{Pelatihan Pemakai}
+
+Tidak ada pemakai atau pengguna yang berhubungan langsung dengan sistem basis data, sehingga tidak diperlukan pelatihan bagi pengguna. Nantinya pengguna atau pemakai akan melakukan akses ke peladen aplikasi untuk mendapatkan informasi yang diinginkan, kemudian peladen aplikasi yang akan melakukan pengambilan data ke peladen basis data apabila datanya tersedia.

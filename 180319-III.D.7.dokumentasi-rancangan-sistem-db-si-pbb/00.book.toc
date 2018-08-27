@@ -1,0 +1,15 @@
+\babel@toc {bahasa}{}
+\contentsline {chapter}{\numberline {1}ANALISIS DAN PERANCANGAN SISTEM BASIS DATA}{1}
+\contentsline {section}{\numberline {1.1}Fungsi atau Kegunaan Sistem Basis Data}{1}
+\contentsline {section}{\numberline {1.2}Struktur Data}{2}
+\contentsline {subsection}{\numberline {1.2.1}Tabel SPPT}{2}
+\contentsline {subsection}{\numberline {1.2.2}Tabel DAT\_OBJEK\_PAJAK}{4}
+\contentsline {subsection}{\numberline {1.2.3}Tabel DAT\_SUBJEK\_PAJAK}{6}
+\contentsline {subsection}{\numberline {1.2.4}Tabel REF\_KECAMATAN}{7}
+\contentsline {subsection}{\numberline {1.2.5}Tabel REF\_KELURAHAN}{7}
+\contentsline {section}{\numberline {1.3}Hubungan Antar Entitas}{8}
+\contentsline {chapter}{\numberline {2}KEAMANAN \textit {DATABASE}}{10}
+\contentsline {section}{\numberline {2.1}Ketersediaan}{10}
+\contentsline {section}{\numberline {2.2}Kehandalan}{11}
+\contentsline {section}{\numberline {2.3}Integritas Layanan}{11}
+\contentsline {chapter}{\numberline {3}KAPASITAS SISTEM BASIS DATA}{12}

@@ -1,0 +1,40 @@
+\chapter{KRITERIA PENGUJIAN PROGRAM}
+
+Kriteria yang diperlukan untuk melakukan pengujian kesesuaian program terhadap spesifikasi, karena akan menggunakan \textit{unit test} dan \textit{integration test}, maka beberapa poin kriterianya adalah seperti berikut ini :
+
+\begin{itemize}
+	\item Pengujian terhadap data objek pajak :
+	
+	\begin{itemize}
+		\item Nomor objek pajak yang dikembalikan dari sistem basis data harus sesuai seperti data yang dikirimkan saat klien melakukan \textit{request}.
+		\item Luas bumi yang dihasilkan berdasarkan Nomor Objek Pajak tertentu harus sama besarnya seperti yang tertera dalam sistem basis data.
+		\item Luas bangunan yang dihasilkan berdasarkan Nomor Objek Pajak tertentu harus sama besarnya seperti yang tertera dalam sistem basis data.
+		\item Nilai jual objek pajak bumi yang dihasilkan berdasarkan Nomor Objek Pajak tertentu harus sama besarnya seperti yang tertera dalam sistem basis data.
+		\item Nilai jual objek pajak bangunan yang dihasilkan berdasarkan Nomor Objek Pajak tertentu harus sama besarnya seperti yang tertera dalam sistem basis data.
+		\item Nama jalan yang dihasilkan berdasarkan Nomor Objek Pajak tertentu harus sama nilainya seperti yang tertera dalam sistem basis data.
+		\item Nomor blok, atau nomor rumah yang dihasilkan berdasarkan Nomor Objek Pajak harus sama nilainya seperti yang tertera dalam sistem basis data.
+		\item Nomor RT yang dihasilkan berdasarkan Nomor Objek Pajak tertentu harus sama nilainya seperti yang tertera dalam sistem basis data.
+		\item Nomor RW yang dihasilkan berdasarkan Nomor Objek Pajak tertentu harus sama nilainya seperti yang tertera dalam sistem basis data.
+		\item Nama Kecamatan yang dihasilkan berdasarkan Nomor Objek Pajak tertentu harus sama seperti yang tertera dalam sistem basis data.
+		\item Nama Kelurahan / Desa yang dihasilkan berdasarkan Nomor Objek Pajak tertentu harus sama seperti yang tertera dalam sistem basis data.
+	\end{itemize}
+	
+	\item Pengujian terhadap data subjek pajak :
+	
+	\begin{itemize}
+		\item Nama subjek pajak yang dihasilkan berdasarkan Nomor Objek Pajak tertentu, hasilnya harus sama seperti yang tertera dalam sistem basis data.
+		\item Nama jalan tempat subjek pajak tinggal yang dihasilkan berdasarkan Nomor Objek Pajak tertentu, hasilnya harus sama seperti yang tertera dalam sistem basis data.
+		\item Nomor blok atau nomor rumah tempat subjek pajak tinggal yang dihasilkan berdasarkan Nomor Objek Pajak tertentu, hasilnya harus sama seperti yang tertera dalam sistem basis data.
+		\item Nomor RT tempat subjek pajak tinggal yang dihasilkan berdasarkan Nomor Objek Pajak tertentu, hasilnya harus sama seperti yang tertera dalam sistem basis data.
+		\item Nomor RW tempat subjek pajak tinggal yang dihasilkan berdasarkan Nomor Objek Pajak tertentu, harus sama seperti yang tertera dalam sistem basis data.
+		\item Nama Kelurahan / Desa tempat subjek pajak tinggal berdasarkan Nomor objek Pajak tertentu, isinya harus sama seperti yang tertera dalam sistem basis data.
+		\item Nama Kota tempat subjek pajak tinggal berdasarkan Nomor Objek Pajak tertentu, isinya harus sama seperti yang tertera dalam sistem basis data.
+	\end{itemize}
+	
+	\item Pengujian terhadap data tagihan dari Surat Pemberitahuan Pajak Terhutang (SPPT) untuk tiap tahun pajak : 
+	
+	\begin{itemize}
+		\item Besarnya pajak terhutang untuk setiap tahun pajak berdasarkan Nomor objek Pajak tertentu, harus sama nilanya seperti kondisi pada sistem basis data.
+		\item Kondisi status pembayaran untuk setiap tahun pajak berdasarkan Nomor Objek Pajak tertentu, harus sama nilanya seperti kondisi pada sistem basis data.
+	\end{itemize}
+\end{itemize}

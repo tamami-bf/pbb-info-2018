@@ -1,0 +1,171 @@
+\chapter{PROSEDUR VERIFIKASI / VALIDASI SPESIFIKASI PROGRAM}
+
+Prosedur verifikasi atas spesifikasi program akan dilakukan saat pengembangan aplikasi / program dengan \textit{unit testing} dan \textit{integration testing}.
+
+Data yang digunakan untuk pengembangan dan pengujian dilakukan dengan data \textit{dummy} menggunakan struktur data asli seperti pada spesifikasi sistem basis data.
+
+\textit{Unit testing} dan \textit{integration testing} yang dilakukan akan terbagi menjadi beberapa kelompok seperti spesifikasi berikut :
+
+\section{Pengujian Permintaan Terhadap Objek Pajak}
+
+\subsection{Nomor Objek Pajak}
+
+Pada saat klien melakukan permintaan data ke peladen, hal pertama yang dilakukan adalah memeriksa kebenaran Nomor Objek Pajak (NOP) yang sampai ke peladen, apakah Nomor Objek Pajak yang dikirimkan oleh klien, telah diterima benar susunannya pada peladen.
+
+Pemeriksaan ini dilakukan pada objek \texttt{JsonObject}. Apabila \textit{method} \texttt{setNop()} berisi parameter berupa Nomor Objek Pajak (NOP) \texttt{332901000100500390}, maka \textit{method} \texttt{getNop()} harus memberikan hasil yang sama.
+
+\subsection{Luas Bumi Objek Pajak}
+
+Pada bagian ini, klien akan melakukan \textit{request} atau permintaan data ke peladen dengan membawa parameter \texttt{keyword} berisi \texttt{op}, dan \texttt{nop} berisi \texttt{332901000100500390}.	
+
+Hasil dari \textit{request} atau permintaan terhadap API (\textit{application programmable interface}) ini berupa data bertipe \texttt{BigDecimal} dengan nilai \texttt{80} untuk luas bumi objek pajaknya.
+
+\subsection{Luas Bangunan Objek Pajak}
+
+Pada bagian ini, klien masih melakukan \textit{request} atau permintaan data ke peladen dengan membawa parameter \texttt{keyword} berisi \texttt{op}, dan \texttt{nop} berisi \texttt{332901000100500390}.
+
+Hasil dari \textit{request} atau permintaan terhadap API (\textit{Application Programmable Interface}) ini berupa data bertipe \texttt{BigDecimal} dengan nilai \texttt{40} untuk luas bangunan objek pajaknya.
+
+\subsection{NJOP Bumi Objek Pajak}
+
+Pada bagian ini, klien masih melakukan \textit{request} atau permintaan data ke peladen dengan parameter yang sama, yaitu \texttt{keyword} yang berisi \texttt{op}, dan \texttt{nop} yang berisi \texttt{332901000100500390}.
+
+Hasil keluaran untuk Nilai Jual Objek Pajak (NJOP) Bumi dari \textit{request} atau permintaan data tersebut akan bertipe \texttt{BigDecimal} dengan nilai \texttt{1600000} (Satu juta enam ratus) rupiah per meter persegi.
+
+\subsection{NJOP Bangunan Objek Pajak}
+
+\textit{Request} untuk bagian ini masih dengan parameter yang sama, yaitu parameter \texttt{keyword} yang berisi \texttt{op}, dan \texttt{nop} yang berisi \texttt{332901000100500390}.
+
+Hasil Nilai Jual Objek Pajak (NJOP) Bangunan yang didapat dari \textit{request} atau permintaan data tersebut bertipe \texttt{BigDecimal} dengan nilai \texttt{9000000} (Sembilan juta) rupiah per meter persegi.
+
+\subsection{Nama Jalan Objek Pajak}
+
+Untuk pengambilan nama jalan dari objek pajak, masih menggunakan parameter yang sama untuk \textit{request} atau permintaan data ke peladen, yaitu dengan parameter \texttt{keyword} yang berisi \texttt{op}, dan \texttt{nop} yang berisi \texttt{332901000100500390}.
+
+Hasil yang seharusnya didapat dari \textit{request} atau permintaan data di atas akan memiliki tipe data \texttt{String} dengan nilai \texttt{KP RW 01}.
+
+\subsection{RT dan RW Objek Pajak}
+
+Untuk pengambilan data RT dan RW objek pajak, masih menggunakan parameter yang sama untuk \textit{request} atau permintaan data ke peladen, yaitu dengan parameter \texttt{keyword} yang berisi \texttt{op}, dan \texttt{nop} yang berisi \texttt{332901000100500390}.
+
+Hasil yang seharusnya didapat dari \textit{request} atau permintaan data tersebut akan memiliki tipe data \texttt{string} dengan nilai \texttt{RT. 002 RW. 01}.
+
+\subsection{Nama Kelurahan Objek Pajak}
+
+Pengambilan data nama Kelurahan atau nama Desa untuk objek pajak masih menggunakan parameter yang sama untuk \textit{request} atau permintaan data ke peladen, yaitu dengan parameter \texttt{keyword} yang berisi \texttt{op}, dan \texttt{nop} yang berisi \texttt{332901000100500390}.
+
+Hasil yang seharusnya didapatkan dari \textit{request} atau permintaan data tersebut akan memiliki tipe data \texttt{string} dengan nilai \texttt{GUNUNGJAYA}.
+
+\subsection{Nama Kecamatan Objek Pajak}
+
+Tidak berbeda dengan pengujian sebelumnya, untuk pengambilan data nama Kecamatan sebuah objek pajak masih menggunakan parameter yang sama untuk \textit{request} atau permintaan data ke peladen, yaitu dengan parameter \texttt{keyword} yang berisi \texttt{op}, dan \texttt{nop} yang berisi \texttt{332901000100500390}.
+
+Hasil yang seharusnya didapatkan dari \textit{request} atau permintaan data tersebut akan memiliki tipe data \texttt{string} dengan nilai \texttt{SALEM}.
+
+\subsection{Nomor Identitas Subjek Pajak}
+
+Untuk pengambilan data nomor identitas subjek pajak pun masih menggunakan parameter \textit{request} atau permintaan data ke peladen berupa parameter \textit{keyword} yang berisi \texttt{op} dan parameter \texttt{nop} yang berisi \texttt{332901000100500390}.
+
+Hasil yang seharusnya didapatkan dari \textit{request} atau permintaan data tersebut akan memiliki tipe data \texttt{string} dengan nilai \texttt{332901000100500390}
+
+\section{Pengujian Permintaan Terhadap Data Subjek Pajak}
+
+Untuk pengujian permintaan terhadap data subjek pajak akan terdiri dari beberapa bagian berikut :
+
+\subsection{Nama Subjek Pajak}
+
+Permintaan data nama subjek pajak dilakukan oleh klien ke peladen API (\textit{Application Programmable Interface}) dengan parameter \texttt{keyword} yang isinya \texttt{wp} dan parameter \texttt{subjek\_pajak\_id} yang berisi nomor identitas dari subjek pajak tersebut, yang diambil sebagai contoh pengujian adalah \texttt{332901000100500390}.
+
+Hasil yang seharusnya didapatkan dari \textit{request} atau permintaan data tersebut berupa nama \texttt{KARSO} dengan tipe data \texttt{string}.
+
+\subsection{Nama Jalan Alamat Subjek Pajak}
+
+Untuk pengujian nama jalan dari alamat subjek pajak, akan dilakukan oleh klien ke peladen dengan \textit{request} parameter berupa \texttt{keyword} dengan nilai \texttt{wp} dan parameter \texttt{subjek\_pajak\_id} dengan nilai \texttt{332901000100500390}.
+
+Hasil yang seharusnya didapatkan dari \textit{request} atau permintaan data tersebut adalah nilai \texttt{KP RW 01} dengan tipe data \texttt{string}.
+
+\subsection{RT dan RW dari Alamat Subjek Pajak}
+
+Untuk pengujian permintaan data RT dan RW dari alamat subjek pajak yang akan dilakukan klien ke peladen adalah menggunakan parameter \texttt{keyword} yang berisi \texttt{wp} dan parameter \texttt{subjek\_pajak\_id} dengan isi \texttt{332901000100500390}.
+
+Hasil yang didapat untuk \textit{request} atau permintaan tersebut seharusnya adalah berupa data \texttt{RT. 002 RW. 01} dengan tipe data \texttt{string}
+
+\subsection{Nama Kelurahan dari Alamat Subjek Pajak}
+
+Untuk pengujian permintaan data nama Kelurahan / Desadari alamat subjek pajak yang akan dilakukan klien ke peladen adalah menggunakan parameter \texttt{keyword} yang berisi \texttt{wp}, dan parameter \texttt{subjek\_pajak\_id} yang berisi \texttt{332901000100500390}.
+
+Hasil yang seharusnya didapat untuk parameter tersebut adalah data \texttt{GUNUNGJAYA} dengan tipe data \texttt{string}.
+
+\subsection{Nama Kota atau Kabupaten dari Alamat Subjek Pajak}
+
+Untuk pengujian permintaan data nama Kota atau Kabupaten dari alamat subjek pajak yang dilakukan klien ke peladen adalah menggunakan parameter \texttt{keyword} yang berisi \texttt{wp}, dan parameter \texttt{subjek\_pajak\_id} yang berisi \texttt{332901000100500390}.
+
+Hasil yang seharusnya didapat untuk parameter tersebut adalah data \texttt{KAB BREBES} dengan tipe data \texttt{string}.
+
+\section{Pengujian Permintaan Data Ketetapan}
+
+Untuk pengujian permintaan data ketetapan tiap tahun pajak, hal yang perlu dilakukan pengujian adalah seperti berikut ini :
+
+\subsection{Pengujian Atas Daftar Ketetapan}
+
+Pengujian atas daftar ketetapan dilakukan klien dengan cara melakukan \textit{request} atau permintaan data ke peladen dengan parameter \texttt{keyword} yang berisi \texttt{sppt}, dan parameter \texttt{nop} yang berisi \texttt{332901000100500390}.
+
+Hasil yang seharusnya dikembalikan oleh peladen adalah berupa daftar tahun pajak dimana Nomor Objek Pajak tersebut telah terbit sebagai Surat Pemberitahuan Pajak Terhutang (SPPT) untuk tiap tahun pajak, adapun banyaknya data yang seharusnya ditampilkan untuk Nomor Objek Pajak (NOP) tersebut adalah 8 (delapan data).
+
+\subsection{Pengujian Besarnya NIlai Pajak Terhutang Tiap Tahun Pajak}
+
+Untuk pengujian besarnya nilai pajak, akan menggunakan 3 (tiga) contoh data seperti berikut :
+
+\begin{itemize}
+	\item \textit{Request} pertama menggunakan parameter \texttt{keyword} yang berisi \texttt{bayar}, parameter \texttt{nop} yang berisi \texttt{332911090400000967}, dan parameter \texttt{tahun} yang berisi \texttt{1994}. Hasil yang diharapkan dari \textit{request} ini adalah data \texttt{2088} dengan tipe data \texttt{BigDecimal}.
+	\item \textit{Request} yang kedua menggunakan parameter \texttt{keyword} yang berisi \texttt{bayar}, parameter \texttt{nop} yang berisi \texttt{332912090500003797}, dan parameter \texttt{tahun} yang berisi \texttt{1994}. Hasil yang diharapkan dari \textit{request} ini adalah data \texttt{2720} yang bertipe \texttt{BigDecimal}.
+	\item \textit{Request} yang ketiga menggunakan parameter \texttt{keyword} yang berisi \texttt{bayar}, parameter \texttt{nop} yang berisi \texttt{332912090500003657}. Hasil yang diharapkan dari \textit{request} ini adalah data \texttt{3920} dengan tipe data \texttt{BigDecimal}.
+\end{itemize}
+
+\subsection{Pengujian Status Pembayaran Untuk Tiap Tahun Pajak}
+
+Untuk pengujian status pembayaran untuk tiap tahun pajak akan menggunakan 1 (satu) contoh data dalam 1 (satu) kali \textit{request}, dan akan dicocokan datanya dengan 3 (tiga) tahun pertama terbit, apakah statusnya sudah \texttt{LUNAS} atau \texttt{BELUM LUNAS}.
+
+\textit{Request} yang dilakukan klien ke peladen menggunakan parameter \texttt{keyword} yang berisi \texttt{sppt} dan parameter \texttt{nop} dengan isi \texttt{332901000100500390}. Hasil yang diharapkan untuk data pertama, data kedua, dan data ketiga dari daftar yang diberikan oleh peladen harus bernilai \texttt{LUNAS}.
+
+\section{Pengujian Modul \textit{Service}}
+
+Pengujian atas \textit{service} yang terbentuk akan terbagi menjadi 3 (tiga) bagian seperti jumlah kelas yang terdapat pada paket \texttt{service} seperti berikut :
+
+\subsection{Pengujian Terhadap Kelas \texttt{DatObjekPajakService}}
+
+Pada pengujian kali ini, yang digunakan adalah 1 (satu) buah contoh data berdasarkan Nomor Objek Pajak (NOP), nantinya data yang dikembalikan dari sistem basis data harus memenuhi nilai yang ditentukan. \textit{Request} yang dilakukan adalah terhadap Nomor Objek Pajak (NOP) \texttt{332901000100500390}, hasil yang diharapkan adalah sebuah objek \texttt{DatObjekPajakModif} dengan nilai berikut :
+
+\begin{itemize}
+	\item Atribut \texttt{op\_kec} seharusnya bernilai \texttt{SALEM} dengan tipe data \texttt{string}
+	\item Atribut \texttt{op\_kel} seharusnya bernilai \texttt{GUNUNGJAYA} dengan tipe data \texttt{string}
+	\item Atribut \texttt{op\_jalan} seharusnya bernilai \texttt{KP RW 01} dengan tipe data \texttt{string}
+	\item Atribut \texttt{op\_rtrw} seharusnya bernilai \texttt{RT. 002 RW. 01} dengan tipe data \texttt{string}
+	\item Atribut \texttt{op\_luas\_bumi} seharusnya bernilai \texttt{80} dengan tipe data \texttt{BigDecimal}
+	\item Atribut \texttt{op\_luas\_bng} seharusnya bernilai \texttt{40} dengan tipe data \texttt{BigDecimal}
+	\item Atribut \texttt{op\_njop\_bumi} seharusnya bernilai \texttt{1600000} dengan tipe data \texttt{BigDecimal}
+	\item Atribut \texttt{op\_njop\_bng} seharusnya bernilai \texttt{9000000} dengan tipe data \texttt{BigDecimal}
+	\item Atribut \texttt{op\_wp\_id} seharusnya bernilai \texttt{332901000100500390} dengan tipe data \texttt{string}
+\end{itemize}
+
+\subsection{Pengujian Terhadap Kelas \texttt{DatSubjekPajakService}}
+
+Pengujian terhadap kelas \texttt{DatSubjekPajak} pun akan dilakukan dengan sebuah parameter berupa nomor identitas subjek pajak dengan nilai \texttt{332901000100500390}. Hasil yang seharusnya didapatkan adalah objek dari kelas \texttt{DatSubjekPajakModif} dengan rincian nilai atas atribut seperti berikut ini :
+
+\begin{itemize}
+	\item Atribut \texttt{wp\_nama} dengan isi \texttt{KARSO} dengan tipe data \texttt{string}
+	\item Atribut \texttt{wp\_jalan} dengan isi \texttt{KP RW 01} dengan tipe data \texttt{string}
+	\item Atribut \texttt{wp\_rtrw} dengan isi \texttt{RT. 002 RW. 01} dengan tipe data \texttt{string}
+	\item Atribut \texttt{wp\_kel} dengan isi \texttt{GUNUNGJAYA} dengan tipe data \texttt{string}
+	\item Atribut \texttt{wp\_kota} dengan isi \texttt{KAB BREBES} dengan tipe data \texttt{string}
+\end{itemize}
+
+\subsection{Pengujian Terhadap Kelas \texttt{SpptService}}
+
+Untuk pengujian kelas \texttt{SpptService}, yang akan diuji adalah hasil dari \textit{method} \texttt{getSppt()} dan \texttt{getPiutang()}
+
+Pada saat pemanggilan \textit{method} \texttt{getSppt()} dengan menggunakan parameter Nomor Objek Pajak (NOP) \texttt{332901000100500390}, maka \textit{method} tersebut akan mengembalikan nilai berupa daftar dengan tipe data \texttt{List}, jumlah data yang terdapat pada \texttt{List} ini seharusnya ada 8 (delapan) buah data.
+
+Kemudian pada saat pemanggilan \textit{method} \texttt{getPiutang()} untuk dilakukan uji coba, parameter yang dilewatkan adalah berupa Nomor Objek Pajak (NOP) dengan isi \texttt{332911090400000967}, kemudian parameter kedua diisi dengan tahun pajak, yaitu \texttt{1994}.
+
+Diharapkan hasil dari operasi di atas adalah data \texttt{2088} dengan tipe data berupa \texttt{BigDecimal}.

@@ -1,0 +1,1137 @@
+%%%%%%%%%%%%%%%%%%%% book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for the chapters of your "monograph"
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[pdftex,12pt, oneside]{article}
+
+% choose options for [] as required from the list
+% in the Reference Guide, Sect. 2.2
+%\usepackage[paperwidth=8.5in, paperheight=13in]{geometry} % Folio
+\usepackage[paperwidth=8.27in, paperheight=11.69in]{geometry} % A4
+
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+%\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+\usepackage[bahasa]{babel}
+\usepackage{enumerate}
+\usepackage{paralist}
+\usepackage{float}
+\usepackage{gensymb}  
+\usepackage{listings}
+\usepackage{color}
+%\usepackage{siunitx}
+% etc.
+% see the list of further useful packages
+% in the Reference Guide, Sects. 2.3, 3.1-3.3
+\renewcommand{\baselinestretch}{1.5}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+                       
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolor}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolor},
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  stringstyle=\color{codepurple},
+  basicstyle=\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%\input{./01.title.tex}
+\begin{center}
+{\large KODE PROGRAM SISTEM INFORMASI PEMBAYARAN PAJAK BUMI DAN BANGUNAN PERDESAAN DAN PERKOTAAN DI KABUPATEN BREBES SERTA PENJELASANNYA}
+\\[1cm]
+18 April 2018\\
+Priyanto Tamami, S.Kom.
+\end{center}
+
+\section{PENDAHULUAN}
+
+Karena program dibangun secara terpisah antara bagian-belakang (\textit{backend}) dan bagian-depan (\textit{frontend}) serta keduanya menggunakan \textit{framework} yang berbeda, maka kode program dan penjelasannya akan terbagi menjadi 2 (dua) bagian yang nantinya akan dibahas pada seksi masing-masing.
+
+\section{BAGIAN-BELAKANG (\textit{BACKEND})}
+
+Bagian-belakang (\textit{backend}) dibangun menggunakan Springboot dimana didalamnya sudah terdapat \textit{servlet container} yang telah ditanamkan dan dapat dijalankan langsung dalam paket berkas berformat \texttt{jar} tanpa harus melakukan \textit{deploy} pada \textit{servlet container} yang lain. Berikut adalah kelas-kelas yang membangun sistem aplikasi ini sehingga dapat beroperasi sebagaimana mestinya.
+
+\subsection{Kelas \texttt{ApiController}}
+
+Kelas ini merupakan gerbang depan dari sistem \textit{backend}, yang berisi layanan-layanan \textit{service} berupa REST API (\textit{Representational State Transfer - Application Programmable Interface}), hal ini ditandai dengan adanya kode berikut di atas deklarasi kelas :
+
+\begin{lstlisting}[language=java]
+@RestController
+\end{lstlisting}
+
+Langkah pertama adalah menyiapkan \textit{log} untuk kelas ini sehingga mempermudah diagnosa apabila terjadi kesalahan dalam operasional aplikasi ini nantinya. Berikut adalah deklarasi pembentukan \textit{log} pada kelas ini :
+
+\begin{lstlisting}[language=java]
+private static Logger logger = Logger.getLogger(ApiController.class);
+\end{lstlisting}
+
+Kelas ini pun akan menggunakan beberapa \textit{service} untuk keperluan melakukan pemilahan data-data mana saja yang nantinya akan disampaikan ke bagian-depan (\textit{frontend}) untuk ditampilkan. Deklarasi penggunaan \textit{service} ini seperti ditunjukkan pada kode berikut :
+
+\begin{lstlisting}[language=java]
+@Autowired
+private DatObjekPajakService datOpService;
+
+@Autowired
+private DatSubjekPajakService datSpService;
+
+@Autowired
+private SpptService spptService;
+\end{lstlisting}
+
+\subsubsection{\textit{Method} \texttt{getDataOp()}}
+
+API (\textit{Application Programmeable Interface}) yang pertama dari kelas ini adalah \texttt{android\_service} seperti ditunjukkan dengan deklarasi berikut :
+
+\begin{lstlisting}[language=java]
+@RequestMapping(value = "/android_service", method = RequestMethod.POST)
+public ReturnData getDataOp2(@RequestBody String data, HttpServletResponse response) {}    
+\end{lstlisting}
+
+Pada baris pertama dari kode tersebut adalah menyiapkan API (\textit{Application Programmable Interface}) dari \textit{android\_service} dengan \textit{method} permintaan datanya berupa \texttt{POST}.
+
+Pada baris kedua, \textit{method} ini akan mengembalikan kelas \texttt{ReturnData} dalam bentuk JSON yang terkonversi secara otomatis, sedangkan data yang diterima dari klien akan masuk dalam variabel \texttt{data} dalam tipe \texttt{String}.
+
+Variabel \texttt{response} dengan tipe \texttt{HttpServletResponse} digunakan untuk melakukan pengiriman status akses bahwa seluruh klien dapat melakukan koneksi ke peladen API ini dari manapun.
+
+Selanjutnya menyiapkan beberapa variabel yang akan digunakan untuk memilah bentuk permintaan dari klien dan mempersiapkan data yang akan digunakan sebagai parameter pengambilan data pada sistem basis data. Berikut ada penggalan kode persiapan variabel yang akan digunakan :
+
+\begin{lstlisting}[language=java]
+String keyword = "", nop = "", subjekPajakId="", tahun="";
+String [] pairs = data.split("\\&");
+HashMap<String, String> param = new HashMap<>();
+\end{lstlisting}
+
+Variabel \texttt{keyword} nantinya digunakan untuk membedakan jenis permintaan data yang diinginkan, variabel \texttt{nop} digunakan untuk menyimpan parameter Nomor Objek Pajak (NOP), variabel \texttt{subjekPajakId} digunakan untuk menyimpan identitas wajib pajak, dan variabel \texttt{tahun} digunakan untuk menyimpan parameter permintaan data untuk tahun pajak.
+
+Variabel \texttt{pairs} digunakan sebagai varibel sementara untuk menyimpan pasangan data \textit{key} dan \textit{value} dari parameter \textit{request} yang dikirimkan oleh klien dalam format \texttt{key=value} dalam sebuah larik.
+
+Variabel \texttt{param} memiliki tipe data \texttt{HashMap} karena fungsinya akan menyimpan pasangan data pada larik \texttt{pairs} menjadi bentuk struktur data naturalnya yang terdiri \texttt{key} dan \texttt{value}.
+
+Potongan kode berikutnya adalah seperti ini :
+
+\begin{lstlisting}[language=java]
+for(int i=0; i<pairs.length; i++) {
+	param.put(pairs[i].split("=")[0], pairs[i].split("=")[1]);
+}
+\end{lstlisting}
+
+Potongan kode tersebut sebetulnya hanya memindahkan isi data larik \texttt{pairs} kedalam tipe data \texttt{Map} yang memang ditujukan untuk pembentukan rangkaian pasangan data \texttt{key} dan \texttt{value}.
+
+Blok kode berikutnya adalah mengambil nilai dari masing-masing parameter \textit{request} yang dikirimkan oleh klien untuk digunakan sebagai parameter \textit{request} ke sistem basis data. Berikut kode programnya :
+
+\begin{lstlisting}[language=java]
+keyword = param.get("keyword"); param.remove("keyword");
+nop = param.get("nop"); param.remove("nop");
+subjekPajakId = param.get("subjek_pajak_id"); param.remove("subjek_pajak_id");
+tahun = param.get("tahun"); param.remove("tahun");
+\end{lstlisting}
+
+Pada baris pertama dari kode tersebut, variabel \texttt{keyword} akan mengambil nilai atau isi atau \texttt{value} dari variabel \texttt{param} dengan kunci atau \texttt{key} berupa teks \texttt{keyword}.
+
+Untuk variabel \texttt{nop}, \texttt{subjekPajakId}, dan \texttt{tahun}, masing-masing pun akan terisi dengan nilai dari variabel \texttt{param} dengan kunci masing-masing berupa \texttt{nop, subjek\_pajak\_id} dan \texttt{tahun}.
+
+Kode berikutnya sangat sederhana, terdiri hanya 1 (satu) baris saja, fungsinya untuk memberikan \textit{header} pada \textit{response body} agar klien dapat melakukan akses terhadap API ini. Kodenya adalah seperti berikut :
+
+\begin{lstlisting}[language=java]
+response.setHeader("Access-Control-Allow-Origin", "*");
+\end{lstlisting}
+
+Langkah berikutnya adalah melakukan seleksi terhadap isi variabel \texttt{keyword}, berikut adalah cuplikan kodenya :
+
+\begin{lstlisting}[language=java]
+if(keyword.equals("op")) {
+	logger.trace("Request OP untuk NOP : " + nop);
+	return datOpService.getOp(nop);
+} else if(keyword.equals("wp")) {
+	logger.trace("Request SP untuk ID : " + subjekPajakId);
+	return datSpService.getSubjekPajak(subjekPajakId);
+} else if(keyword.equals("bayar")) {
+	logger.trace("Data Piutang untuk NOP : " + nop + " / " + tahun);
+	return spptService.getPiutang(nop, tahun);
+}
+\end{lstlisting}
+
+Pada baris pertama adalah memeriksa apakah isi variabel \texttt{keyword} sama dengan \texttt{op} atau tidak, bila sama, maka akan melakukan perintah pada baris ke-2 yang melakukan pencatatan ke \textit{log} dan ke-3 yang akan melakukan pengambilan data ke kelas \texttt{DatOpService}.
+
+Bila variabel \texttt{keyword} berisi teks \texttt{wp}, maka akan menjalankan proses pada baris ke-5, yang juga melakukan pencatatan ke dalam \textit{log}, kemudian pada baris ke-6 yang akan memanggil \textit{method} \texttt{getSubjekPajak()} milik kelas \texttt{DatSpService}.
+
+Pemeriksaan terakhir adalah apabila nilai dari variabel \texttt{keyword} berisi teks \texttt{bayar}. Langkahnya akan sama dimana pada baris ke-8 sistem akan mencatatkan aktivitasnya pada \textit{log} dan pada baris ke-9 akan memanggil \textit{method} \texttt{getPiutang()} milik kelas \texttt{SpptService}.
+
+\subsection{Kelas \texttt{DatObjekPajak}}																																							Kelas ini digunakan untuk \texttt{mapping} data dari sistem basis data, sehingga isinya hanya berupa deklarasi properti yang mirip dengan struktur tabel pada sistem basis data, berikut adalah isinya :
+
+\begin{lstlisting}[language=java]
+@Id @Getter @Setter
+private String kdPropinsi;
+@Id @Getter @Setter
+private String kdDati2;
+@Id @Getter @Setter
+private String kdKecamatan;
+@Id @Getter @Setter
+private String kdKelurahan;
+@Id @Getter @Setter
+private String kdBlok;
+@Id @Getter @Setter
+private String noUrut;
+@Id @Getter @Setter
+private String kdJnsOp;
+@Getter @Setter
+private String subjekPajakId;
+@Getter @Setter
+private String noFormulirSpop;
+@Getter @Setter
+private String noPersil;
+@Getter @Setter
+private String jalanOp;
+@Getter @Setter
+private String blokKavNoOp;
+@Getter @Setter
+private String rwOp;
+@Getter @Setter
+private String rtOp;
+@Getter @Setter
+private int kdStatusCabang;
+@Getter @Setter
+private char kdStatusWp;
+@Getter @Setter
+private BigDecimal totalLuasBumi;
+@Getter @Setter
+private BigDecimal totalLuasBng;
+@Getter @Setter
+private BigDecimal njopBumi;
+@Getter @Setter
+private BigDecimal njopBng;
+@Getter @Setter
+private int statusPetaOp;
+@Getter @Setter
+private char jnsTransaksiOp;
+@Getter @Setter
+private Date tglPendataanOp;
+@Getter @Setter
+private String nipPendata;
+@Getter @Setter
+private Date tglPemeriksaanOp;
+@Getter @Setter
+private String nipPemeriksaOp;
+@Getter @Setter
+private Date tglPerekamanOp;
+@Getter @Setter
+private String nipPerekamOp;
+
+@ManyToOne
+@JoinColumns({
+	@JoinColumn(name = "kdPropinsi", referencedColumnName = "kdPropinsi", insertable = false, updatable = false),
+	@JoinColumn(name = "kdDati2", referencedColumnName = "kdDati2", insertable = false, updatable = false),
+	@JoinColumn(name = "kdKecamatan", referencedColumnName = "kdKecamatan", insertable = false, updatable = false)
+})
+@Getter @Setter
+private RefKecamatan refKecamatan;
+
+@ManyToOne
+@JoinColumns({
+	@JoinColumn(name="kdPropinsi", referencedColumnName = "kdPropinsi", insertable = false, updatable = false),
+	@JoinColumn(name="kdDati2", referencedColumnName = "kdDati2", insertable = false, updatable = false),
+	@JoinColumn(name="kdKecamatan", referencedColumnName = "kdKecamatan", insertable = false, updatable = false),
+	@JoinColumn(name = "kdKelurahan", referencedColumnName = "kdKelurahan", insertable = false, updatable = false)
+})
+@Getter @Setter
+private RefKelurahan refKelurahan;
+\end{lstlisting}																							
+
+\subsection{Kelas \texttt{DatObjekPajakPK}}
+
+Kelas ini dibentuk untuk menjadi tempat \textit{mapping} pada \textit{primary key} milik kelas \texttt{DatObjekPajak}. Kelas ini dibutuhkan karena tabel \texttt{dat\_objek\_pajak} memiliki banyak \textit{field} untuk membentuk satu \textit{primary key}, sehingga dalam sistem Spring Data JPA, perlu untuk mendeklarasikan kelas tersendiri untuk \textit{mapping} tiap \textit{field} yang menjadi \textit{primary key}, dengan istilah lain pada Spring Data JPA ini adalah \textit{composite id}.
+
+Deklarasi kelas ini pun cukup sederhana, hanya menyiapkan beberapa variabel yang akan memetakan dan menjadi pasangan \textit{field} pada tabel di sistem basis data. Berikut adalah deklarasi dari tiap properti pada kelas \texttt{DatObjekPajakPK} :
+
+\begin{lstlisting}[language=java]
+@Getter @Setter
+private String kdPropinsi;
+@Getter @Setter
+private String kdDati2;
+@Getter @Setter
+private String kdKecamatan;
+@Getter @Setter
+private String kdKelurahan;
+@Getter @Setter
+private String kdBlok;
+@Getter @Setter
+private String noUrut;
+@Getter @Setter
+private String kdJnsOp;
+\end{lstlisting}													
+
+\subsection{Kelas \texttt{DatSubjekPajak}}
+
+Kelas ini berfungsi untuk \textit{mapping} data dengan tabel \texttt{dat\_subjek\_pajak} dengan isi properti mirip dengan \textit{field} milik tabel tersebut. Berikut adalah daftar properti yang dimiliki oleh kelas \texttt{DatSubjekPajak} :
+
+\begin{lstlisting}[language=java]
+    @Id @Getter @Setter
+    private String subjekPajakId;
+    @Getter @Setter
+    private String nmWp;
+    @Getter @Setter
+    private String jalanWp;
+    @Getter @Setter
+    private String blokKavNoWp;
+    @Getter @Setter
+    private String rwWp;
+    @Getter @Setter
+    private String rtWp;
+    @Getter @Setter
+    private String kelurahanWp;
+    @Getter @Setter
+    private String kotaWp;
+    @Getter @Setter
+    private String kdPosWp;
+    @Getter @Setter
+    private String telpWp;
+    @Getter @Setter
+    private String npwp;
+    @Getter @Setter
+    private char statusPekerjaanWp;
+\end{lstlisting}
+
+\subsection{Kelas \texttt{JsonObject}}
+
+Kelas ini nantinya akan memetakan parameter \textit{request} dari klien yang dikirimkan dalam format JSON, isi propertinya adalah seperti berikut ini :
+
+\begin{lstlisting}[language=java]
+    @Getter @Setter
+    private String keyword;
+    @Getter @Setter
+    private String nop;
+    @Getter @Setter
+    private String subjekPajakId;
+    @Getter @Setter
+    private String tahun;
+\end{lstlisting}
+
+\subsection{Kelas \texttt{RefKecamatan}}
+
+Kelas ini digunakan untuk \textit{mapping} tabel \texttt{ref\_kecamatan} seingga isi propertinya mirip dengan \textit{field} milik tabel \texttt{ref\_kecamatan} pada sistem basis data, berikut adalah daftar propertinya (isi kodenya) :
+
+\begin{lstlisting}[language=java]
+    @Id @Getter @Setter
+    private String kdPropinsi;
+    @Id @Getter @Setter
+    private String kdDati2;
+    @Id @Getter @Setter
+    private String kdKecamatan;
+    @Getter @Setter
+    private String nmKecamatan;
+\end{lstlisting}
+
+\subsection{Kelas \texttt{RefKecamatanPK}}
+
+Kelas ini akan menjadi definisi bagi \textit{primary key} milik tabel \texttt{ref\_kecamatan} yang akan digunakan oleh kelas \texttt{RefKecamatan}, berikut adalah isi kodenya :
+
+\begin{lstlisting}[language=java]
+    private String kdPropinsi;
+    private String kdDati2;
+    private String kdKecamatan;
+\end{lstlisting}
+
+\subsection{Kelas \texttt{RefKelurahan}}
+
+Kelas ini merupakan kelas \textit{mapping} untuk tabel \texttt{ref\_kelurahan} sehingga isi propertinya mirip dengan milik tabel \texttt{ref\_kelurahan}, berikut adalah isi properti dari kelas \texttt{RefKelurahan} :
+
+\begin{lstlisting}[language=java]
+    @Id @Getter @Setter
+    private String kdPropinsi;
+    @Id @Getter @Setter @Column(insertable = false, updatable = false)
+    private String kdDati2;
+    @Id @Getter @Setter
+    private String kdKecamatan;
+    @Id @Getter @Setter
+    private String kdKelurahan;
+    @Getter @Setter
+    private String kdSektor;
+    @Getter @Setter
+    private String nmKelurahan;
+    @Getter @Setter
+    private BigDecimal noKelurahan;
+    @Getter @Setter
+    private String kdPosKelurahan;
+\end{lstlisting}
+
+\subsection{Kelas \texttt{RefKelurahanPK}}
+
+Kelas ini ditujukan untuk \texttt{mapping} definisi \textit{primary key} milik tabel \texttt{ref\_kelurahan}, berikut adalah isi propertinya dari kelas \texttt{RefKelurahanPK} :
+
+\begin{lstlisting}[language=java]
+    @Getter @Setter
+    private String kdPropinsi;
+    @Getter @Setter
+    private String kdDati2;
+    @Getter @Setter
+    private String kdKecamatan;
+    @Getter @Setter
+    private String kdKelurahan;
+\end{lstlisting}
+
+\subsection{Kelas \texttt{Sppt}}
+
+Kelas ini digunakan untuk \textit{mapping} tabel \texttt{sppt} pada sistem basis data, sehingga isinya mirip dengan \textit{field} pada tabel tersebut. Isi properti dari kelas \texttt{Sppt} ini adalah seperti berikut :
+
+\begin{lstlisting}[language=java]
+    @Id @Getter @Setter
+    private String kdPropinsi;
+    @Id @Getter @Setter
+    private String kdDati2;
+    @Id @Getter @Setter
+    private String kdKecamatan;
+    @Id @Getter @Setter
+    private String kdKelurahan;
+    @Id @Getter @Setter
+    private String kdBlok;
+    @Id @Getter @Setter
+    private String noUrut;
+    @Id @Getter @Setter
+    private String kdJnsOp;
+    @Id @Getter @Setter
+    private String thnPajakSppt;
+    @Getter @Setter
+    private int siklusSppt;
+    @Getter @Setter
+    private String kdKanwilBank;
+    @Getter @Setter
+    private String kdKppbbBank;
+    @Getter @Setter
+    private String kdBankTunggal;
+    @Getter @Setter
+    private String kdBankPersepsi;
+    @Getter @Setter
+    private String kdTp;
+    @Getter @Setter
+    private String nmWpSppt;
+    @Getter @Setter
+    private String jlnWpSppt;
+    @Getter @Setter
+    private String blokKavNoWpSppt;
+    @Getter @Setter
+    private String rwWpSppt;
+    @Getter @Setter
+    private String rtWpSppt;
+    @Getter @Setter
+    private String kelurahanWpSppt;
+    @Getter @Setter
+    private String kotaWpSppt;
+    @Getter @Setter
+    private String kdPosWpSppt;
+    @Getter @Setter
+    private String npwpSppt;
+    @Getter @Setter
+    private String noPersilSppt;
+    @Getter @Setter
+    private String kdKlsTanah;
+    @Getter @Setter
+    private String thnAwalKlsTanah;
+    @Getter @Setter
+    private String kdKlsBng;
+    @Getter @Setter
+    private String thnAwalKlsBng;
+    @Getter @Setter
+    private Date tglJatuhTempoSppt;
+    @Getter @Setter
+    private BigDecimal luasBumiSppt;
+    @Getter @Setter
+    private BigDecimal luasBngSppt;
+    @Getter @Setter
+    private BigDecimal njopBumiSppt;
+    @Getter @Setter
+    private BigDecimal njopBngSppt;
+    @Getter @Setter
+    private BigDecimal njopSppt;
+    @Getter @Setter
+    private BigDecimal njoptkpSppt;
+    @Getter @Setter
+    private BigDecimal njkpSppt;
+    @Getter @Setter
+    private BigDecimal pbbTerhutangSppt;
+    @Getter @Setter
+    private BigDecimal faktorPengurangSppt;
+    @Getter @Setter
+    private BigDecimal pbbYgHarusDibayarSppt;
+    @Getter @Setter
+    private char statusPembayaranSppt;
+    @Getter @Setter
+    private char statusTagihanSppt;
+    @Getter @Setter
+    private char statusCetakSppt;
+    @Getter @Setter
+    private Date tglTerbitSppt;
+    @Getter @Setter
+    private Date tglCetakSppt;
+    @Getter @Setter
+    private String nipPencetakSppt;
+\end{lstlisting}
+
+\subsection{Kelas \texttt{SpptPK}}
+
+Digunakan untuk mendefinisikan \textit{primary key} dari tabel \texttt{sppt} milik kelas \texttt{Sppt}, karena \textit{primary key} milik tabel \texttt{sppt} ini terdiri dari beberapa \textit{field}. Berikut adalah isi properti dari kelas \texttt{SpptPK} ini : 
+
+\begin{lstlisting}[language=java]
+    @Getter @Setter
+    private String kdPropinsi;
+    @Getter @Setter
+    private String kdDati2;
+    @Getter @Setter
+    private String kdKecamatan;
+    @Getter @Setter
+    private String kdKelurahan;
+    @Getter @Setter
+    private String kdBlok;
+    @Getter @Setter
+    private String noUrut;
+    @Getter @Setter
+    private String kdJnsOp;
+    @Getter @Setter
+    private String thnPajakSppt;
+\end{lstlisting}
+
+\subsection{\textit{Interface} \texttt{DatObjekPajakRepo}}
+
+\textit{Interface} ini digunakan untuk melakukan operasi terhadap data pada tabel \texttt{dat\_objek\_pajak}, baik itu tambah data, ubah data, dan hapus data. Karena ini adalah \textit{interface}, maka hanya berisi deklarasi \textit{method} saja.
+
+Bentuk deklarasi \textit{method} pada \textit{interface} ini mengikuti aturan yang diberikan oleh Spring Data JPA untuk melakukan berbagai macam operasi terhadap data pada tabel di sistem basis data. Hanya ada 1 (satu) \textit{method} yang ada pada \textit{interface} ini, berikut adalah kodenya :
+
+\begin{lstlisting}[language=java]
+    DatObjekPajak findByKdKecamatanAndKdKelurahanAndKdBlokAndNoUrut(String kdKecamatan, String kdKelurahan, String kdBlok, String noUrut);
+\end{lstlisting}
+
+Kode tersebut untuk mencari data pada tabel \texttt{dat\_objek\_pajak} dengan filter berupa \textit{field} \texttt{kd\_kecamatan}, \texttt{kd\_kelurahan}, \texttt{kd\_blok}, dan \texttt{no\_urut}
+
+\subsection{\textit{Interface} \texttt{DatSubjekPajakRepo}}
+
+\textit{Interface} ini digunakan untuk melakukan operasi pada tabel \texttt{dat\_subjek\_pajak}, baik itu tambah data, ubah data, ataupun hapus data. \textit{Interface} ini pun mengikuti aturan dari Spring Data JPA untuk melakukan manipulasi data pada tabel \texttt{dat\_subjek\_pajak}.
+
+Karena ini adalah \textit{interface}, maka hanya berisi deklarasi \textit{method} saja. Berikut adalah daftar \textit{method} yang ada pada \textit{interface} ini :
+
+\begin{lstlisting}[language=java]
+    DatSubjekPajak findBySubjekPajakId(String subjekPajakId);
+    List<DatSubjekPajak> findBySubjekPajakIdLike(String subjekPajakId);
+    List<DatSubjekPajak> findByNmWpLike(String nmWp);
+\end{lstlisting}
+
+\textit{Method} yang pertama digunakan untuk mencari subjek pajak berdasarkan nomor identitasnya. \textit{Method} kedua akan menghasilkan daftar subjek pajak dengan melakukan filter pencarian berdasarkan potongan nomor identitas subjek pajak. \textit{Method} yang ketiga akan menghasilkan daftar subjek pajak yang pencariannya menggunakan filter nama subjek pajak.
+
+\subsection{\textit{Interface} \texttt{SpptRepo}}
+
+\textit{Interface} ini pun mengikuti aturan dari Spring Data JPA, dimana didalamnya hanya berisi deklarasi-deklarasi \textit{method} yang fungsinya adalah melakukan manipulasi data pada tabel \texttt{sppt} pada sistem basis data, baik berupa tambah data, ubah data, atau hapus data. Deklarasi kode yang terdapat pada \textit{interface} ini adalah seperti berikut :
+
+\begin{lstlisting}[language=java]
+    List<Sppt> findByKdPropinsiAndKdDati2AndKdKecamatanAnd
+KdKelurahanAndKdBlokAndNoUrutAndKdJnsOp(
+        String kdPropinsi, String kdDati2, String kdKecamatan, 
+        String kdKelurahan, String kdBlok, String noUrut, 
+        String kdJnsOp, Sort sort
+    );
+
+    List<Sppt> findByKdPropinsiAndKdDati2AndKdKecamatanAnd
+KdKelurahanAndKdBlokAndNoUrutAndKdJnsOpAndStatusPembayaranSpptIn(
+        String kdPropinsi, String kdDati2, String kdKecamatan, 
+        String kdKelurahan, String kdBlok, String noUrut, 
+        String kdJnsOp, Collection<Character> status
+    );
+
+    Sppt findOneByKdPropinsiAndKdDati2AndKdKecamatanAnd
+KdKelurahanAndKdBlokAndNoUrutAndKdJnsOpAndThnPajakSpptAnd
+StatusPembayaranSppt(
+        String kdPropinsi, String kdDati2, String kdKecamatan, 
+        String kdKelurahan, String kdBlok, String noUrut,
+        String kdJnsOp, String thnPajak, char statusPembayaranSppt
+    );
+\end{lstlisting}
+
+\textit{Method} yang pertama digunakan untuk melakukan pengambilan daftar Surat Pemberitahuan Pajak Terhutang (SPPT) dengan filter berdasarkan \textit{field} \texttt{kd\_propinsi}, \texttt{kd\_dati2}, \texttt{kd\_kecamatan}, \texttt{kd\_kelurahan}, \texttt{kd\_blok}, \texttt{no\_urut}, dan \texttt{kd\_jns\_op}, kemudian hasilnya akan dilakukan pengurutan berdasarkan \textit{field} tertentu.
+
+\textit{Method} yang kedua digunakan untuk melakukan pengambilan daftar Surat Pemberitahuan Pajak Terhutang (SPPT) dengan berdasarkan beberapa \textit{field} yaitu \textit{field} \texttt{kd\_propinsi}, \texttt{kd\_dati2}, \texttt{kd\_kecamatan}, \texttt{kd\_kelurahan}, \texttt{kd\_blok}, \texttt{no\_urut}, \texttt{kd\_jns\_op}, dan \texttt{status\_pembayaran\_sppt}.
+
+\textit{Method} yang ketiga adalah mengambil data sebuah Surat Pemberitahuan Pajak Terhutang (SPPT) dengan filter berupa \textit{field} \texttt{kd\_propinsi}, \texttt{kd\_dati2}, \texttt{kd\_kecamatan}, \texttt{kd\_kelurahan}, \texttt{kd\_blok}, \texttt{no\_urut}, \texttt{kd\_jns\_op}, \texttt{thn\_pajak\_sppt}, dan \texttt{status\_pembayaran\_sppt}.
+
+\subsection{Kelas \texttt{DatObjekPajakService}}
+
+Kelas ini bertujuan untuk menjembatani komunikasi antara \textit{interface} atau API (\textit{Application Programmable Interface}) sebagai tempat awal masuknya komunikasi bagian-depan (\textit{frontend}), dengan \textit{repository} yang bertugas melakukan manipulasi data pada sistem basis data.
+
+Adakalanya data yang diterima dari bagian-depan (\textit{frontend}) perlu diolah lebih dahulu sebelum akhirnya dapat melakukan manipulasi data pada tingkat / lapisan sistem basis data, atau sebaliknya, dimana kondisi data dari sistem basis data, perlu dioleh lebih dahulu mana yang akan diteruskan ke bagian-depan (\textit{frontend}) mana yang tidak perlu, dalam hal ini tentunya melihat efisiensi lebar-pita (\textit{bandwidth}) yang nantinya digunakan.
+
+Baris awal adalah mendeklarasikan \textit{repository} yang akan digunakan, berikut kodenya :
+
+\begin{lstlisting}[language=java]
+    @Autowired
+    private DatObjekPajakRepo datOpRepo;
+\end{lstlisting}
+
+Berikutnya hanya ada sebuah \textit{method} yang fungsinya akan mengembalikan data dari tabel \texttt{dat\_objek\_pajak} namun telah dimodifikasi sesuai kebutuhan bagian-depan \textit{frontend}, berikut adalah kodenya :
+
+\begin{lstlisting}[language=java]
+    public DatObjekPajakModif getOp(String nop) {
+        DatObjekPajakPK pk = new DatObjekPajakPK();
+        pk.setKdPropinsi(nop.substring(0,2));
+        pk.setKdDati2(nop.substring(2,4));
+        pk.setKdKecamatan(nop.substring(4,7));
+        pk.setKdKelurahan(nop.substring(7,10));
+        pk.setKdBlok(nop.substring(10,13));
+        pk.setNoUrut(nop.substring(13,17));
+        pk.setKdJnsOp(nop.substring(17,18));
+
+        DatObjekPajak data = datOpRepo.findOne(pk);
+
+        return new DatObjekPajakModif(
+                data.getRefKecamatan().getNmKecamatan(),
+                data.getRefKelurahan().getNmKelurahan(), 
+                data.getJalanOp(), "RT. " + data.getRtOp() + 
+                " RW. " + data.getRwOp(), data.getTotalLuasBumi(),
+                data.getTotalLuasBng(), data.getNjopBumi(), 
+                data.getNjopBng(), data.getSubjekPajakId());
+    }
+\end{lstlisting}
+
+\textit{Method} ini membutuhkan sebuah parameter Nomor Objek Pajak (NOP) agar dapat mengembalikan sebuah nilai.
+
+\subsection{Kelas \texttt{DatSubjekPajakService}}
+
+Kelas ini pun menjadi penghubung antara \textit{interface} luar yang menghubungkan bagian-depan (\textit{frontend}) dan bagian-belakang (\textit{backend}) sebagai kelas yang menyediakan adaptasi data untuk operasi data pada tabel \texttt{dat\_subjek\_pajak}.
+
+Pada awal-awal baris kode, berisi deklarasi kode untuk membuat instan dari \textit{interface} \texttt{DatSubjekPajakRepo}, berikut adalah baris kode tersebut :
+
+\begin{lstlisting}[language=java]
+    @Autowired
+    private DatSubjekPajakRepo datSubjekPajakRepo;
+\end{lstlisting}
+
+Kode berikutnya adalah sebuah \textit{method} yang akan memberikan data dari tabel \texttt{dat\_subjek\_pajak} setelah melakukan penyesuaian data bergantung kebutuhan dari bagian-depan (\textit{frontend}). Berikut ada kode nya :
+
+\begin{lstlisting}[language=java]
+    public DatSubjekPajakModif getSubjekPajak(String subjekPajakId) {
+        DatSubjekPajak data = datSubjekPajakRepo.findBySubjekPajakId(
+            String.format("%-30s", subjekPajakId));
+        
+        return new DatSubjekPajakModif(data.getNmWp(), 
+            data.getJalanWp(), "RT. " + data.getRtWp() + " RW. " + 
+            data.getRwWp(), data.getKelurahanWp(), data.getKotaWp());
+    }
+\end{lstlisting}
+
+\textit{Method} ini membutuhkan sebuah parameter bertipe \texttt{String} yang berisi nomor identitas subjek pajak.
+
+\subsection{Kelas \texttt{SpptService}}
+
+Kelas ini seperti kelas \textit{service} lainnya, yaitu menghubungkan antara \textit{interface} tempat bagian-depan (\textit{frontend}) berkomunikasi dengan bagian \textit{repository} tempat manipulasi sistem basis data terjadi.
+
+Kode awal dari kelas ini adalah mendeklarasikan dan membentuk instan dari \textit{interface} \texttt{SpptRepo} seperti berikut :
+
+\begin{lstlisting}[language=java]
+    @Autowired
+    private SpptRepo spptRepo;
+\end{lstlisting}
+
+Bagian kedua dari blok kode program pada kelas ini adalah deklarasi \textit{method} \texttt{getSppt()} yang berfungsi untuk mengambil daftar Surat Pemberitahuan Pajak Terhutang (SPPT) untuk sebuah Nomor Objek Pajak (NOP) pada tiap tahun pajaknya, maka dari itu \textit{method} ini membutuhkan sebuah parameter bertipe teks (\texttt{String}) yang berisi Nomor Objek Pajak (NOP) tanpa tanda baca lain. Berikut adalah deklarasinya :
+
+\begin{lstlisting}[language=java]
+    public List<SpptModif> getSppt(String nop) {
+        List<SpptModif> result = new LinkedList();
+
+        List<Sppt> data = spptRepo.findByKdPropinsiAndKdDati2
+AndKdKecamatanAndKdKelurahanAndKdBlokAndNoUrutAndKdJnsOp
+AndStatusPembayaranSpptIn(
+            nop.substring(0,2), nop.substring(2,4), 
+            nop.substring(4,7), nop.substring(7,10), 
+            nop.substring(10,13), nop.substring(13,17), 
+            nop.substring(17,18), 
+            new ArrayList<Character>() {{add('0'); add('1');}}
+        );
+
+        for(int i=0; i<data.size(); i++) {
+            result.add(new SpptModif(data.get(i).getThnPajakSppt(), 
+                data.get(i).getPbbYgHarusDibayarSppt(),
+                data.get(i).getStatusPembayaranSppt() == '1' ? 
+                    "LUNAS" : "BLM BAYAR"));
+        }
+
+        return result;
+    }
+\end{lstlisting}
+
+Bagian ketiga adalah blok kode program tentang \textit{method} yang akan mengembalikan nilai piutang dari sebuah Surat Pemberitahuan Pajak Terhutang (SPPT) apabila status dari Surat Pemberitahuan Pajak Terhutang (SPPT) tersebut memang belum dibayarkan. Berikut adalah kode programnya :
+
+\begin{lstlisting}[language=java]
+    public PiutangSpptModif getPiutang(String nop, String thnPajak) {
+        DateTimeFormatter dateFormatOut = 
+            DateTimeFormat.forPattern("dd-MM-yyyy");
+
+        Sppt data = spptRepo.findOneByKdPropinsiAndKdDati2
+AndKdKecamatanAndKdKelurahanAndKdBlokAndNoUrutAndKdJnsOp
+AndThnPajakSpptAndStatusPembayaranSppt(
+            nop.substring(0,2), nop.substring(2,4), 
+            nop.substring(4,7), nop.substring(7,10), 
+            nop.substring(10,13), nop.substring(17,18), 
+            thnPajak, '0'
+        );
+
+        PiutangSpptModif result = new PiutangSpptModif();
+        DateTime tglJatuhTempo = new DateTime(
+            data.getTglJatuhTempoSppt());
+        result.setTgl_tempo(dateFormatOut.print(tglJatuhTempo));
+        result.setJumlah(data.getPbbYgHarusDibayarSppt());
+        result.setTgl_skrg(dateFormatOut.print(new DateTime()));
+        int selisih = Months.monthsBetween(
+            new DateTime(data.getTglJatuhTempoSppt()), 
+            new DateTime()).getMonths();
+        result.setDenda_bln(selisih);
+        BigDecimal denda;
+
+        if(selisih >= 0)
+            result.setDenda_jml(
+                (selisih > 15) ?
+                    (new BigDecimal("15").multiply(
+                        new BigDecimal("0.02"))
+                            .multiply(
+                                data.getPbbYgHarusDibayarSppt()))
+                            .round(new MathContext(3, 
+                                RoundingMode.UP)) :
+                    (new BigDecimal(selisih)
+                        .multiply(new BigDecimal("0.02"))
+                        .multiply(data.getPbbYgHarusDibayarSppt()))
+                        .round(new MathContext(3, RoundingMode.UP))
+            );
+        else result.setDenda_jml(new BigDecimal("0"));
+
+        return result;
+    }
+\end{lstlisting}
+
+\subsection{Kelas \texttt{DatObjekPajakModif}}
+
+Kelas ini digunakan untuk mengemas data respon dari tabel \texttt{dat\_objek\_pajak} agar sesuai dengan kebutuhan bagian-depan (\textit{frontend}), sehingga isi dari kelas ini hanyalah beberapa properti yang dibutuhkan oleh bagian-depan (\textit{frontend}), berikut ada kodenya :
+
+\begin{lstlisting}[language=java]
+    @Getter @Setter @NonNull
+    private String op_kec;
+    @Getter @Setter @NonNull
+    private String op_kel;
+    @Getter @Setter @NonNull
+    private String op_jalan;
+    @Getter @Setter @NonNull
+    private String op_rtrw;
+    @Getter @Setter @NonNull
+    private BigDecimal op_luas_bumi;
+    @Getter @Setter @NonNull
+    private BigDecimal op_luas_bng;
+    @Getter @Setter @NonNull
+    private BigDecimal op_njop_bumi;
+    @Getter @Setter @NonNull
+    private BigDecimal op_njop_bng;
+    @Getter @Setter @NonNull
+    private String op_wp_id;
+\end{lstlisting}
+
+\subsection{Kelas \texttt{DatSubjekPajakModif}}
+
+Kelas ini pun digunakan untuk mengemas data dari tabel \texttt{dat\_subjek\_pajak} agar sesuai dengan kebutuhan bagian-depan (\textit{frontend}), berikut adalah kodenya :
+
+\begin{lstlisting}[language=java]
+    @Getter @Setter @NonNull
+    private String wp_nama;
+    @Getter @Setter @NonNull
+    private String wp_jalan;
+    @Getter @Setter @NonNull
+    private String wp_rtrw;
+    @Getter @Setter @NonNull
+    private String wp_kel;
+    @Getter @Setter @NonNull
+    private String wp_kota;
+\end{lstlisting}
+
+\subsection{Kelas \texttt{PiutangSpptModif}}
+
+Kelas ini digunakan untuk mengemas informasi piutang agar sesuai dengan kebutuhan bagian-depan (\textit{frontend}). Berikut adalah kode programnya :
+
+\begin{lstlisting}[language=java]
+    @Getter @Setter
+    private String tgl_tempo;
+    @Getter @Setter
+    private BigDecimal jumlah;
+    @Getter @Setter
+    private String tgl_skrg;
+    @Getter @Setter
+    private int denda_bln;
+    @Getter @Setter
+    private BigDecimal denda_jml;
+\end{lstlisting}
+
+\subsection{\textit{Interface} \texttt{ReturnData}}
+
+\textit{Interface} ini digunakan sebagai penyeragam nilai kembalian pada masing-masing titik API (\textit{Application Programmable Interface}), sehingga nilai kembaliannya dapat lebih umum untuk diterapkan, deklarasinya sangat sederhana tanpa properti atau \textit{method} apapun. Berikut adalah kodenya :
+
+\begin{lstlisting}[language=java]
+public interface ReturnData {}
+\end{lstlisting}
+
+\subsection{Kelas \texttt{SpptModif}}
+
+Kelas ini digunakan untuk memodifikasi jumlah data yang akan dikirimkan ke bagian-depan (\textit{frontend}) dari tabel \texttt{sppt} agar sesuai dengan kebutuhan bagian-depan (\textit{frontend}). Kodenya adalah seperti berikut ini :
+
+\begin{lstlisting}[language=java]
+    @Getter @Setter @NonNull
+    private String tahun;
+    @Getter @Setter @NonNull
+    private BigDecimal jumlah;
+    @Getter @Setter @NonNull
+    private String status;
+\end{lstlisting}
+
+\section{BAGIAN-DEPAN (\textit{FRONTEND})}
+
+Bagian-depan (\textit{frontend}) menggunakan Angular 5, sehingga banyak berkas yang terbentuk secara otomatis agar sistem berjalan sebagaimana mestinya. Beberapa penyesuaian dan penambahan modul atau berkas yang diperlukan adalah seperti berikut :
+
+\subsection{Berkas \texttt{app.component.html}}
+
+Berkas ini yang menjadi tampilan utama dan tampilan awal dari aplikasi sistem informasi pembayaran dari bagian-depan (\textit{frontend}) ini. Berikut adalah kodenya :
+
+\begin{lstlisting}[language=html]
+<!--The content below is only a placeholder and can be replaced.-->
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">BPPKAD Kab. Brebes</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto"></ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" name="nop" type="text" placeholder="NOP" aria-label="NOP" [(ngModel)]="nop"
+            [ngModelOptions]="{standalone: true}" #nopStatus="ngModel"
+            *ngIf="showNopTxt">
+        <button class="btn btn-outline-success my-2 my-sm-0" (click)="cekNop(nop)" *ngIf="showCariBtn">Cari</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" (click)="kembali()" *ngIf="showKembaliBtn">
+          Cari NOP Lain</button>
+      </form>
+    </div>
+  </nav>
+</header>
+<main role="main" class="container">
+  <div class="mt-3">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+\end{lstlisting}
+
+Bagian masukkan teks untuk Nomor Objek Pajak (NOP) akan \textit{binding} dengan variabel nop pada kelas \texttt{AppComponent} pada berkas \texttt{app.component.ts}.
+
+Tombol \texttt{Cari} dan \texttt{Cari NOP Lain} akan berganti secara otomatis menyesuaikan kondisi properti \texttt{showCariBtn} dan \texttt{showKembaliBtn} milik kelas \texttt{AppComponent}.
+
+Kemudian bagian penting dari halaman ini adalah adanya komponen \texttt{<router-outlet>} yang fungsinya adalah sebagai bagian dari tampilan yang secara dinamis akan diubah dengan tampilan lain melalui tombol \texttt{Cari}. Bagian \textit{router} ini akan berkaitan erat dengan konfigurasi pada berkas \texttt{app-routing.module.ts}.
+
+\subsection{Berkas \texttt{app.component.ts}}
+
+Berkas ini berisi deklarasi kelas \texttt{AppComponent} yang akan beriringan dengan berkas \texttt{HTML} bernama \texttt{app.component.html} seperti pada deklarasinya berikut :
+
+\begin{lstlisting}
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+\end{lstlisting}
+
+Beberapa deklarasi properti yang ada pada kelas ini adalah sebagai berikut :
+
+\begin{lstlisting}
+  nop: string;
+  showNopTxt: boolean = true;
+  showCariBtn: boolean = true;
+  showKembaliBtn: boolean = false;
+\end{lstlisting}
+
+Deklarasi konstruktor pada kelas ini sederhana, hanya memeriksa apakah Nomor Objek Pajak (NOP) telah terisi atau belum, bila sudah terisi maka periksa Nomor Objek Pajak (NOP) tersebut. Sekaligus pada deklarasi konstruktor ini adalah melakukan pembentukan instan dari kelas-kelas yang dibutuhkan pada kelas \texttt{AppComponent} ini yang disebutkan dalam parameter pembentukan kontruktor ini, berikut adalah kode programnya :
+
+\begin{lstlisting}
+  constructor(private router: Router, private zone: NgZone) {
+    if(this.nop != null) 
+      this.cekNop(this.nop);
+  }
+\end{lstlisting}
+
+Yang berikutnya adalah fungsi atau \textit{method} dari \texttt{cekNop} dengan parameter Nomor Objek Pajak (NOP) yang nantinya akan melakukan navigasi ke alamat \texttt{/sppt/} yang didefinisikan pada berkas \texttt{app-routing.module.ts}. Berikut adalah isi kode dari fungsi \texttt{cekNop()} ini :
+
+\begin{lstlisting}
+  public cekNop(nop) {
+    if(nop.length != 18) {
+      return;
+    }
+    this.zone.run(() => {
+      this.showNopTxt = false;
+      this.showCariBtn = false;
+      this.showKembaliBtn = true;
+      this.router.navigate(['/sppt/' + nop]);
+    });
+  };
+\end{lstlisting}
+
+\subsection{Berkas \texttt{app-routing.module.ts}}
+
+Kelas ini berisi deklarasi untuk \textit{routing} perubahan sebagian halaman pada berkas \texttt{app.component.html}, tepatnya pada \textit{tag} \texttt{<router-outlet>}. Berikut adalah deklarasi kelas dari \texttt{AppRoutingModule} ini :
+
+\begin{lstlisting}
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { SpptComponent } from './sppt/sppt.component';
+
+const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'sppt/:nop', component: SpptComponent }
+];
+
+@NgModule({
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ],
+  declarations: []
+})
+export class AppRoutingModule { }
+\end{lstlisting}
+
+Terlihat bahwa pada saat \textit{routing} melakukan navigasi ke \textit{path} \texttt{sppt/:nop}, dimana \texttt{:nop} akan terisi oleh Nomor Objek Pajak (NOP), maka komponen \texttt{router-outlet} akan terisi oleh \texttt{SpptComponent}.
+
+\subsection{Berkas \texttt{sppt.component.html}}
+
+Berkas inilah yang akan tampil saat Nomor Objek Pajak telah terisi dan tombol \texttt{Cari} ditekan. Kodenya adalah seperti berikut :
+
+\begin{lstlisting}[language=html]
+<div class="tinggi">
+  <div class="card">
+    <div class="card-header">
+      Data Objek Pajak
+    </div>
+    <div class="card-body">
+<table>
+  <tr>
+    <td>NOP</td>
+    <td>:</td>
+    <td>{{ nop }}</td>
+  </tr>
+  <tr>
+    <td>Luas Bumi</td>
+    <td>:</td>
+    <td>{{ luasBumi | number }} m<sup>2</sup></td>
+  </tr>
+  <tr>
+    <td>Luas Bangunan</td>
+    <td>:</td>
+    <td>{{ luasBangunan | number }} m<sup>2</sup></td>
+  </tr>
+  <tr>
+    <td>NJOP Bumi</td>
+    <td>:</td>
+    <td>Rp. {{ njopBumi | number }}.-</td>
+  </tr>
+  <tr>
+    <td>NJOP Bangunan</td>
+    <td>:</td>
+    <td>Rp. {{ njopBangunan | number }}.-</td>
+  </tr>
+  <tr>
+    <td>Lokasi</td>
+    <td>:</td>
+    <td>{{ lokasi }}</td>
+  </tr>
+</table>
+    </div>
+    
+  </div>
+
+  <div style="padding-top: 20px;"></div>
+  <div class="card">
+    <div class="card-header">
+      Data Subjek Pajak
+    </div>
+    <div class="card-body">
+      <table>
+        <tr>
+          <td>Subjek Pajak ID</td>
+          <td>:</td>
+          <td>{{ spId }}</td>
+        </tr>
+        <tr>
+          <td>Nama Subjek Pajak</td>
+          <td>:</td>
+          <td>{{ namaSp }}</td>
+        </tr>
+        <tr>
+          <td>Alamat Subjek Pajak</td>
+          <td>:</td>
+          <td>{{ alamatSp }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div style="padding-top: 20px;"></div>
+  <div class="card">
+      <div class="card-header">
+        Data SPPT
+      </div>
+      <div class="card-body">
+        <table>
+          <tr *ngFor="let sppt of listSppt">
+            <td>Tahun {{ sppt.tahun }}</td>
+            <td>:</td>
+            <td>Rp. {{ sppt.jumlah | number }}.-</td>
+            <td>{{ sppt.status }}</td>
+          </tr>
+        </table>
+      </div>
+  </div>  
+</div>
+\end{lstlisting}
+
+\subsection{Berkas \texttt{sppt.component.ts}}
+
+Berkas ini berisi deklarasi kelas \texttt{SpptComponent} yang merupakan \textit{binding} kelas untuk halaman \texttt{sppt.component.html}. Beberapa properti yang ada pada kelas ini adalah seperti berikut :
+
+\begin{lstlisting}
+  nop: string;
+  luasBumi: number;
+  luasBangunan: number;
+  njopBumi: number;
+  njopBangunan: number;
+  lokasi: string;
+  spId: string;
+  namaSp: string;
+  alamatSp: string;
+  listSppt: any;
+  apiUrl = 'http://pajak-daerah.brebeskab.go.id:1328/android_service'
+\end{lstlisting}
+
+Konstruktor dari kelas ini hanya berisi pembentukan instan kelas yang akan dibutuhkan seperti deklarasinya dalam parameter konstruktor berikut :
+
+\begin{lstlisting}
+  constructor(
+    private route: ActivatedRoute ,
+    private http: HttpClient, 
+    private zone: NgZone
+  ) { }
+\end{lstlisting}
+
+Karena kelas ini melakukan implementasi \texttt{OnInit}, maka tiap pertama kali kelas ini terbentuk atau aktif kembali dari kondisi \textit{refresh}, maka \textit{method} \texttt{ngOnInit} akan selalu dijalankan yang isinya adalah seperti berikut :
+
+\begin{lstlisting}
+  ngOnInit() {
+    this.nop = this.route.snapshot.paramMap.get('nop');
+    let body = 'keyword=op&nop=' + this.nop;
+
+    this.zone.run(() => {
+    this.http.post(this.apiUrl, body)
+      .subscribe(data => {
+        this.luasBumi = data['op_luas_bumi'];
+        this.luasBangunan = data['op_luas_bng'];
+        this.njopBumi = data['op_njop_bumi'];
+        this.njopBangunan = data['op_njop_bng'];
+        this.lokasi = data['op_jalan'] + ' ' + data['op_rtrw'] + ' ' + data['op_kel'] + ', ' + data['op_kec'];
+        this.spId = data['op_wp_id'];
+        this.initSp(this.spId);
+      });
+    
+      let spptBody = 'keyword=sppt&nop=' + this.nop;  
+      this.http.post(this.apiUrl + '/sppt', spptBody) 
+      .subscribe(data => {
+        this.listSppt = data;
+        console.log(data);
+      });
+    });
+  }
+\end{lstlisting}
+
+Isinya adalah melakukan \textit{request} atau permintaan data ke bagian-belakang (\textit{backend}) dengan \texttt{keyword} \texttt{op} dan \texttt{sppt}.
+
+Di dalamnya terdapat pemanggilan ke fungsi atau \textit{method} \texttt{initSp()} yang akan melakukan \textit{request} atau permintaan data dengan \texttt{keyword wp}. Berikut adalah deklarasi dari \textit{method} \texttt{initSp()} ini :
+
+\begin{lstlisting}
+  initSp(id): void {
+    let bodySp = 'keyword=wp&subjek_pajak_id=' + this.spId;
+    this.http.post(this.apiUrl, bodySp)
+      .subscribe(data => {
+        this.namaSp = data['wp_nama'];
+        this.alamatSp = data['wp_jalan'] + ' ' + data['wp_rtrw'] + ' ' + data['wp_kel'] + ', ' + data['wp_kota'];
+      });
+  }
+\end{lstlisting}
+
+\subsection{Berkas \texttt{home.component.html}}
+
+Berkas ini berisi tampilan awal dari bagian \texttt{routing-outlet} sebelum terjadinya proses pencarian sebuah objek pajak berdasarkan Nomor Objek Pajak (NOP). Berikut adalah isi kode programnya :
+
+\begin{lstlisting}[language=html]
+<div class="tinggi">
+
+<div class="card">
+  <div class="card-body">
+    <div class="card-title">
+      <h1>Selamat Datang di Aplikasi WEB BPPKAD Kab. Brebes</h1>
+    </div>
+    <div class="card-text">
+<p>Silahkan ketikan Nomor Objek Pajak (NOP) pada kotak kecil di kanan atas untuk mengetahui 
+  informasi PBB-P2 Anda. Kami pun menyediakan aplikasi Android yang dapat Anda unduh 
+  <a href="https://play.google.com/store/apps/details?id=com.brebeskab.mpbb">disini</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+\end{lstlisting}
+
+\subsection{Kelas \texttt{home.component.ts}}
+
+Berkas ini berisi kelas \texttt{HomeComponent} yang merupakan \textit{binding} dari halaman \texttt{home.component.html} yang didalamnya tidak perlu ada properti atau \textit{method} yang terpasang, karena hanya menampilkan informasi saja. Berikut adalah isi kode programnya :
+
+\begin{lstlisting}
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
+})
+export class HomeComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {}
+}
+\end{lstlisting}
+
+\end{document}
+

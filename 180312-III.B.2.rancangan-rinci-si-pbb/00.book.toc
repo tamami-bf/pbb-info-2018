@@ -1,0 +1,13 @@
+\babel@toc {bahasa}{}
+\contentsline {chapter}{\numberline {1}SISTEM KOMPUTER}{1}
+\contentsline {chapter}{\numberline {2}SISTEM JARINGAN}{2}
+\contentsline {chapter}{\numberline {3}SISTEM BASIS DATA}{4}
+\contentsline {chapter}{\numberline {4}PROSEDUR AKTIVITAS}{7}
+\contentsline {section}{\numberline {4.1}Diagram \textit {Use-Case}}{7}
+\contentsline {section}{\numberline {4.2}Diagram \textit {Class}}{8}
+\contentsline {section}{\numberline {4.3}Diagram \textit {Component}}{15}
+\contentsline {section}{\numberline {4.4}Diagram \textit {Communication}}{20}
+\contentsline {section}{\numberline {4.5}Diagram \textit {Activity}}{23}
+\contentsline {section}{\numberline {4.6}Diagram \textit {Sequence}}{27}
+\contentsline {section}{\numberline {4.7}Diagram \textit {Deployment}}{31}
+\contentsline {chapter}{\numberline {5}SUMBER DAYA MANUSIA}{33}

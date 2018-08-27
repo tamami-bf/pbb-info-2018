@@ -1,0 +1,13 @@
+\chapter{BATASAN DAN KARAKTERISTIK KINERJA PROGRAM}
+
+\section{Batasan Program}
+
+Batasan dari program atau sistem informasi yang dibangun ini adalah bahwa aplikasi atau program atau sistem informasi ini, sesuai dengan tujuannya, yaitu menampilkan informasi status pencatatan pembayaran dari Sistem Manajemen Informasi Objek Pajak (SISMIOP) adalah sebatas memberikan informasi status pencatatan pembayaran yang telah terjadi berdasarkan Nomor Objek Pajak (NOP) yang tertera pada lembar Surat Pemberitahuan Pajak Terhutang (SPPT) yang diberikan tiap tahunnya.
+
+Aplikasi atau program atau sistem informasi yang dibangun tidak mampu untuk melakukan perubahan pencatatan pembayaran, atau perubahan-perubahan terhadap data yang ditayangkan, untuk perubahan-perubahan atau manipulasi data terhadap data yang tampil dilakukan dengan aplikasi lain, yaitu Sistem Manajemen Informasi Objek Pajak (SISMIOP) yang digunakan untuk melakukan pengelolaan data-data objek pajak bumi dan bangunan sektor perdesaan dan perkotaan.
+
+\section{Karakteristik Kinerja Program}
+
+Karakteristik kinerja dari program atau aplikasi atau sistem informasi yang dibangun, karena menggunakan skema aplikasi dengan 2 (dua) lapis, yaitu bagian ujung-belakang (\textit{backend}) dan bagian ujung-depan (\textit{frontend}), sehingga program atau aplikasi ini dapat lebih mudah untuk dikembangkan ke aplikasi model lain seperti aplikasi \textit{mobile} dengan basis Android atau iOS, atau bahkan dikembangkan menjadi aplikasi berbasis \textit{desktop}.
+
+Komunikasi yang terjadi antara 2 (dua) bagian ini adalah melalui arsitektur REST (\textit{Representational State Transfer}), dimana peladen akan menyediakan \textit{resources} (sumber daya / data) dan klien akan melakukan akses dan menampilkan \textit{resource} tersebut. \textit{Resource} atau sumber daya ini akan dikirimkan oleh peladen dalam format JSON untuk mempermudah melakukan penguraian datanya.

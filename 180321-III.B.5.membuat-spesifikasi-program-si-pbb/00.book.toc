@@ -1,0 +1,44 @@
+\babel@toc {bahasa}{}
+<<<<<<< HEAD
+\contentsline {chapter}{\numberline {1}CAKUPAN DAN TUJUAN PROGRAM}{1}
+\contentsline {chapter}{\numberline {2}STRUKTUR DATA / BASIS DATA}{3}
+\contentsline {section}{\numberline {2.1}Tabel SPPT}{3}
+\contentsline {section}{\numberline {2.2}Tabel DAT\_OBJEK\_PAJAK}{5}
+\contentsline {section}{\numberline {2.3}Tabel DAT\_SUBJEK\_PAJAK}{7}
+\contentsline {section}{\numberline {2.4}Tabel REF\_KECAMATAN}{8}
+\contentsline {section}{\numberline {2.5}Tabel REF\_KELURAHAN}{8}
+\contentsline {chapter}{\numberline {3}FUNGSI-FUNGSI YANG HARUS DILAKUKAN OLEH PROGRAM}{10}
+\contentsline {chapter}{\numberline {4}BATASAN DAN KARAKTERISTIK KINERJA PROGRAM}{12}
+\contentsline {section}{\numberline {4.1}Batasan Program}{12}
+\contentsline {section}{\numberline {4.2}Karakteristik Kinerja Program}{13}
+\contentsline {chapter}{\numberline {5}KRITERIA PENGUJIAN PROGRAM}{14}
+=======
+\contentsline {chapter}{\numberline {1}PROSEDUR VERIFIKASI / VALIDASI SPESIFIKASI PROGRAM}{1}
+\contentsline {section}{\numberline {1.1}Pengujian Permintaan Terhadap Objek Pajak}{2}
+\contentsline {subsection}{\numberline {1.1.1}Nomor Objek Pajak}{2}
+\contentsline {subsection}{\numberline {1.1.2}Luas Bumi Objek Pajak}{2}
+\contentsline {subsection}{\numberline {1.1.3}Luas Bangunan Objek Pajak}{2}
+\contentsline {subsection}{\numberline {1.1.4}NJOP Bumi Objek Pajak}{3}
+\contentsline {subsection}{\numberline {1.1.5}NJOP Bangunan Objek Pajak}{3}
+\contentsline {subsection}{\numberline {1.1.6}Nama Jalan Objek Pajak}{3}
+\contentsline {subsection}{\numberline {1.1.7}RT dan RW Objek Pajak}{3}
+\contentsline {subsection}{\numberline {1.1.8}Nama Kelurahan Objek Pajak}{4}
+\contentsline {subsection}{\numberline {1.1.9}Nama Kecamatan Objek Pajak}{4}
+\contentsline {subsection}{\numberline {1.1.10}Nomor Identitas Subjek Pajak}{4}
+\contentsline {section}{\numberline {1.2}Pengujian Permintaan Terhadap Data Subjek Pajak}{5}
+\contentsline {subsection}{\numberline {1.2.1}Nama Subjek Pajak}{5}
+\contentsline {subsection}{\numberline {1.2.2}Nama Jalan Alamat Subjek Pajak}{5}
+\contentsline {subsection}{\numberline {1.2.3}RT dan RW dari Alamat Subjek Pajak}{5}
+\contentsline {subsection}{\numberline {1.2.4}Nama Kelurahan dari Alamat Subjek Pajak}{6}
+\contentsline {subsection}{\numberline {1.2.5}Nama Kota atau Kabupaten dari Alamat Subjek Pajak}{6}
+\contentsline {section}{\numberline {1.3}Pengujian Permintaan Data Ketetapan}{6}
+\contentsline {subsection}{\numberline {1.3.1}Pengujian Atas Daftar Ketetapan}{6}
+\contentsline {subsection}{\numberline {1.3.2}Pengujian Besarnya NIlai Pajak Terhutang Tiap Tahun Pajak}{7}
+\contentsline {subsection}{\numberline {1.3.3}Pengujian Status Pembayaran Untuk Tiap Tahun Pajak}{8}
+\contentsline {section}{\numberline {1.4}Pengujian Modul \textit {Service}}{8}
+\contentsline {subsection}{\numberline {1.4.1}Pengujian Terhadap Kelas \texttt {DatObjekPajakService}}{8}
+\contentsline {subsection}{\numberline {1.4.2}Pengujian Terhadap Kelas \texttt {DatSubjekPajakService}}{9}
+\contentsline {subsection}{\numberline {1.4.3}Pengujian Terhadap Kelas \texttt {SpptService}}{10}
+\contentsline {chapter}{\numberline {2}PETUGAS VERIFIKASI ATAU VALIDASI PROGRAM}{11}
+\contentsline {chapter}{\numberline {3}JADWAL PELAKSANAAN}{12}
+>>>>>>> f6adbf289a5d25679d8a151dafd7a62049e5a3fe

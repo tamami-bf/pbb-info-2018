@@ -1,0 +1,3 @@
+repository lokal untuk ini adalah propStdyLykSisBphtb
+jadi kalo add remote pake ini :
+git remote add propStdyLykSisBphtb git@github.com:tamami/proposal-studi-kelayakan-sis-bphtb.git

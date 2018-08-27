@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="808" height="450">
+  <title>UML Diagrammhierarchie</title>
+  <rect x="415" y="20" width="100" height="50" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="465" y="49" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;font-style:italic;">Diagram</text>
+  <path d="M245,115 V100 H615 V115 M465,100 V85 h-6 l6,-15 l6,15 h-6" style="fill:none;stroke:black;stroke-width:1;"/>
+  <rect x="195" y="115" width="100" height="50" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="245" y="136" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;font-style:italic;">Structure<tspan x="245" y="153">Diagram</tspan></text>
+  <rect x="565" y="115" width="100" height="50" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="615" y="136" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;font-style:italic;">Behaviour<tspan x="615" y="153">Diagram</tspan></text>
+  <path d="M65,285 V195 H425 V285 M125,210 V195 M185,285 V195 M305,285 V195 M245,210 V180 h-6 l6,-15 l6,15 h-6" style="fill:none;stroke:black;stroke-width:1;"/>
+  <path d="M555,210 V195 H735 V285 M675,210 V195 M615,285 V180 h-6 l6,-15 l6,15 h-6" style="fill:none;stroke:black;stroke-width:1;"/>
+  <rect x="75" y="210" width="100" height="50" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="125" y="231" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;">Class<tspan x="125" y="248">Diagram</tspan></text>
+  <rect x="195" y="210" width="100" height="50" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="245" y="231" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;">Component<tspan x="245" y="248">Diagram</tspan></text>
+  <rect x="315" y="210" width="100" height="50" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="365" y="231" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;">Object<tspan x="365" y="248">Diagram</tspan></text>
+  <rect x="505" y="210" width="100" height="50" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="555" y="231" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;">Activity<tspan x="555" y="248">Diagram</tspan></text>
+  <rect x="625" y="210" width="100" height="50" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="675" y="231" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;">Use Case<tspan x="675" y="248">Diagram</tspan></text>
+  <rect x="15" y="285" width="100" height="50" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="65" y="306" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;">Profile<tspan x="65" y="323">Diagram</tspan></text>
+  <rect x="135" y="285" width="100" height="60" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="185" y="304" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;">Composite<tspan x="185" y="320">Structure</tspan><tspan x="185" y="336">Diagram</tspan></text>
+  <rect x="255" y="285" width="100" height="50" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="305" y="306" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;">Deployment<tspan x="305" y="323">Diagram</tspan></text>
+  <rect x="375" y="285" width="100" height="50" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="425" y="306" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;">Package<tspan x="425" y="323">Diagram</tspan></text>
+  <rect x="565" y="285" width="100" height="50" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="615" y="306" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;font-style:italic;">Interaction<tspan x="615" y="323">Diagram</tspan></text>
+  <rect x="685" y="285" width="100" height="60" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="735" y="304" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;">State<tspan x="735" y="320">Machine</tspan><tspan x="735" y="336">Diagram</tspan></text>
+  <path d="M395,380 V365 H720 V380 M505,380 V365 M615,380 V350 h-6 l6,-15 l6,15 h-6" style="fill:none;stroke:black;stroke-width:1;"/>
+  <rect x="345" y="380" width="100" height="50" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="395" y="401" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;">Sequence<tspan x="395" y="418">Diagram</tspan></text>
+  <rect x="450" y="380" width="110" height="50" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="505" y="401" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;">Communication<tspan x="505" y="418">Diagram</tspan></text>
+  <rect x="565" y="380" width="100" height="60" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="615" y="399" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;">Interaction<tspan x="615" y="415">Overview</tspan><tspan x="615" y="431">Diagram</tspan></text>
+  <rect x="670" y="380" width="100" height="50" style="fill:white;stroke:black;stroke-width:1;"/>
+  <text x="720" y="401" style="fill:black;font-family:Arial,sans-serif;font-size:14;text-anchor:middle;">Timing<tspan x="720" y="418">Diagram</tspan></text>
+  <polygon points="15,430 15,395 98,395 98,407 110,407 110,430 15,430" style="fill:white;stroke:black;stroke-width:1"/>
+  <polygon points="98,395 98,407 110,407 98,395 " style="fill:white;stroke:black;stroke-width:1"/>
+  <text x="60" y="418" style="fill:black;font-family:Arial,sans-serif;font-size:12;text-anchor:middle;font-style:italic;">Notation: UML</text>
+</svg>

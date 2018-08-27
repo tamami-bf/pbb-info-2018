@@ -1,0 +1,25 @@
+\babel@toc {bahasa}{}
+\contentsline {chapter}{\numberline {1}TAHAPAN IMPLEMENTASI}{1}
+\contentsline {section}{\numberline {1.1}Persiapan Perangkat Keras}{1}
+\contentsline {section}{\numberline {1.2}Persiapan Perangkat Lunak}{2}
+\contentsline {section}{\numberline {1.3}Persiapan Basis Data}{2}
+\contentsline {section}{\numberline {1.4}Persiapan Fasilitas Fisik}{2}
+\contentsline {section}{\numberline {1.5}Pelatihan Pemakai}{3}
+\contentsline {chapter}{\numberline {2}RANCANGAN BASIS DATA}{4}
+\contentsline {section}{\numberline {2.1}Tabel SPPT}{4}
+\contentsline {section}{\numberline {2.2}Tabel DAT\_OBJEK\_PAJAK}{6}
+\contentsline {section}{\numberline {2.3}Tabel DAT\_SUBJEK\_PAJAK}{7}
+\contentsline {section}{\numberline {2.4}Tabel REF\_KECAMATAN}{8}
+\contentsline {section}{\numberline {2.5}Tabel REF\_KELURAHAN}{8}
+\contentsline {chapter}{\numberline {3}LOKASI SISTEM BASIS DATA}{9}
+\contentsline {chapter}{\numberline {4}SKEMA DAN KAMUS DATA}{10}
+\contentsline {section}{\numberline {4.1}Skema Basis Data}{10}
+\contentsline {section}{\numberline {4.2}Kamus Data}{12}
+\contentsline {subsection}{\numberline {4.2.1}Tabel SPPT}{12}
+\contentsline {subsection}{\numberline {4.2.2}Tabel DAT\_OBJEK\_PAJAK}{16}
+\contentsline {subsection}{\numberline {4.2.3}Tabel DAT\_SUBJEK\_PAJAK}{18}
+\contentsline {subsection}{\numberline {4.2.4}Tabel REF\_KECAMATAN}{19}
+\contentsline {subsection}{\numberline {4.2.5}Tabel REF\_KELURAHAN}{20}
+\contentsline {chapter}{\numberline {5}BESARAN}{22}
+\contentsline {chapter}{\numberline {6}JENIS DATABASE MANAGEMENT SYSTEM}{23}
+\contentsline {chapter}{\numberline {7}JENIS APLIKASI PENGGUNA}{24}

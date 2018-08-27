@@ -1,0 +1,454 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.19)  10 JUN 2018 20:41
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**00.book.tex
+(./00.book.tex
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/03/24 v5.7 Page Geometry
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count89
+\Gm@cntv=\count90
+\c@Gm@tempcnt=\count91
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks16
+\footnotemargin=\dimen113
+\c@pp@next@reset=\count92
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/02/14 3.18 The Babel package
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel-indonesian/bahasa.ldf
+Language: bahasa 2017/02/15 v1.0m Bahasa Indonesia support from the babel syste
+m
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+Language: indonesian 2017/02/15 v1.0m Bahasa Indonesia support from the babel s
+ystem
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/02/14 3.18 Babel common definitions
+\babel@savecnt=\count93
+\U@D=\dimen114
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count94
+))))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks17
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/paralist/paralist.sty
+Package: paralist 2017/01/22 v2.7 Extended list environments
+\pltopsep=\skip43
+\plpartopsep=\skip44
+\plitemsep=\skip45
+\plparsep=\skip46
+\pl@lab=\toks18
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count95
+\float@exts=\toks19
+\float@box=\box26
+\@float@everytoks=\toks20
+\@floatcapt=\box27
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count96
+\lst@gtempboxa=\box28
+\lst@token=\toks21
+\lst@length=\count97
+\lst@currlwidth=\dimen115
+\lst@column=\count98
+\lst@pos=\count99
+\lst@lostspace=\dimen116
+\lst@width=\dimen117
+\lst@newlines=\count100
+\lst@lineno=\count101
+\lst@maxwidth=\dimen118
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count102
+\lst@skipnumbers=\count103
+\lst@framebox=\box29
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+\@indexfile=\write3
+\openout3 = `00.book.idx'.
+
+
+Writing index file 00.book.idx
+(./00.book.aux (./02.pengesahan.aux) (./03.struktur-db.aux)
+(./04.relasi-entity.aux))
+\openout1 = `00.book.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.65189pt, 418.36942pt, 89.6519pt)
+* v-part:(T,H,B)=(101.38141pt, 591.38295pt, 152.07211pt)
+* \paperwidth=597.6732pt
+* \paperheight=844.83647pt
+* \textwidth=418.36942pt
+* \textheight=591.38295pt
+* \oddsidemargin=17.3819pt
+* \evensidemargin=17.3819pt
+* \topmargin=-2.76237pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=47.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count104
+\scratchdimen=\dimen119
+\scratchbox=\box30
+\nofMPsegments=\count105
+\nofMParguments=\count106
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count107
+\MPscratchDim=\dimen120
+\MPnumerator=\count108
+\makeMPintoPDFobject=\count109
+\everyMPtoPDFconversion=\toks23
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Info: Redefining \celsius on input line 65.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 65.
+
+
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 65.
+Package gensymb Info: Using \Omega for \ohm on input line 65.
+
+Package gensymb Warning: Not defining \micro.
+
+\c@lstlisting=\count110
+(./01.title.tex
+<./resources/logo.jpg, id=1, 321.2pt x 311.1625pt>
+File: ./resources/logo.jpg Graphic file (type jpg)
+<use ./resources/logo.jpg>
+Package pdftex.def Info: ./resources/logo.jpg  used on input line 10.
+(pdftex.def)             Requested size: 209.18471pt x 202.65205pt.
+ [1
+
+
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./resou
+rces/logo.jpg>])
+\openout2 = `02.pengesahan.aux'.
+
+ (./02.pengesahan.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 4.
+) [1
+
+
+] (./00.book.toc)
+\tf@toc=\write4
+\openout4 = `00.book.toc'.
+
+
+[2
+
+
+] (./00.book.lof)
+\tf@lof=\write5
+\openout5 = `00.book.lof'.
+
+ [3
+
+]
+\openout2 = `03.struktur-db.aux'.
+
+ (./03.struktur-db.tex
+Bab 1.
+[1
+
+
+
+]
+<./resources/struktur-tabel-sppt.jpg, id=24, 307.1475pt x 841.1425pt>
+File: ./resources/struktur-tabel-sppt.jpg Graphic file (type jpg)
+<use ./resources/struktur-tabel-sppt.jpg>
+Package pdftex.def Info: ./resources/struktur-tabel-sppt.jpg  used on input lin
+e 19.
+(pdftex.def)             Requested size: 209.18471pt x 572.86778pt.
+ [2]
+Overfull \vbox (13.23483pt too high) has occurred while \output is active []
+
+
+[3 <./resources/struktur-tabel-sppt.jpg>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 27.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+[]\OT1/cmr/m/n/12 Besarnya pa-jak ter-hu-tang pa-da \OT1/cmr/m/it/12 fi-e-ld \O
+T1/cmr/m/n/12 atau ko-lom
+ []
+
+<./resources/struktur-tabel-dat-op.jpg, id=33, 261.97874pt x 533.995pt>
+File: ./resources/struktur-tabel-dat-op.jpg Graphic file (type jpg)
+<use ./resources/struktur-tabel-dat-op.jpg>
+Package pdftex.def Info: ./resources/struktur-tabel-dat-op.jpg  used on input l
+ine 40.
+(pdftex.def)             Requested size: 209.18471pt x 426.39807pt.
+[4]
+Underfull \hbox (badness 1484) in paragraph at lines 47--48
+\OT1/cmr/m/n/12 e-nai sub-jek pa-jak-nya se-per-ti na-ma dan ala-mat-nya. Struk
+-tur ta-bel da-ri
+ []
+
+<./resources/struktur-tabel-dat-sp.jpg, id=38, 259.97125pt x 244.915pt>
+File: ./resources/struktur-tabel-dat-sp.jpg Graphic file (type jpg)
+<use ./resources/struktur-tabel-dat-sp.jpg>
+Package pdftex.def Info: ./resources/struktur-tabel-dat-sp.jpg  used on input l
+ine 51.
+(pdftex.def)             Requested size: 209.18471pt x 197.06833pt.
+[5 <./resources/struktur-tabel-dat-op.jpg>]
+<./resources/struktur-tabel-ref-kec.jpg, id=42, 217.81375pt x 100.375pt>
+File: ./resources/struktur-tabel-ref-kec.jpg Graphic file (type jpg)
+<use ./resources/struktur-tabel-ref-kec.jpg>
+Package pdftex.def Info: ./resources/struktur-tabel-ref-kec.jpg  used on input 
+line 62.
+(pdftex.def)             Requested size: 209.18471pt x 96.39871pt.
+ [6 <./resources/struktur-tabel-dat-sp.jpg> <./resources/struktur-tabel-ref-kec
+.jpg>]
+<./resources/struktur-tabel-ref-kel.jpg, id=46, 244.915pt x 172.645pt>
+File: ./resources/struktur-tabel-ref-kel.jpg Graphic file (type jpg)
+<use ./resources/struktur-tabel-ref-kel.jpg>
+Package pdftex.def Info: ./resources/struktur-tabel-ref-kel.jpg  used on input 
+line 73.
+(pdftex.def)             Requested size: 209.18471pt x 147.46283pt.
+) [7 <./resources/struktur-tabel-ref-kel.jpg>]
+\openout2 = `04.relasi-entity.aux'.
+
+ (./04.relasi-entity.tex
+Bab 2.
+<./resources/db-diagram.png, id=50, 724.7075pt x 601.24625pt>
+File: ./resources/db-diagram.png Graphic file (type png)
+<use ./resources/db-diagram.png>
+Package pdftex.def Info: ./resources/db-diagram.png  used on input line 7.
+(pdftex.def)             Requested size: 418.36942pt x 347.09921pt.
+[8
+
+
+
+]
+Underfull \hbox (badness 1533) in paragraph at lines 16--17
+[]\OT1/cmr/m/n/12 Sedangkan hu-bung-an atau re-la-si an-ta-ra ta-bel \OT1/cmtt/
+m/n/12 DAT[]OBJEK[]PAJAK \OT1/cmr/m/n/12 de-ngan
+ []
+
+[9 <./resources/db-diagram.png>]) [10]
+No file 00.book.ind.
+(./00.book.aux (./02.pengesahan.aux) (./03.struktur-db.aux)
+(./04.relasi-entity.aux)) ) 
+Here is how much of TeX's memory you used:
+ 4302 strings out of 492649
+ 62584 string characters out of 6129622
+ 141599 words of memory out of 5000000
+ 8077 multiletter control sequences out of 15000+600000
+ 9779 words of font info for 34 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,8n,32p,549b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmti12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmtt12.pfb>
+Output written on 00.book.pdf (14 pages, 343056 bytes).
+PDF statistics:
+ 85 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,780 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.27)  30 APR 2018 21:35
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**00.book.tex
+(./00.book.tex
+LaTeX2e <2017/01/01> patch level 3
+Babel <3.9r> and hyphenation patterns for 5 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count90
+))
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+(/usr/share/texlive/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks16
+\footnotemargin=\dimen113
+\c@pp@next@reset=\count91
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/04/23 3.9r The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/04/23 3.9r Babel common definitions
+\babel@savecnt=\count92
+\U@D=\dimen114
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/paralist/paralist.sty
+Package: paralist 2017/01/22 v2.7 Extended list environments
+\pltopsep=\skip43
+\plpartopsep=\skip44
+\plitemsep=\skip45
+\plparsep=\skip46
+\pl@lab=\toks18
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count93
+\float@exts=\toks19
+\float@box=\box26
+\@float@everytoks=\toks20
+\@floatcapt=\box27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count94
+\lst@gtempboxa=\box28
+\lst@token=\toks21
+\lst@length=\count95
+\lst@currlwidth=\dimen115
+\lst@column=\count96
+\lst@pos=\count97
+\lst@lostspace=\dimen116
+\lst@width=\dimen117
+\lst@newlines=\count98
+\lst@lineno=\count99
+\lst@maxwidth=\dimen118
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count100
+\lst@skipnumbers=\count101
+\lst@framebox=\box29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2016/06/24 v6.83q Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen119
+\Hy@linkcounter=\count102
+\Hy@pagecounter=\count103
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count104
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4486.
+Package hyperref Info: Link nesting OFF on input line 4491.
+Package hyperref Info: Hyper index ON on input line 4494.
+Package hyperref Info: Plain pages OFF on input line 4501.
+Package hyperref Info: Backreferencing OFF on input line 4506.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4735.
+\c@Hy@tempcnt=\count105
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5088.
+\XeTeXLinkMargin=\dimen120
+\Fld@menulength=\count106
+\Field@Width=\dimen121
+\Fld@charsize=\dimen122
+Package hyperref Info: Hyper figures OFF on input line 6342.
+Package hyperref Info: Link nesting OFF on input line 6347.
+Package hyperref Info: Hyper index ON on input line 6350.
+Package hyperref Info: backreferencing OFF on input line 6357.
+Package hyperref Info: Link coloring OFF on input line 6362.
+Package hyperref Info: Link coloring with OCG OFF on input line 6367.
+Package hyperref Info: PDF/A mode OFF on input line 6372.
+LaTeX Info: Redefining \ref on input line 6412.
+LaTeX Info: Redefining \pageref on input line 6416.
+\Hy@abspage=\count107
+\c@Item=\count108
+\c@Hfootnote=\count109
+)
+
+Package hyperref Message: Driver: hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
+\Fld@listcount=\count110
+\c@bookmark@seq@number=\count111
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip47
+)
+(./00.book.aux)
+\openout1 = `00.book.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.65189pt, 418.36942pt, 89.6519pt)
+* v-part:(T,H,B)=(101.38141pt, 591.38295pt, 152.07211pt)
+* \paperwidth=597.6732pt
+* \paperheight=844.83647pt
+* \textwidth=418.36942pt
+* \textheight=591.38295pt
+* \oddsidemargin=17.3819pt
+* \evensidemargin=17.3819pt
+* \topmargin=-7.88858pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count112
+\scratchdimen=\dimen123
+\scratchbox=\box30
+\nofMPsegments=\count113
+\nofMParguments=\count114
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen124
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
+\everyMPtoPDFconversion=\toks23
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Info: Redefining \celsius on input line 45.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 45.
+
+
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 45.
+Package gensymb Info: Using \Omega for \ohm on input line 45.
+
+Package gensymb Warning: Not defining \micro.
+
+\c@lstlisting=\count118
+\AtBeginShipoutBox=\box31
+Package hyperref Info: Link coloring OFF on input line 45.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count119
+)
+LaTeX Info: Redefining \ref on input line 45.
+LaTeX Info: Redefining \pageref on input line 45.
+LaTeX Info: Redefining \nameref on input line 45.
+
+(./00.book.out) (./00.book.out)
+\@outlinefile=\write3
+\openout3 = `00.book.out'.
+
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (0.38318pt too wide) in paragraph at lines 74--75
+\OT1/cmr/m/n/12 ban-gan sis-tem meru-pakan teknologi yang mu-dah di-da-pat, mu-
+rah, dan tingkat
+ []
+
+[2]
+Overfull \hbox (1.94566pt too wide) in paragraph at lines 82--83
+[]\OT1/cmr/m/n/12 Menguraikan se-cara hukum apakah sis-tem in-for-masi yang aka
+n dikem-bangkan
+ []
+
+[3]
+Overfull \hbox (12.06361pt too wide) in paragraph at lines 99--100
+[]\OT1/cmr/m/n/12 Kelayakan teknik meny-oroti ke-bu-tuhan sis-tem yang telah di
+s-usun dari teknologi
+ []
+
+
+Overfull \hbox (8.21643pt too wide) in paragraph at lines 101--102
+\OT1/cmr/m/n/12 tar-get peng-guna yang di-hara-p-kan yaitu peng-guna yang tidak
+ memi-liki keahlian
+ []
+
+
+Overfull \hbox (0.20123pt too wide) in paragraph at lines 104--105
+[]\OT1/cmr/m/n/12 Kebutuhan Perangkat Keras, Perangkat Lu-nak, dan Perangkat Ja
+ringan 
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 113.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 113.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 113.
+[4]
+Overfull \hbox (80.65916pt too wide) in paragraph at lines 169--184
+ [][] 
+ []
+
+[5] <./resources/arsitektur-sistem.png, id=63, 694.595pt x 396.48125pt>
+File: ./resources/arsitektur-sistem.png Graphic file (type png)
+
+<use ./resources/arsitektur-sistem.png>
+Package pdftex.def Info: ./resources/arsitektur-sistem.png used on input line 1
+94.
+(pdftex.def)             Requested size: 418.36942pt x 238.8162pt.
+ [6 <./resources/arsitektur-sistem.png (PNG copy)>] [7]
+Overfull \hbox (37.58044pt too wide) in paragraph at lines 231--240
+ [][] 
+ []
+
+
+Overfull \hbox (1.78452pt too wide) in paragraph at lines 242--243
+[]\OT1/cmr/m/n/12 Basis data yang di-gu-nakan masih belum ter-in-te-grasi den-g
+an baik, karena
+ []
+
+[8]
+Overfull \hbox (26.21805pt too wide) in paragraph at lines 254--267
+ [][] 
+ []
+
+
+Overfull \hbox (14.63577pt too wide) in paragraph at lines 269--270
+\OT1/cmr/m/n/12 da-p-atan, Keuan-gan dan Aset Daerah cukup un-tuk mem-buka atau
+ melayani
+ []
+
+
+Overfull \hbox (0.44841pt too wide) in paragraph at lines 271--272
+\OT1/cmr/m/n/12 teknologi yang di-gu-nakan ter-bilang cukup baru, se-hingga ni-
+lai ke-layakan
+ []
+
+[9]
+Overfull \hbox (1.53195pt too wide) in paragraph at lines 293--294
+\OT1/cmr/m/n/12 gu-nakan pada awal pem-bu-atan sis-tem, se-belum sis-tem di-op-
+erasikan. 
+ []
+
+[10]
+Overfull \hbox (0.54863pt too wide) in paragraph at lines 311--312
+[]\OT1/cmr/m/n/12 Keuntungan tak berwu-jud, adalah ke-un-tun-gan yang sulit ata
+u tidak
+ []
+
+
+Overfull \hbox (0.48335pt too wide) in paragraph at lines 339--340
+[]\OT1/cmr/m/n/12 Nilai in-ves-tasi me-mang berni-lai 0 (nol) ru-piah karena se
+lu-ruh sarana
+ []
+
+[11] [12]
+Overfull \hbox (6.2319pt too wide) in paragraph at lines 366--367
+\OT1/cmr/m/n/12 lan-gan pem-bagi adalah 0 (nol) se-hingga meng-hasilkan ni-lai 
+demikian,
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 377.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 377.
+ [13] [14]
+Overfull \hbox (6.35396pt too wide) in paragraph at lines 413--414
+[]\OT1/cmr/m/n/12 Proyek pem-ban-gu-nan sis-tem in-for-masi yang akan dikem-ban
+gkan se-cara hukum
+ []
+
+[15]
+Overfull \hbox (9.62047pt too wide) in paragraph at lines 444--445
+[]\OT1/cmr/m/it/12 Performance \OT1/cmr/m/n/12 atau kin-erja adalah un-tuk meng
+e-tahui apakah sis-tem menye-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+[]\OT1/cmr/m/n/12 Waktu yang dibu-tuhkan un-tuk
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+\OT1/cmr/m/n/12 mem-bu-tuhkan waktu cukup lama
+ []
+
+
+Overfull \hbox (3.96915pt too wide) in paragraph at lines 448--455
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1325) in paragraph at lines 465--465
+[]\OT1/cmr/m/n/12 Informasi yang dis-ajikan hanya da-
+ []
+
+
+Overfull \hbox (3.96915pt too wide) in paragraph at lines 461--468
+ [][] 
+ []
+
+
+Overfull \hbox (25.77267pt too wide) in paragraph at lines 470--471
+[]\OT1/cmr/m/it/12 Economy \OT1/cmr/m/n/12 atau ekonomi adalah un-tuk menge-tah
+ui apakah sis-tem menawarkan
+ []
+
+
+Overfull \hbox (3.96915pt too wide) in paragraph at lines 474--481
+ [][] 
+ []
+
+[16]
+Overfull \hbox (3.96915pt too wide) in paragraph at lines 487--494
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1383) in paragraph at lines 506--506
+[]\OT1/cmr/m/n/12 Wajib pa-jak harus datang ke kan-
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 506--506
+\OT1/cmr/m/n/12 tor hanya un-tuk menge-tahui sta-tus
+ []
+
+
+Underfull \hbox (badness 3735) in paragraph at lines 506--506
+\OT1/cmr/m/n/12 pem-ba-yaran atau pe-ruba-han nama
+ []
+
+
+Underfull \hbox (badness 2717) in paragraph at lines 506--507
+[]\OT1/cmr/m/n/12 Wajib pa-jak da-pat melakukan pe-
+ []
+
+
+Underfull \hbox (badness 3138) in paragraph at lines 506--507
+\OT1/cmr/m/n/12 merik-saan se-cara mandiri ter-hadap
+ []
+
+
+Overfull \hbox (3.96915pt too wide) in paragraph at lines 502--509
+ [][] 
+ []
+
+
+Overfull \hbox (1.72287pt too wide) in paragraph at lines 511--512
+[]\OT1/cmr/m/it/12 Services \OT1/cmr/m/n/12 atau pelayanan adalah un-tuk menge-
+tahui apakah sis-tem menye-
+ []
+
+
+Overfull \hbox (37.46053pt too wide) in paragraph at lines 511--512
+\OT1/cmr/m/n/12 di-akan layanan yang di-inginkan dan han-dal pada siapa saja ya
+ng menginginkan-
+ []
+
+[17]
+Underfull \hbox (badness 1616) in paragraph at lines 519--519
+[]\OT1/cmr/m/n/12 Pelayanan san-gat mem-be-bani wa-jib
+ []
+
+
+Overfull \hbox (3.96915pt too wide) in paragraph at lines 515--522
+ [][] 
+ []
+
+[18] <./resources/gantt-chart.png, id=158, 1406.25375pt x 314.17375pt>
+File: ./resources/gantt-chart.png Graphic file (type png)
+
+<use ./resources/gantt-chart.png>
+Package pdftex.def Info: ./resources/gantt-chart.png used on input line 551.
+(pdftex.def)             Requested size: 418.36942pt x 93.46664pt.
+ [19 <./resources/gantt-chart.png (PNG copy)>]
+Overfull \hbox (41.16214pt too wide) in paragraph at lines 572--572
+[]\OT1/cmr/bx/n/17.28 SARANA DAN PRASARANA YANG MELIPUTI
+ []
+
+[20]
+Overfull \hbox (25.31487pt too wide) in paragraph at lines 599--600
+[]\OT1/cmr/m/n/12 Kabel ini ter-diri dari 4 (em-pat) pasang warna yang di-gu-na
+kan se-ba-gai penghubung
+ []
+
+[21]
+Overfull \hbox (21.80998pt too wide) in paragraph at lines 628--629
+[]\OT1/cmr/m/n/12 Ini akan lebih efek-tif dan efisien apa-bila di-gu-nakan-nya 
+\OT1/cmr/m/it/12 switch \OT1/cmr/m/n/12 se-ba-gai penghubung
+ []
+
+[22] [23] [24]
+Overfull \hbox (8.15115pt too wide) in paragraph at lines 654--655
+\OT1/cmr/m/n/12 terse-dia dan cukup un-tuk men-gako-modir ber-jalan-nya sis-tem
+ in-for-masi yang nantinya
+ []
+
+[25]
+Overfull \hbox (0.22662pt too wide) in paragraph at lines 675--676
+\OT1/cmr/m/n/12 akan ap-likasi \OT1/cmr/m/it/12 web \OT1/cmr/m/n/12 yang telah 
+diban-gun yaitu sis-tem in-for-masi PBB, perangkat
+ []
+
+
+Overfull \hbox (3.12477pt too wide) in paragraph at lines 682--683
+\OT1/cmr/m/n/12 dan di-han-curkan se-cara berulang-ulang, melainkan tetap ter-s
+im-pan pada
+ []
+
+[26]
+Overfull \hbox (7.8449pt too wide) in paragraph at lines 686--687
+[]\OT1/cmr/m/it/12 Servlet \OT1/cmr/m/n/12 memi-liki ke-mam-puan yang lengkap a
+n-tara lain mampu melakukan
+ []
+
+[27]
+Overfull \hbox (9.06503pt too wide) in paragraph at lines 722--723
+\OT1/cmr/m/n/12 atau struk-tur ba-sis data, melainkan da-pat pula un-tuk mem-bu
+at de-sain jaringan
+ []
+
+
+Overfull \hbox (3.05954pt too wide) in paragraph at lines 722--723
+\OT1/cmr/m/n/12 kom-puter, de-sain rangka-ian elek-tronik, dan be-ber-apa de-sa
+in lain se-ba-gaimana
+ []
+
+
+Overfull \hbox (87.14302pt too wide) in paragraph at lines 722--723
+\OT1/cmr/m/n/12 ter-da-pat pada ha-la-man \OT1/cmr/m/it/12 repos-i-tory \OT1/cm
+r/m/n/12 Dia di ala-mat http://dia-installer.de/shapes/index.html.en. 
+ []
+
+[28]
+Overfull \hbox (3.62991pt too wide) in paragraph at lines 728--729
+\OT1/cmr/m/n/12 yang menye-di-akan se-cara gratis. Se-ba-gai con-toh adalah Net
+-beans dan Eclipse.
+ []
+
+[29] [30]
+Overfull \hbox (26.49402pt too wide) in paragraph at lines 771--772
+\OT1/cmr/m/n/12 http://www.oracle.com/technetwork/apps-tech/jdbc-112010-090769.
+html, karena
+ []
+
+
+Overfull \hbox (28.83737pt too wide) in paragraph at lines 771--772
+\OT1/cmr/m/n/12 kita meng-gu-nakan \OT1/cmr/m/it/12 Maven \OT1/cmr/m/n/12 se-ba
+-gai \OT1/cmr/m/it/12 build-tools\OT1/cmr/m/n/12 , se-hingga kita cukup mendekl
+arasikan
+ []
+
+[31] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+)
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 774.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 774.
+ [32]
+Overfull \hbox (1.36234pt too wide) in paragraph at lines 805--806
+\OT1/cmr/m/n/12 karena hanya menampilkan in-for-masi pen-catatan pem-ba-yaran, 
+na-mun un-tuk meng-
+ []
+
+[33] [34]
+Overfull \hbox (11.3582pt too wide) in paragraph at lines 815--816
+\OT1/cmr/m/n/12 menim-bulkan tag-i-han baru pada peladen BPP-KAD Kabu-paten Bre
+bes yang mungkin
+ []
+
+
+Overfull \hbox (8.32208pt too wide) in paragraph at lines 817--817
+[]\OT1/cmr/bx/n/17.28 WAKTU DAN BI-AYA YANG DIBU-TUHKAN
+ []
+
+
+Overfull \hbox (11.96637pt too wide) in paragraph at lines 817--817
+\OT1/cmr/bx/n/17.28 DALAM PEM-BU-ATAN / PENGEM-BAN-GAN
+ []
+
+
+Overfull \hbox (18.1442pt too wide) in paragraph at lines 817--817
+\OT1/cmr/bx/n/17.28 SIS-TEM AP-LIKASI SE-CARA MENYELU-RUH 
+ []
+
+
+Overfull \hbox (5.9621pt too wide) in paragraph at lines 823--823
+[]\OT1/cmr/bx/n/17.28 MANFAAT DAN DAMPAK DARI PENGEM-
+ []
+
+
+Overfull \hbox (1.19707pt too wide) in paragraph at lines 825--826
+\OT1/cmr/m/n/12 Beberapa man-faat dan dampak yang di-da-pat dari pen-go-la-han 
+data nantinya adalah
+ []
+
+[35]
+Overfull \hbox (7.75533pt too wide) in paragraph at lines 828--829
+[]\OT1/cmr/m/n/12 Masyarakat wa-jib pa-jak da-pat den-gan mu-dah men-gak-ses da
+ta objek-pajaknya,
+ []
+
+
+Overfull \hbox (3.02066pt too wide) in paragraph at lines 830--831
+\OT1/cmr/m/n/12 ngut tingkat De-sa/Kelu-ra-han dalam melak-sanakan ke-wa-jiban-
+nya meneruskan
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 835.
+[36]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 835.
+ (./00.book.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 835.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 835.
+Package rerunfilecheck Info: File `00.book.out' has not changed.
+(rerunfilecheck)             Checksum: 75026CA576D84D825772DD7B2304E973;548.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 835.
+ ) 
+Here is how much of TeX's memory you used:
+ 7728 strings out of 494902
+ 113204 string characters out of 6179891
+ 227775 words of memory out of 5000000
+ 10811 multiletter control sequences out of 15000+600000
+ 8103 words of font info for 29 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 28i,9n,51p,994b,1311s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmtt12.pfb>
+Output written on 00.book.pdf (36 pages, 214389 bytes).
+PDF statistics:
+ 336 PDF objects out of 1000 (max. 8388607)
+ 285 compressed objects within 3 object streams
+ 131 named destinations out of 1000 (max. 500000)
+ 59 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,4 @@
+\babel@toc {bahasa}{}
+\contentsline {chapter}{\numberline {1}PENDAHULUAN}{1}
+\contentsline {chapter}{\numberline {2}INSTALASI PROGRAM}{3}
+\contentsline {chapter}{\numberline {3}PROSEDUR OPERASI}{5}

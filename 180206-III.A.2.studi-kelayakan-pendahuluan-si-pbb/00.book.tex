@@ -1,0 +1,380 @@
+%%%%%%%%%%%%%%%%%%%% book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for the chapters of your "monograph"
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[pdftex,12pt, oneside]{article}
+
+% choose options for [] as required from the list
+% in the Reference Guide, Sect. 2.2
+%\usepackage[paperwidth=8.5in, paperheight=13in]{geometry} % Folio
+\usepackage[paperwidth=8.27in, paperheight=11.69in]{geometry} % A4
+
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+%\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+\usepackage[english]{babel}
+\usepackage{enumerate}
+\usepackage{paralist}
+\usepackage{float}
+\usepackage{gensymb}  
+\usepackage{listings}
+\usepackage{hyperref}
+%\usepackage{siunitx}
+% etc.
+% see the list of further useful packages
+% in the Reference Guide, Sects. 2.3, 3.1-3.3
+\renewcommand{\baselinestretch}{1.5}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%\input{./01.title.tex}
+\begin{center}
+{\large STUDI KELAYAKAN PENDAHULUAN PEMBANGUNAN LAYANAN SISTEM INFORMASI PEMBAYARAN PAJAK BUMI DAN BANGUNAN PERDESAAN DAN PERKOTAAN DI KABUPATEN BREBES}
+\\[1cm]
+6 Februari 2018\\
+Priyanto Tamami, S.Kom.
+\end{center}
+
+\section{PENENTUAN MASALAH DAN PELUANG YANG DITUJU SISTEM}
+
+\subsection{Penentuan Masalah}
+
+Pada sejarah bangsa Indonesia, pajak atas bumi dan bangunan dapat dikatakan pajak yang paling tua. Pajak Bumi dan Bangunan (PBB) sejatinya sudah ada sejak masa sebelum penjajahan hingga saat ini, hanya saja aturan perpajakan yang diterapkan berbeda-beda pada masing-masing zaman.
+
+Dahulu, rakyat Indonesia sudah dibebani dengan persembahan upeti dalam bentuk natura kepada para penguasa sebagai tanda pengakuan atas kepemimpinan dan bukti rasa syukur atas pengayoman dari penguasa tersebut. Pada masa penjajahan Belanda, pajak bumi dikenal dengan nama \textit{Land Rent}. Ketentuannya saat itu bahwa \textit{Land Rent} dikenakan terhadap semua jenis tanah produktif dan wajib pajaknya adalah desa (Kepala Desa) dan bukan perseorangan, karena kepala desa dianggap sebagai penyewa yang harus membayar sewa tanah. Besarnya tarif \textit{Land Rent} bervariasi antara 20\% hingga 50\% dari hasil produksi pertanian tergantung pada jenis produksinya.
+
+Pada masa penjajahan Jepang, \textit{Land Rent} atau \textit{Landrente} diubah menjadi \textit{Land Tax}. Administrasi Pajak ditangani oleh kantor pajak yang disebut \textit{Zaimubu Shuzeika} yang sekaligus bertugas untuk melakukan survey dan pemetaan di pulau Jawa dan Madura.
+
+Pada masa setelah kemerdekaan, pemungutan pajak jenis ini masih berlangsung dengan nama Pajak Bumi yang kemudian diganti dengan Pajak Pendapatan Tanah. Periode tahun 1945 sampai tahun 1951. Kemudian dengan desakan dari golongan yang dipimpin oleh Tauchid, yang dikenal dengan nama Mosi Tauchid, maka Pajak Pendapatan Tanah pun dihapuskan, sebagai gantinya, dikeluarkan pajak baru dengan nama Pajak Penghasilan atas Tanah Pertanian (PPTP).
+
+Pada tahun 1951 sampai tahun 1959, setelah dikeluarkan Undang Undang Nomor 14 Tahun 1951 tentang Penghapusan Pajak Bumi di Wilayah Negara Republik Indonesia, maka lahirlah Jawatan Pendaftaran dan Pajak Penghasilan Tanah Milik Indonesia (P3TMI) yang bertugas melakukan pendaftaran atas tanah-tanah milik adat yang ada di Indonesia. Karena tugasnya hanya mengurus pendaftaran tanah saja, maka namanya diubah kembali menjadi jawatan Pendaftaran Tanah Milik Indonesia (PTMI) dan bertugas sama seperti sebelumnya ditambah dengan kewenangan untuk mengeluarkan Surat Pendaftaran sementara terhadap tanah milik yang sudah terdaftar.
+
+Pada tahun 1959 sampai tahun 1985, nama jawatan yang mengelola Pajak Hasil Bumi menjadi Direktorat Pajak Hasil Bumi yang dalam pelaksanaannya diubah menjadi Direktorat Iuran Pembangunan Daerah (DIT-IPEDA), dan nama Pajak Hasil Bumi diubah menjadi Iuran Pembangan Daerah (IPEDA). Pengenaannya diberlakukan pada tanah-tanah sektor perdesaan, perkotaan, perhutanan, perkebunan, dan pertambangan.
+
+Selain IPEDA, pada masa itu dipungut pula 6 (enam) pajak kekayaan dan pungutan lain atas tanah dan bangunan yang menimbulkan tumpang tindih antara satu pajak dengan pajak lainnya dan menyebabkan adanya beban pajak berganda bagi masyarakat. Dengan adanya reformasi perpajakan pertama yang dimulai pada tahun 1983, antara lain dengan penyederhanaan jumlah dan jenis pajak atas tanah dan bangunan melalui pengundangan Undang Undang Nomor 12 Tahun 1985, maka 7 (tujuh) jenis pajak kebendaan dan kekayaan atas tanah dan bangunan disederhanakan menjadi PBB.
+
+Pemberlakuan Undang Undang Nomor 12 Tahun 1985 tentang Pajak Bumi dan Bangunan didasari pemikiran antara lain bahwa bumi dan bangunan memberikan keuntungan dan atau kedudukan sosial ekonomi yang lebih baik bagi orang atau badan yang mempunyai suatu hak atasnya dan memperoleh manfaat darinya, oleh sebab itu wajar apabila kepada mereka diwajibkan memberikan sebagian dari manfaat atau kenikmatan yang diperolehnya kepada negara melalui pajak.
+
+Pelaksanaan reformasi di bidang pajak atas tanah dan bangunan disamping berupaya menyederhanakan berbagai pungutan pajak atas tanah dan bangunan juga tetap memberikan tekanan terhadap upaya untuk meningkatkan penerimaan dan memperhatikan aspek keadilan serta meminimalkan dampak terhadap distorsi kegiatan ekonomi dan sosial mengingat PBB merupakan salah satu sumber utama penerimaan daerah mengingat PBB adalah penerimaan pajak Pusat yang keseluruhan hasilnya diserahkan kepada Daerah.
+
+Menyadari pentingnya penerimaan PBB bagi pembiayaan pembangunan Daerah, maka pada tahun 1989 dilakukan pembaharuan sistem administrasi penerimaan PBB melalui Sistem Tempat Pembayaran (SISTEP). SISTEP diujicobakan pertama kali pada tahun 1989 di wilayah Kabupaten Tangerang, yang secara bertahap sehingga pada akhir tahun 1994 seluruh Kabupaten / Kota di Indonesia telah melaksanakan sistem administrasi pemungutan PBB dengan pola SISTEP.
+
+Pokok-pokok ketentuan SISTEP antara lain meliputi : 
+
+\begin{itemize}
+
+	\item Hanya ada satu tempat pembayaran untuk setiap wilayah pembayaran PBB tertentu sebagaimana tercantum dalam Surat Pemberitahuan Pajak Terhutang (SPPT) yang diusahakan berdekatan dengan lokasi objek pajak.
+	
+	\item Pembayaran PBB dilakukan sekaligus dalam satu kali pembayaran dan tidak dapat diangsur.
+	
+	\item Jatuh tempo pembayaran PBB diatur seragam sehingga hanya terdapat satu tanggal jatuh tempo.
+	
+	\item Surat Tanda Terima Setoran (STTS) PBB telah tersedia di tempat pembayaran sebelum SPPT diterima oleh wajib pajak.
+	
+	\item Administrasi PBB harus dilaksanakan dengan dukungan komputer.
+	
+	\item Sistem Pemantauan STTS dan pelaporan pembayaran didesain sedemikian rupa sehingga perkembangan pembayaran PBB diketahui lebih cepat oleh instansi terkait.
+	
+	\item Secara sistem, SISTEP mampu menerbitkan daftar negatif (\textit{negative list}) wajib pajak yang tidak memenuhi kewajiban PBB pada saat jatuh tempo pembayaran sehingga penegakan hukum dapat dilaksanakan.
+	
+\end{itemize}
+
+Dengan diberlakukannya SISTEP, penerimaan PBB mengalami peningkatan yang berarti. Keberhasilan pembaharuan sistem administrasi pemungutan dengan pola SISTEP terutama menyangkut perubahan sistem pemungutan PBB yang sebelumnya dilakukan oleh petugas pemungut desa / kelurahan secara bertahap diambil alih melalui sistem perbankan yang ditunjang dengan komputerisasi administrasi penerimaan PBB. Pemberian pelayanan kepada wajib pajak dalam rangka pembayaran PBB menjadi lebih mudah dan pelaksanaan penegakan hukum dapat lebih ditingkatkan.
+
+Pada tahun 1994 Pemerintah menerbitkan Undang Undang Nomor 12 Tahun 1994 tentang Perubahan Undang Undang Nomor 12 Tahun 1985 tentang Pajak Bumi dan Bangunan, esensi dari perubahan ini adalah penyesuaian atas praktek perkembangan penyelenggaraan kegiatan usaha yang belum tertampung dalam Undang Undang Nomor 12 Tahun 1985. Pada saat inilah Sistem Manajemen Informasi Objek Pajak yang dikenal dengan nama SISMIOP muncul dengan perbaikan pada manajemen objek pajak berupa pemberian Nomor Objek Pajak (NOP) yang baku.
+
+Selanjutnya seiring dengan bergulirnya reformasi di Indonesia, dan sejalan dengan tuntutan otonomi daerah setelah masa reformasi maka beberapa Pemerintah Daerah menuntut agar Pajak Bumi dan Bangunan Perdesaan dan Perkotaan menjadi pajak daerah, namun tidak semua Pemerintah Daerah setuju sehingga terjadi perdebatan pro dan kontra pengalihan Pajak Bumi dan Bangunan Perdesaan dan Perkotaan menjadi pajak daerah. Pemerintah Daerah yang setuju adalah mereka yang memiliki potensi penerimaan Pajak Bumi dan Bangunan Perdesaan dan Perkotaan yang besar (Kota-kota besar di Indonesia) karena akan menambahkan jumlah Pendapatan Asli Daerah, jika masih menjadi pajak pusat maka Pajak Bumi dan Bangunan yang kembali ke daerah penghasil dalam bentuk Dana Bagi Hasil hanya 64,8\% saja. Sementara itu Pemerintah Daerah yang tidak setuju dengan peralihan Pajak Bumi dan Bangunan Perdesaan dan Perkotaan menjadi pajak daerah adalah Pemerintah Daerah yang memiliki potensi penerimaan Pajak Bumi dan Bangunan Perdesaan dan Perkotaan yang kecil (Daerah yang bukan kota besar di Indonesia), selain itu dikeluhkan juga faktor lain diluar pendapatan seperti :
+
+\begin{itemize}
+
+	\item Sarana dan prasarana yang mendukung
+	
+	\item Keterbatasan Sumber Daya Manusia yang mampu mengelola Pajak Bumi dan Bangunan Perdesaan dan Perkotaan.
+	
+	\item Regulasi dan Standar Operasional Prosedur Pelayanan
+	
+	\item Sistem Manajemen Informasi Objek Pajak
+
+\end{itemize}
+
+Selain itu tantangan pengalihan Pajak Bumi dan Bangunan Perdesaan dan Perkotaan bagi Pemerintah Daerah antara lain kesiapan Kabupaten / Kota pada masa awal pengalihan yang belum optimal, sehingga dapat berdampak pada penurunan pelayanan, penerimaan, dan beberapa hal seperti : 
+
+\begin{itemize}
+	\item Kesenjangan (disparitas) kebijakan Pajak Bumi dan Bangunan Perdesaan dan Perkotaan antar Kabupaten / Kota.
+	\item Hilangnya potensi penerimaan bagi Provinsi (16,2\%) dan hilangnya potensi penerimaan insentif Pajak Bumi dan Bangunan khususnya bagi Kabupaten / Kota yang potensi Pajak Bumi dan Bangunan Perdesaan dan Perkotaan rendah.
+	\item Beban biaya pemungutan Pajak Bumi dan Bangunan Perdesaan dan Perkotaan yang cukup besar.
+\end{itemize}
+
+Kemudian pada tanggal 15 September 2009 terbitlah Undang Undang Nomor 28 Tahun 2009 tentang Pajak Daerah dan Retribusi Daerah dimana telah mengakomodir Pajak Bumi dan Bangunan Perdesaan dan Perkotaan menjadi Pajak Daerah yang paling lambat dilaksanakan pada tanggal 1 Januari 2014. 
+
+Adapun tujuan dari pengalihan Pajak Bumi dan Bangunan Perdesaan dan Perkotaan menjadi Pajak Daerah adalah untuk meningkatkan \textit{local taxing power} pada Kabupaten / Kota seperti :
+
+\begin{itemize}
+	\item Memperluas objek Pajak daerah dan retribusi daerah
+	\item Menambah jenis pajak daerah dan retribusi daerah (termasuk pengalihan Pajak Bumi dan Bangunan Perdesaan dan Perkotaan di Pajak Daerah).
+	\item Memberikan diskresi penetapan tarif pajak kepada daerah.
+	\item Menyerahkan fungsi pajak sebagai instrumen penganggaran dan pengaturan pada daerah.
+\end{itemize}
+
+Pada awal pengalihannya, prosedur pembayaran Pajak Bumi dan Bangunan Perdesaan dan Perkotaan di Kabupaten Brebes dapat dilakukan dalam 2 (dua) cara, yaitu : 
+
+\begin{itemize}
+	\item Membayar langsung pada PPOB (\textit{Payment Point Online Banking}), Kantor Kas BPD Jateng, Kantor Cabang BPD Jateng, atau melalui mesin ATM (Anjungan Tunai Mandiri).
+	\item Membayar pada petugas pemungut di Desa/Kelurahan yang dalam periode tertentu petugas pemungut di Desa/Kelurahan akan menyerahkan ke salah satu lokasi yang disebutkan pada cara pertama.
+\end{itemize}
+
+Pada cara yang pertama tidak masalah dimana tempatnya, dana yang disetorkan akan langsung masuk ke Rekening Kas Pemerintah Daerah dan dicatatkan dalam SISMIOP pada kondisi H+1.
+
+Untuk cara yang kedua, dana tidak sepenuhnya dapat dikontrol akan diterima pada Rekening Kas Pemerintah Daerah pada H+1, karena periode setiap petugas pemungut di Desa/Kelurahan berbeda-beda dalam melakukan penyetoran ke Rekening Kas Pemerintah Daerah. 
+
+Maka dari itu, untuk memastikan bahwa pembayaran yang telah dilakukan oleh wajib pajak diterima pada Rekening Kas Pemerintah Daerah, maka diperlukan sebuah sistem informasi untuk membuka informasi mengenai status pembayaran yang telah dilakukan tersebut. Selain daripada itu, adanya sistem informasi semacam ini pun dapat menjadi kontrol bagi petugas di tingkat Desa / Kelurahan dalam melakukan penyetoran ke Rekening Kas Pemerintah Daerah.
+
+\subsection{Peluang Yang Dituju}
+
+Dari kondisi tersebut di atas sehingga diperlukan sebuah aplikasi yang mampu memberikan informasi yang tepat bagi masyarakat wajib pajak yang dapat digunakan untuk melihat status pembayaran yang telah dicatatkan yang dapat digunakan pula sebagai kontrol penyetoran realisasi Pajak Bumi dan Bangunan sektor Perdesaan dan Perkotaan di tingkat Desa / Kelurahan.
+
+Selain itu masyarakat wajib pajak pun dapat melihat besaran pokok pajak terhutang yang belum terbayarkan, termasuk besaran denda apabila pembayaran belum dilakukan setelah melewati tanggal jatuh tempo.
+
+Fungsi lain dari dibangunnya sistem informasi ini nantinya pun dapat menjadi kontrol nilai piutang untuk tahun pajak sebelum terjadinya pengalihan Pajak Bumi dan Bangunan sektor Perdesaan dan Perkotaan, yaitu untuk tahun pajak sebelum tahun 2014. Karena pada tahun pajak sebelum terjadinya pengalihan, kondisi pencatatan pembayaran untuk Pajak Bumi dan Bangunan sektor Perdesaan dan Perkotaan tidak teradministrasi dengan baik, sehingga bagi wajib pajak yang memiliki bukti pembayaran / bukti penyetoran sebelum tahun terjadi pengalihan Pajak Bumi dan Bangunan sektor Perdesaan dan Perkotaan namun pada sistem informasi menunjukkan informasi bahwa objek tersebut belum terbayar, dapat melakukan konfirmasi ke Badan Pengelolaan Pendapatan, Keuangan dan Aset Daerah Kabupaten Brebes agar data pada sistem informasi dapat diperbaiki.
+
+\section{PEMBENTUKAN SASARAN SISTEM BARU SECARA KESELURUHAN}
+
+Sasaran dari sistem baru ini secara keseluruhan adalah dapat menampilkan informasi pembayaran atas suatu objek pajak di wilayah Kabupaten Brebes untuk setiap tahun pajak. Informasi lain yang ditampilkan ada data terbatas untuk wajib pajaknya sebagai bahan verifikasi apakah data atau informasi yang ditampilkan adalah data atau informasi yang diinginkan oleh pengguna sistem.
+
+Nantinya bagi wajib pajak yang akan melakukan akses ke sistem cukup mengetikan Nomor Objek Pajak atas objek pajak yang akan dilihat informasinya, Nomor Objek Pajak ini tertera pada bagian kiri atas lembar Surat Pemberitahuan Pajak Terhutang untuk Pajak Bumi dan Bangunan sektor Perdesaan dan Perkotaan.
+
+Informasi yang ditampilkan bukan hanya untuk tahun pajak yang berjalan, tetapi untuk seluruh tahun pajak, karena diharapkan dengan ditampilkannya data tersebut, wajib pajak dapat melakukan verifikasi data untuk seluruh tahun pajak, di tahun pajak mana saja wajib pajak telah membayarkan atau menyetorkan kewajiban perpajakannya, dan di tahun pajak mana saja wajib pajak belum menyetorkan atau membayarkan kewajibannya.
+
+Konfirmasi mengenai informasi pembayaran ini dapat dilakukan di Badan Pengelolaan Pendapatan, Keuangan dan Aset Daerah.
+
+Implementasi yang tepat untuk sistem informasi yang dapat diakses oleh masyarakat wajib pajak adalah berupa aplikasi \textit{web} atau aplikasi \textit{mobile}, dengan pertimbangan yang lebih jauh, karena akses terhadap informasi ini kemungkinan besar hanya dilakukan 1 (satu) tahun sekali, membangun aplikasi \textit{mobile} kurang tepat dengan alasan bahwa akses aplikasi yang sangat jarang sekali, dan kapasitas memori pada perangkat \textit{smartphone} yang mayoritas masih sedikit.
+
+Seingga pilihan yang paling tepat untuk membangun sistem informasi ini adalah dalam bentuk aplikasi \textit{web}.
+
+\section{PENGIDENTIFIKASIAN PARA PEMAKAI SISTEM}
+
+Karena tujuan penggunaan aplikasi ini dapat digunakan secara luas oleh masyarakat wajib pajak, dan tidak terbatas pada rentang umur berapapun, maka terget dari pengguna atau pemakai sistem ini adalah pengguna awam. Tetapi tidak menutup kemungkinan aplikasi dapat diakses oleh petugas pemungut di Desa / Kelurahan dan petugas di Kecamatan.
+
+Dengan target pengguna / pemakai yang demikian, maka sistem informasi yang dibangun harus dengan sangat mudah dioperasikan, maka dari itu, masukkan yang diperlukan untuk mendapatkan informasi ini hanya berupa Nomor Objek Pajak yang tertera pada bagian kiri atas lembar Surat Pemberitahuan Pajak Terhutang untuk Pajak Bumi dan Bangunan sektor Perdesaan dan Perkotaan.
+
+Walaupun kondisi operasi dari sistem informasi ini dijadikan mudah, namun perlu tahapan sosialisasi yang memberitahukan bahwa data yang tertera adalah data yang ada pada basis data di Badan Pengelolaan Pendapatan, Keuangan dan Aset Daerah, dimana kondisi datanya dapat dimungkinkan tidak \textit{valid} karena kesalahan pencatatan pembayaran di tahun sebelum 2013.
+
+\section{PEMBENTUKAN LINGKUP SISTEM}
+
+Karena jumlah data dan jenis data yang sangat banyak pada Sistem Informasi Manajemen Objek Pajak untuk jenis Pajak Bumi dan Bangunan sektor Perdesaan dan Perkotaan, maka perlu pembatasan terhadap data-data yang perlu ditampilkan.
+
+Adapun data atau informasi yang akan ditampilkan adalah data mengenai objek pajak, baik lokasi objek pajak, luas bumi dari objek pajak, luas bangunan dari objek pajak apabila ada, serta Nilai Jual Objek Pajak untuk bumi dan bangunan bila ada.
+
+Untuk data subjek pajak yang perlu ditampilkan untuk memverifikasi data adalah nama wajib pajak dan alamatnya. Sedangkan untuk data tagihan atau data pembayaran yang ditampilkan adalah tahun pajaknya, besaran pokok pajak terhutang, dan status pembayarannya, apakah sudah lunas atau belum.
+
+Teknologi pembangunan sebuah sistem informasi atau aplikasi berbasis \textit{web} ini pun cukup luas, sehingga perlu diberikan pembatasan pula, adapun teknologi yang digunakan akan dibagi menjadi 2 (dua) bagian, yaitu bagian \textit{front-end} atau yang menangani bagian \textit{user interface} atau tampilan dari program, bagian inilah yang berinteraksi langsung dengan pengguna. Bagian berikutnya adalah bagian \textit{backend} dimana bagian ini akan menangani logika aplikasi, bagian ini yang menghubungkan antara \textit{front-end} dengan sistem basis data, data apa yang perlu ditangkap dari bagian \textit{front-end}, bagaimana mengolahnya sehingga dapat menghasilkan data dari sistem basis data, begitu pun sebaliknya.
+
+\section{PENGUSULAN PERANGKAT LUNAK DAN PERANGKAT KERAS UNTUK SISTEM BARU}
+
+Beberapa hal terkait perangkat lunak untuk membangun sistem informasi pembayaran Pajak Bumi dan Bangunan sektor Perdesaan dan Perkotaan ini akan diuraikan seperti berikut berdasarkan perangkat yang dibutuhkan :
+
+\begin{itemize}
+	\item Sistem Basis Data
+	
+Karena data yang ditampilkan adalah data asli hasil perekaman atau pencatatan pembayaran secara \textit{realtime}, maka sistem basis data baru tidak diperlukan, sistem informasi ini akan menggunakan sistem basis data yang telah terpasang di \textit{server} yang sedang aktif melayani operasional pengelolaan Pajak Bumi dan Bangunan sektor Perdesaan dan Perkotaan.
+	
+	\item \textit{Text Editor} atau IDE (\textit{Integrated Development Environment})
+	
+Untuk membangun sistem informasi yang baru ini, karena terdiri dari \textit{front-end} dan \textit{back-end}, maka kita membutuhkan aplikasi yang berbeda. 
+
+Aplikasi \textit{text editor} atau IDE untuk membangun bagian \textit{front-end} adalah yang memiliki karakteristik ringan, memiliki \textit{auto-complete} untuk mempercepat pengetikan kode, dan karena akan dibangun dengan \textit{framework} Angular, maka dibutuhkan \textit{console} yang telah terintegrasi sehingga pada saat uji coba tidak harus berpindah jendela terlalu sering. Kemampuan seperti itu dimiliki oleh editor Visual Studio Code yang tersedia gratis dan dapat diunduh secara bebas di laman \href{https://code.visualstudio.com/}{https://code.visualstudio.com/}.
+
+Membangun sistem pada bagian \textit{back-end} akan dilakukan dengan bahasa pemrograman Java, sehingga dibutuhkan \textit{text editor} atau IDE yang mampu untuk memberikan kemudahan pada saat melakukan \textit{coding} Java. IDE yang digunakan harus cukup ringan dan mudah dioperasikan, sehingga pilihan \textit{text editor} atau IDE yang memenuhi kriteria tersebut ada pada Intellij IDEA versi Community yang dapat diunduh dengan gratis dari alamat \href{https://www.jetbrains.com/idea/}{https://www.jetbrains.com/idea/}
+	
+	\item Pustaka (\textit{Library})
+	
+Pustaka atau \textit{library} untuk membangun sistem ini pun memiliki 2 (dua) bagian, yaitu bagian \textit{front-end} dan bagian \textit{back-end}, detail dari pustaka yang digunakan pada tiap-tiap bagian ini yaitu seperti berikut ini :
+
+		\begin{itemize}
+			\item Pustaka yang digunakan pada bagian \textit{front-end} yaitu :
+			
+			\begin{itemize}
+				\item Angular 5, pustaka ini digunakan pada seluruh bagian \textit{front-end} dari aplikasi, yang menjadi alat untuk berkomunikasi dengan bagian \textit{back-end}, seluruh rangka aplikasi bagian \textit{front-end} akan diatur dengan Angular 5. Termasuk di dalamnya adalah \texttt{angular-cli} yang digunakan untuk melakukan otomasi saat uji coba aplikasi yang dibangun dengan Angular.
+				\item Bootstrap, pustaka ini memberikan kesan yang menarik pada tampilan aplikasi \textit{web} sehingga pengguna nantinya akan lebih nyaman untuk melakukan operasi masukkan data dan membaca informasi pada sistem aplikasi ini.
+				\item NPM, nama panjang dari aplikasi ini adalah \textit{Node Package Manager}, digunakan untuk otomasi pengumpulan pustaka yang akan digunakan pada aplikasi \textit{front-end}.
+			\end{itemize}
+			
+			\item Pustaka yang digunakan pada bagian \textit{back-end} adalah :
+			
+			\begin{itemize}
+				\item Spring Boot
+				
+Spring Boot adalah \textit{framework} yang digunakan sebagai dasar aplikasi bagian \textit{back-end} yang memiliki beberapa fitur seperti: \textit{servlet} yang telah terintegrasi di dalamnya, sehingga tidak perlu lagi mengubah sebuah \textit{project} menjadi \textit{file} \texttt{war} untuk di \textit{publish}, dapat dikonfigurasi sesuai kebutuhan berdasarkan kegunaan aplikasi, termasuk adanya \textit{dependency injection} yang memungkinkan kita tidak perlu membuat instan sebuah objek (karena sudah diatur oleh \textit{Spring Boot} dan cukup mendeklarasikan dengan menggunakan anotasi.				
+				
+				\item Spring Data JPA
+				
+\textit{Spring Data JPA} adalah paket lain dari \textit{framework} Spring yang fungsinya menghubungkan aplikasi dengan sistem basis data. Dengan pustaka ini akan dimudahkan melakukan operasi basis data dasar tanpa menggunakan bahasa SQL (\textit{Structured Query Language}) sama sekali.				
+				
+				\item Spring REST
+				
+\textit{Spring REST} pun adalah bagian dari paket \textit{framework} Spring yang fungsinya mempermudah dalam membangun sebuah \textit{server webservice} dengan model \textit{Restful}.				
+				
+				\item Driver OJDBC
+				
+Pustaka ini digunakan sebagai jembatan penghubung antara aplikasi dengan basis data Oracle, perbedaan dengan penggunaan Spring Data JPA adalah Spring Data JPA digunakan pada saat melakukan operasi transaksi terhadap data pada sistem basis data, sedangkan \textit{driver OJDBC} adalah jembatan yang menerjemahkan perintah yang dikirimkan oleh bahasa pemrograman Java ke bahasa perintah pada sistem basis data.				
+				
+				\item Joda Time
+				
+Pustaka \textit{Joda Time} digunakan sebagai utilitas yang membantu melakukan operasi terhadap satuan waktu di bahasa pemrograman Java, pustaka ini dipilih karena bentuk operasinya yang lebih mudah daripada menggunakan utilitas waktu yang disediakan Java.				
+				
+				\item Jackson
+				
+Pustaka ini berfungsi sebagai penerjemah atau yang melakukan konversi otomatis dari objek Java menjadi data dengan pola struktur JSON (\textit{JavaScript Object Notation}), dan sebaliknya, yaitu dari JSON menjadi objek Java.				
+				
+				\item Lombok
+				
+Pustaka ini bermanfaat menjadikan kode program lebih bersih karena akan mengotomasi kode-kode generik yang biasanya ada pada objek Java seperti \textit{getter} dan \textit{setter}.				
+				
+			\end{itemize}
+		\end{itemize}	
+	
+	\item \textit{Servlet Container}	
+	
+\textit{Servlet Container} adalah aplikasi \textit{server} tempat untuk menjalankan aplikasi Java yang menggunakan protokol \textit{HTTP} untuk komunikasi datanya.
+	
+\end{itemize}
+
+Sedangkan kebutuhan akan perangkat kerasnya adalah seperti berikut ini :
+
+\begin{itemize}
+	\item \textit{Server} Basis Data
+	
+Perangkat keras \textit{Server} Basis Data digunakan sebagai tempat untuk berjalannya sistem basis data yang digunakan, perangkat ini idealnya terpisah dari perangkat keras \textit{server} aplikasi sehingga nantinya saat operasional beban untuk melakukan operasi pada sistem basis data tidak terganggu dengan beban proses lain pada aplikasi.
+	
+	\item \textit{Server} Aplikasi
+	
+Perangkat keras \textit{Server} Aplikasi digunakan sebagai tempat aplikasi tersimpan dan perangkat keras yang melayani permintaan terhadap akses aplikasi. Perangkat keras inilah yang nantinya akan diakses atau berhubungan dengan berbagai perangkat \textit{client}.
+	
+	\item \textit{Router}
+	
+Perangkat keras ini akan mengatur alur data pada jaringan dan menghubungkan 2 (dua) atau lebih alamat jaringan yang berbeda. Perangkat ini yang nantinya akan mengarahkan permintaan akses aplikasi web yang telah dibuat ke alamat \textit{server} aplikasi.
+	
+	\item \textit{Modem} dan Akses Internet	
+	
+Perangkat \textit{Modem} ini yang akan menghubungkan jaringan internal dengan jaringan internet agar \textit{server} aplikasi yang berada pada jaringan internal dapat diakses oleh publik.	
+	
+\end{itemize}
+
+\section{PEMBUATAN ANALISIS UNTUK MEMBANGUN SENDIRI ATAU MEMBELI APLIKASI}
+
+Keputusan untuk membangun aplikasi sendiri atau membeli tentunya akan berdasarkan kepada waktu, kualitas, dan layanan. 
+
+Dari sisi waktu, tentunya dengan membeli aplikasi yang sudah jadi untuk sistem informasi semacam ini akan lebih cepat selesai karena biasanya sudah tersedia \textit{template} atau bahkan aplikasi sudah jadi dan dipasarkan secara umum. Apabila kita membangun aplikasi ini sendiri, tentu dibutuhkan waktu yang lebih lama karena perlu waktu untuk pembelajaran terhadap model \textit{web services} terlebih dahulu, bagaimana teknis \textit{server web services} menerima data, bagaimana data diolah, dan bagaimana \textit{server} harus melakukan respon data terhadap \textit{request} yang datang. Kita pun perlu mempelajari bagaimana \textit{framework} Angular di sisi \textit{front-end} bekerja. Bagaimana \textit{binding data} pada Angular, \textit{flow} program pada Angular, dan bagaimana Angular berkomunikasi melakukan \textit{request} dan mengolah respon dengan \textit{server web service} di bagian \textit{back-end}.
+
+Dari sisi kualitas, tentunya bisa dilihat dari banyaknya \textit{bugs} atau permasalahan kode program yang nantinya muncul. Beberapa perusahaan yang telah bergerak di bidang pembangunan sistem informasi atau aplikasi komputer biasanya akan memiliki \textit{bugs} atau kesalahan program yang sangat sedikit, yang tentunya ini didapatkan dari pengalaman dalam membangun dan memelihara sebuah sistem informasi. Apabila membangun sistem informasi ini secara mandiri, tentunya akan mengalami beberapa kendala dengan kualitas aplikasi yang dihasilkan, namun akan menjadi investasi jangka panjang bagi proses pemeliharaan sistem aplikasi dan pembaruannya tanpa harus menambahkan biaya tambahan atau biaya pemeliharaan yang biasanya muncul saat kita membeli aplikasi atau sistem informasi dari pihak lain.
+
+Sedangkan dari sisi layanan, seperti hal yang biasa diajukan oleh sebuah \textit{software house} atau pembuat aplikasi, maka ada 2 (dua) model dasar yang biasanya ditawarkan, yaitu model kontrak putus, artinya begitu sistem sudah jadi dan dipasang, akan ditunjuk 1 (satu) atau lebih orang untuk melakukan \textit{maintenance} dasar, atau bahkan akan diserahkan pula kode sumbernya bila suatu saat akan dilakukan pembaruan atau perbaikan secara mandiri. Model yang kedua yaitu sistem kontrak layanan jasa, yang biasanya sistem aplikasi akan diberikan secara gratis, namun tidak diberikan kode sumbernya, melainkan akan dilakukan perbaikan atau pembaruan secara berkala bila diketahui ada permasalahan pada sistem yang berjalan. 
+
+Dengan membangun sendiri sistem aplikasi ini, maka tentunya layanan penuh akan dikendalikan oleh personil yang menangani bidang teknologi informasi tanpa tambahan biaya apapun selain dari menggunakan 2 (dua) jaringan internet atau lebih sebagai strategi untuk menjaga konektivitas.
+
+\section{PEMBUATAN ANALISIS BIAYA / MANFAAT}
+
+Analisis biaya dan manfaat tentunya tidak jauh dari tujuan dibuatnya sebuah sistem aplikasi. Sebagaimana disebutkan pada bagian awal dokumen studi kelayakan pendahuluan ini, bahwa sistem aplikasi yang dibangun harus mampu menampilkan informasi berupa besaran pokok pajak terhutang untuk tiap tahun pajak berdasarkan Nomor Objek Pajak yang dimasukkan.
+
+Dalam membangun sebuah sistem, tentunya akan menggunakan sumber-sumber daya yang nantinya diharapkan mendapatkan manfaat seperti tujuan dari dibangunnya sistem aplikasi. Jika manfaat-manfaat yang dihasilkan tersebut lebih kecil dari sumber daya yang dikeluarkan, maka sistem aplikasi ini dikatakan tidak bernilai atau tidak layak untuk dibangun, namun bila manfaat yang dihasilkan lebih besar dari sumber daya yang dikeluarkan, maka sistem informasi atau aplikasi ini boleh dikatakan layak untuk dibangun.
+
+Ada dua komponen yang diperlukan untuk melakukan analisis biaya dan manfaat terhadap sebuah sistem aplikasi, sesuai namanya yaitu :
+
+\begin{enumerate}
+	\item Komponen Biaya, dan
+	\item Komponen Manfaat
+\end{enumerate}
+
+Secara detail, masing-masing komponen tersebut adalah seperti berikut ini :
+
+\begin{enumerate}
+	\item \textbf{KOMPONEN BIAYA}
+	
+Biaya yang berhubungan dengan pengembangan sistem aplikasi dapat diklasifikasi ke dalam 4 (empat) kategori utama, yaitu :
+
+\begin{enumerate}
+	\item Biaya Pengadaan
+	
+Biaya pengadaan tentu saja adalah seluruh biaya yang dikeluarkan untuk membangun sistem informasi yang diinginkan, mulai dari perangkat keras, perangkat lunak, serta dukungan sumber daya lain yang dibutuhkan. Dilihat dari kondisi perangkat keras yang seluruhnya telah tersedia, maka biaya yang perlu dikeluarkan untuk hal ini adalah nihil, dengan kata lain, tanpa biaya pengadaan.
+
+Begitu juga apabila kita melihat kebutuhan akan perangkat lunak yang akan digunakan, karena akan menggunakan sistem basis data yang sama dengan sistem basis data yang telah ada, maka dapat dikatakan kebutuhan akan biaya pengadaan sistem basis data pun nihil. Untuk penggunaan perangkat lunak \textit{servlet container} pun kita akan memilih yang gratis yaitu Tomcat yang tentunya kualitasnya tidak kalah dengan jenis \textit{servlet container} yang berbayar, untuk hal ini pun dikatakan nihil atau tidak perlu biaya pengadaan, bahkan \textit{servlet container} yang digunakan sudah ada dan terpasang dalam paket Spring Boot yang juga tersedia secara gratis.
+
+Sumber daya lain yang dibutuhkan adalah, dengan membangun sendiri sistem informasi ini, maka tentunya kebutuhan biaya tidak diperlukan lagi karena personil yang akan membangun sistem informasi ini adalah fungsional pranata komputer yang tugas pokok dan fungsinya memang berada pada bidang tersebut.
+
+Kondisi biaya dari pengadaan perangkat lunak akan berbeda bila dilakukan oleh pihak lain, seperti disebutkan sebelumnya bahwa, secara garis besar, ada 2 (dua) jenis penjualan perangkat lunak yang dilakukan oleh \textit{software house}, yaitu sistem kontrak lepas, artinya membayar di awal masa jual beli, kemudian biasanya akan diberikan rentang waktu tertentu sebagai masa uji coba dan uji kelayakan sebuah sistem aplikasi, setelahnya diserahkan ke Pemerintah Daerah untuk melakukan perawatan mandiri, dan model yang kedua adalah dengan menjual jasa, artinya perangkat lunak yang diberikan gratis tetapi dengan syarat melakukan kontrak jasa dengan rentang waktu minimal yang sering dikatakan sebagai \textit{services}, dimana selama rentang waktu ini akan diberikan perbaikan-perbaikan \textit{bugs} dan pembaruan aplikasi bila ada, namun bila kontrak tidak diperpanjang, maka secara otomatis aplikasi tidak akan dapat digunakan. Dan rata-rata biaya dari pengadaan perangkat lunak yang dikeluarkan akan mencapai puluhan juta, tentu apabila menggunakan model yang kedua, biaya pengadaan menjadi tidak terhingga karena tiap tahunnya harus melakukan perpanjangan kontrak.	
+	
+	\item Biaya Persiapan Operasi
+	
+Biaya persiapan operasi pun tidak diperlukan bila sistem informasi akan dibangun secara mandiri oleh fungsional pranata komputer, karena segala konfigurasi yang dilakukan pada perangkat keras, membangun sistem aplikasi dengan \textit{tools} yang gratis, dapat dilakukan oleh fungsional pranata komputer itu sendiri.
+
+Pada kondisi dimana sistem informasi dibeli dari pihak lain, maka biasanya biaya persiapan operasi sudah diperhitungkan dan digabungkan dengan biaya pengadaan sebuah sistem informasi.	
+	
+	\item Biaya Proyek
+	
+Biaya proyek adalah biaya yang dikeluarkan untuk pengembangan sistem informasi termasuk penerapannya, namun diluar biaya pengadaan dan biaya persiapan operasi. Yang termasuk kedalam biaya proyek diantaranya adalah biaya dalam tahap analisis sistem, biaya pada tahap desain sistem, dan biaya pada tahap penerapan sistem.
+
+Bila pengadaan sistem informasi dilakukan oleh pihak lain, maka ketiga biaya tersebut akan muncul yang biasanya sudah digabungkan dengan biaya pengadaan diatas, namun bila menggunakan tenaga fungsional pranata komputer, maka seluruh biaya proyek tersebut tidak diperlukan lagi.	
+	
+	\item Biaya Operasi dan Biaya Perawatan
+	
+Biaya operasi dan biaya perawatan adalah biaya-biaya yang dikeluarkan untuk mengoperasikan sistem supaya sistem dapat beroperasi. Pada kasus dimana pihak lain dibeli sistem informasinya dengan sistem kontrak putus, maka biaya operasi tidak diperlukan lagi karena sistem biasanya akan diserahkan ke personil di Pemerintah Daerah untuk melakukan tugas Administrasi Sistem. Namun bila menggunakan sistem pembelian jasa, maka tiap tahunnya akan diperlukan biaya operasi dan biaya perawatan guna perbaikan \textit{bugs} dan pembaruan aplikasi.
+
+Namun bila sistem ini dibangun oleh fungsional pranata komputer, maka kejadiannya akan sama seperti sistem kontrak putus untuk biaya operasi dan biaya perawatan akan dilaksanakan sepenuhnya oleh seorang fungsional pranata komputer.
+	
+\end{enumerate}	
+	
+	\item \textbf{KOMPONEN MANFAAT}
+	
+Manfaat yang didapat dari sistem informasi yang dibangun dapat diklasifikasikan sebagai berikut :
+
+\begin{enumerate}
+	\item Manfaat verifikasi data piutang
+	
+Dengan dibangunnya sistem informasi ini, maka diharapkan ada komunikasi imbal balik yang dilakukan oleh masyarakat wajib pajak dalam melakukan verifikasi data piutangnya. Dengan demikian, maka kegiatan pembersihan data piutang yang tidak valid sejak sebelum tahun pengalihan dapat dilakukan dengan tahapan ini, sehingga dapat memperkecil nilai piutang yang tidak valid.
+		
+	\item Manfaat keterbukaan informasi
+	
+Manfaat ini akan dirasakan bahwa Pemerintah Daerah sebagai pengelola dana masyarakat dari jenis Pajak Daerah mampu memberikan informasi secara terbuka bagi setiap wajib pajak yang membutuhkan, bahkan sebelum Surat Pemberitahuan Pajak Terhutang belum sampai diantarkan ke wajib pajak yang bersangkutan, wajib pajak dapat mengetahui berapa besaran kewajiban pajak yang harus dia tunaikan untuk tahun berjalan.
+
+Pun apabila ada ketidaksesuaian data wajib pajak dari yang tercantum pada halaman informasi ini, wajib pajak dapat melakukan koreksi dan verifikasi sehingga data menjadi lebih valid.	
+	
+	\item Manfaat kontrol petugas pemungut
+	
+Salah satu tujuan dari dibangunnya sistem informasi ini adalah pula melakukan kontrol terhadap petugas pemungut di tingkat Desa/Kelurahan yang menerima titipan pembayaran untuk Pajak Bumi dan Bangunan Perdesaan dan Perkotaan, agar sesegera mungkin melakukan penyetoran ke rekening Kas Daerah agar status pembayarannya tercatat pada basis data yang dapat diakses melalui sistem informasi ini.	
+	
+\end{enumerate}	
+	
+\end{enumerate}
+
+\section{PENGKAJIAN TERHADAP RESIKO PROYEK}
+
+Sama seperti jenis proyek yang lain, proyek ini pun pasti memiliki beberapa resiko yang apabila dikelola akan menjadikan nilai tambah bagi proyek bersangkutan. 
+
+Dengan adanya sistem informasi baru ini, terbuka ruang atau cara melakukan verifikasi data piutang sebelum masa pengalihan pajak dari jenis Pajak Pusat menjadi jenis Pajak Daerah.
+
+Karena sistem ini akan menampilkan informasi secara waktu nyata (\textit{realtime}) maka apabila kewajiban pajak telah terbayarkan, seharusnya status pada sistem informasi pun akan berubah menjadi telah terbayar, maka dari itu perlu adanya mekanisme pencatatan pembayaran tunggal yang saat ini belum tercapai.
+
+Kondisi jaringan internet yang tersedia pun harus dapat dijaga ketersediaannya, seperti dengan menggunakan 2 (dua) atau lebih jaringan internet dari 2 (dua) atau lebih penyedia jaringan internet, yang dimaksudkan apabila ada kendala pada sebuah jaringan internet, maka jaringan internet yang lain akan melakukan fungsinya sebagai pengganti jaringan yang rusak.
+
+\section{PEMBERIAN REKOMENDASI UNTUK MENERUSKAN ATAU MENGHENTIKAN PROYEK}
+
+Rekomendasi yang dapat diberikan dengan melihat beberapa pertimbangan dan kebutuhan akan sistem informasi pembayaran Pajak Bumi dan Bangunan sektor Perdesaan dan Perkotaan, maka perlunya meneruskan kegiatan ini sebagai titik awal keterbukaan informasi serta memaksa perbaikan pada proses pencatatan pembayaran yang telah ada.
+
+\end{document}

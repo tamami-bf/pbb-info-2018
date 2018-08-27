@@ -1,0 +1,519 @@
+%%%%%%%%%%%%%%%%%%%% book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for the chapters of your "monograph"
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[pdftex,12pt, oneside]{article}
+
+% choose options for [] as required from the list
+% in the Reference Guide, Sect. 2.2
+%\usepackage[paperwidth=8.5in, paperheight=13in]{geometry} % Folio
+\usepackage[paperwidth=8.27in, paperheight=11.69in]{geometry} % A4
+
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+%\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+\usepackage[english]{babel}
+\usepackage{enumerate}
+\usepackage{paralist}
+\usepackage{float}
+\usepackage{gensymb}  
+\usepackage{listings}
+%\usepackage{siunitx}
+% etc.
+% see the list of further useful packages
+% in the Reference Guide, Sects. 2.3, 3.1-3.3
+\renewcommand{\baselinestretch}{1.5}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\sloppy
+%\author{Priyanto Tamami}
+%\title{BUKU PETUNJUK OPERASIONAL SISTEM INFORMASI GEOGRAFIS UNTUK PBB-P2 DENGAN MAPINFO VERSI 8.0}
+%\date{22 Desember 2015}
+%\maketitle
+
+%\input{./01.title.tex}
+\begin{center}
+{\large ANALISIS SISTEM INFORMASI PEMBAYARAN PBB}
+\\[1cm]
+25 Februari 2018\\
+Priyanto Tamami, S.Kom.
+\end{center}
+
+%\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\include{dedic}
+%\include{pref}
+
+%\include{02.pengesahan} 
+
+%\tableofcontents
+%\listoffigures
+
+%\mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\include{part}
+%\include{chapter}
+%\include{chapter}
+%\appendix
+%\include{appendix}
+
+%\include{03.konsep-sig}
+%\include{04.pengenalan-software}
+%\include{05.koordinat}
+%\include{06.registrasi-transformasi-koordinat} 
+%\include{07.digitasi-on-screen} 
+%\include{08.query} 
+
+%\backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\include{solutions}
+%\include{referenc}
+%\printindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{SASARAN DAN BATASAN SISTEM}
+
+Sasaran dari sistem ini adalah mampu menampilkan informasi besaran pajak terhutang dan status pelunasan untuk jenis pajak bumi dan bangunan sektor perdesaan dan perkotaan, sehingga masyarakat wajib pajak tidak perlu lagi menduga-duga apakah pembayaran yang dilakukan telah diterima oleh kas Pemerintah Daerah atau belum.
+
+Batasan dari sistem ini tentu saja yang dapat melakukan akses informasi adalah pengguna yang memiliki noomr objek pajak untuk pajak bumi dan bangunan sektor perdesaan dan perkotaan, kemudian, karena kondisi pencatatan pada peladen di BPPKAD Kabupaten Brebes dilakukan H+1, maka pembayaran atau setoran yang dilakukan di hari bersangkutan tidak akan terlihat perubahan status pembayarannya.
+
+\section{ARSITEKTUR SISTEM}
+
+Seperti membangun sebuah gedung atau bangunan, agar bangunan dapat berdiri dengan kokoh dan memudahkan dalam pemeliharaan, maka diperlukan sebuah arsitektur, sedangkan pada pembuatan sistem aplikasi maka diperlukan sebuah arsitektur sistem aplikasi yang tujuannya pun agar kokoh dalam artian stabil dengan sedikit permasalahan yang muncul, dan memberikan kemudiahan pada saat pemeliharaan atau penambahan fasilitas pada sistem aplikasi yang sudah jadi.
+
+Arsitektur sistem akan terbagi menjadi 3 (tiga) bagian, yaitu :
+
+\begin{enumerate}[a.] 
+	\item Bagian Basis Data
+	\item Bagian Logika Aplikasi
+	\item Bagian Tampilan Aplikasi
+\end{enumerate}
+
+\section{DESKRIPSI SUB SISTEM}
+
+\subsection{Bagian Basis Data}
+
+Pada bagian ini akan terdapat beberapa tabel dari aplikasi SISMIOP yang digunakan untuk pengelolaan pajak bumi dan bangunan sektor perdesaan dan perkotaan, karena sasarannya adalah menampilkan informasi pembayaran atas sebuah objek, maka tentu saja sistem basis data adalah sistem basis data produksi yang digunakan sebagai pencatatan manajemen objek pajak bumi dan bangunan sektor perdesaan dan perkotaan.
+
+\subsection{Bagian Logika Aplikasi}
+
+Pada bagian ini nantinya akan terdiri dari diagram struktur dan diagram perilaku dari aplikasi, bagaimana masing-masing komponen saling bertukar informasi, bagaimana alur data dari basis data ke bagian tampilan dan sebaliknya dimodelkan pada bagian ini.
+
+Bagian ini bisa disebut inti dari aplikasi, karena bagian ini yang nantinya mengontrol transfer data antar komponen dan lapisan.
+
+\subsection{Bagian Tampilan Aplikasi}
+
+Istilah lainnya biasa dikenal dengan antar muka pengguna, bagian ini yang nantinya akan menjadi desain atau model dari tampilan yang berhadapan langsung dengan pengguna. Bagian ini yang nantinya mengumpulkan informasi untuk disampaikan kepada bagian logika aplikasi untuk diproses, bagian ini pula yang nantinya menampilkan informasi yang diproses oleh sistem untuk dapat dibaca dan dipahami oleh pengguna.
+
+\section{PERTIMBANGAN KHUSUS KINERJA SISTEM}
+
+Karena sistem datanya terpusat, yaitu tersimpan pada peladen basis data Oracle, maka perawatan atau pemeliharaan mutlak dilakukan pada sisi peladen sistem basis data yang diakibatkan dari peningkatan jumlah data transaksi pembayaran yang selalu bertambah dari sisi ukuran dari hari ke hari.
+
+Biasanya akan dilakukan pembersihan terhadap berkas \textit{log}, yaitu berkas yang digunakan oleh sistem basis data Oracle untuk mencatatkan kegiatan atau aktivitas yang telah dilakukannya selama beroperasi melayani permintaan data. Pembersihan ini dilakukan secara rutin karena transaksi yang terjadi pun rutin dilakukan dalam periode harian.
+
+Selain peladen sistem basis data, peladen aplikasi \textit{web} pun perlu mendapatkan perhatian pada sisi perawatan atau pemeliharaan, dimana peladen aplikasi \textit{web} pun memiliki berkas \textit{log} tersendiri yang perlu dibersihkan secara rutin karena menyimpan transaksi antar komputer klien dan peladen.
+
+Hal lain yang perlu dilakukan sebagai langkah pengamanan data yaitu dilakukannya duplikasi data (\textit{backup data}) sehingga apabila terjadi hal-hal yang tidak diinginkan, data dapat langsung dikembalikan atau dipulihkan (\textit{recovery}). Ini pun sebaiknya dilakukan secara rutin, sebaiknya dalam periode harian.
+
+\section{HASIL PEMODELAN}
+
+Hasil pemodelan untuk sistem informasi pembayaran pajak bumi dan bangunan sektor perdesaan dan perkotaan nantinya akan dibagi menjadi beberapa diagram mendasar pada beberapa bagian dari arsitektur sistem, berikut rincian mengenai hasil pemodelan tersebut :
+
+\subsection{Bagian Basis Data}
+
+Basis data yang berhubungan dengan aplikasi ini sebetulnya menggunakan sistem basis data yang telah digunakan untuk pengelolaan Pajak Bumi dan Bangunan sektor Perdesaan dan Perkotaan, namun hanya beberapa tabel saja yang diakses oleh aplikasi ini, diagram tabel yang berhubungan dengan aplikasi sistem informasi pembayaran pajak bumi dan bangunan sektor perdesaan dan perkotaan ini adalah seperti gambar \ref{fig:db-dia} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/db-diagram}
+	\caption{Diagram Tabel Yang Digunakan}
+	\label{fig:db-dia}
+\end{figure}
+
+\subsection{Bagian Logika Aplikasi}
+
+Ada beberapa pemodelan logika aplikasi di dunia teknologi informasi, jika pengembangan dilakukan dengan bahasa pemrograman terstruktur, maka akan menggunakan \textit{flowchart} atau diagram alir sebagai alat untuk pemodelan, karena yang akan digunakan sekarang adalah bahasa pemrograman Java yang menggunakan metodologi orientasi objek, maka digunakan \textit{Unified Modeling Language} (UML) yang akan menggambarkan struktur sistem dari awal sampai akhir. Berikut adalah pemodelan atau diagram yang menggambarkan bagian sistem informasi pembayaran Pajak Bumi dan Bangunan Perdesaan dan Perkotaan bekerja.
+
+\subsubsection{Diagram \textit{Use Case}}
+
+Diagram \textit{use-case} dari keseluruhan sistem yang akan dibangun adalah seperti gambar \ref{fig:use-case} ini :
+
+\begin{figure}[H]	
+	\centering
+	\includegraphics[width=1\textwidth]{resources/use-case-diag}
+	\caption{Diagram \textit{Use-Case}}
+	\label{fig:use-case}
+\end{figure}
+
+Sistem aplikasi hanya akan menampilkan sebuah informasi saja kepada pengguna yaitu berupa informasi besaran tagihan pajak yang terhutang dan status pembayaran pajaknya.
+
+\subsubsection{Diagram \textit{Class}}
+
+Diagram \textit{class} pada sistem aplikasi ini akan terbagi menjadi 2 (dua) bagian, yaitu bagian ujung depan dan bagian ujung belakang. Diagram \textit{class} untuk bagian ujung belakang adalah seperti pada gambar \ref{fig:class-dia-be1} dan \ref{fig:class-dia-be2} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/class-dia-be1}
+	\caption{Diagram \textit{Class} Untuk Ujung Belakang Bagian 1}
+	\label{fig:class-dia-be1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/class-dia-be2}
+	\caption{Diagram \textit{Class} Untuk Ujung Belakang Bagian 2}
+	\label{fig:class-dia-be2}
+\end{figure}
+
+Pada diagram \textit{class} yang pertama, ada kelompok kelas dengan nama yang mirip yaitu \texttt{Sppt}, karena implementasinya menggunakan Spring Data JPA, maka membutuhkan beberapa kelas atau \textit{interface} untuk mengelola data yang berasal dari sistem basis data.
+
+Kelas dan \textit{interface} yang berhubungan dengan tabel \texttt{SPPT} ini adalah seperti berikut :
+
+\begin{itemize}	
+	\item Kelas \texttt{Sppt}, digunakan untuk melakukan pemetaan atribut pada tabel \texttt{SPPT} pada sistem basis data, isi atributnya akan mirip dengan isi atribut pada tabelnya.
+	\item Kelas \texttt{SpptPK}, digunakan untuk mendeklarasikan \textit{primary key} atau kunci utama dari tabel \texttt{SPPT}, nantinya kelas ini akan digunakan pada kelas \texttt{Sppt} untuk memetakan \textit{field-field} yang menjadi \textit{primary key}.
+	\item \textit{Interface} \texttt{SpptRepo} adalah deklarasi yang fungsinya untuk melakukan operasi terhadap tabel \texttt{SPPT} di sistem basis data melalui kelas entitas yang berkaitan, dalam hal ini adalah kelas \texttt{Sppt}.
+	\item Kelas \texttt{SpptService} digunakan untuk mengelola data atau manipulasi data yang datang dari sistem basis data atau yang akan disimpan ke dalam basis data.
+\end{itemize}
+
+Pada diagram \textit{class} bagian pertama ini pun ada 2 (dua) kelas yang tidak berhubungan langsung dengan kelas \texttt{Sppt} yaitu kelas \texttt{JsonObject} yang sebetulnya digunakan untuk pemetaan dari objek JSON yang dikirimkan oleh klien, diubah atau dikonversi menjadi objek Java secara otomatis dengan menggunakan pustaka Jackson. Kemudian kelas yang lain adalah \texttt{ApiController} yang isinya adalah pemetaan URL yang dapat di\textit{request} oleh klien untuk memperoleh data, segala proses yang berhubungan dengan \textit{request} data akan dilakukan pada kelas ini.
+
+Pada diagram \textit{class} bagian kedua akan berisi beberapa kelas dan \textit{interface} yang berhubungan dengan tabel \texttt{DAT\_OBJEK\_PAJAK} beserta beberapa tabel yang berhubungan dengan tabel tersebut.
+
+Adapun kelas-kelas dan \textit{interface} yang ada pada diagram \textit{class} ini yang berhubungan dengan tabel \texttt{DAT\_OBJEK\_PAJAK} yaitu :
+
+\begin{itemize}
+	\item Kelas \texttt{DatSubjekPajakService}, kelas ini bertugas untuk melakukan manipulasi atau pengolahan data yang berasal dari sistem basis data, atau akan disimpan ke sistem basis data.
+	\item Kelas \texttt{DatSubjekPajak}, kelas ini berfungsi sebagai kelas pemetaan untuk tabel \texttt{DAT\_SUBJEK\_PAJAK}, maka dari itu isi properti dari kelas ini akan mirip seperti isi properti dari tabel \texttt{DAT\_SUBJEK\_PAJAK}.
+	\item \textit{Interface} \texttt{DatSubjekPajakRepo}, \textit{interface} ini berfungsi untuk melakukan operasi terhadap isi data pada tabel \texttt{DAT\_SUBJEK\_PAJAK} seperti simpan data, ubah data, hapus data, ambil data.
+	\item Kelas \texttt{DatObjekPajak}, kelas ini berfungsi untuk melakukan pemetaan terhadap tabel \texttt{DAT\_OBJEK\_PAJAK}, seperti kelas \texttt{DatSubjekPajak}, pada kelas ini pun isi propertinya akan mirip seperti pada tabel \texttt{DAT\_OBJEK\_PAJAK}.
+	\item \textit{Interface} \texttt{DatObjekPajakRepo}, seperti \textit{interface repository} lainnya, bertugas untuk melakukan manipulasi data pada tabel \texttt{DAT\_OBJEK\_PAJAK} pada sistem basis data.
+	\item Kelas \texttt{DatObjekPajakPK}, kelas ini digunakan untuk memetakan \textit{primary key} dari tabel \texttt{DAT\_OBJEK\_PAJAK} yang digunakan oleh kelas \texttt{DatObjekPajak}.
+	\item Kelas \texttt{DatObjekPajakService}, kelas ini digunakan untuk mengadaptasikan atau mengolah data dari sistem basis data ke antar muka pengguna, atau sebaliknya, dari antar muka pengguna ke sistem basis data.
+	\item Kelas \texttt{RefKecamatan}, kelas ini akan di rujuk oleh kelas \textit{DatObjekPajak} untuk menampilkan nama wilayah Kecamatan dimana objek berada.
+	\item Kelas \texttt{RefKecamatanPK}, kelas ini digunakan sebagai kelas pemetaan untuk \textit{primary key} dari tabel \texttt{RefKecamatan}.
+	\item Kelas \texttt{RefKelurahan}, kelas ini digunakan untuk memetakan tabel \texttt{REF\_KELURAHAN} yang digunakan untuk mereferensikan nama wilayah Kelurahan untuk objek pajak terpilih.
+	\item Kelas \texttt{RefKelurahanPK}, digunakan untuk memetakan \textit{primary key} dari tabel \texttt{REF\_KELURAHAN} yang akan digunakan pada kelas \texttt{RefKelurahan}.
+\end{itemize}
+
+Kelas dan \textit{interface} lain akan berhubungan dengan respon data atau format pemberian data ke klien. Kelas dan \textit{interface} tersebut adalah seperti berikut ini :
+
+\begin{itemize}
+	\item \textit{Interface} \texttt{ReturnData}, \textit{interface} ini tidak memiliki isi apapun, hanya untuk menyeragamkan deklarasi kelas-kelas untuk respon data ke klien.
+	\item Kelas \textit{DatSubjekPajakModif}, kelas ini akan mengembalikan nilai-nilai atau informasi mengenai data subjek pajak dari basis data berdasarkan Nomor Objek Pajak yang telah diberikan, hanya beberapa informasi saja yang diikutsertakan dalam blok informasi ini sesuai dengan nama propertinya.
+	\item Kelas \textit{PiutangSpptModif}, kelas ini akan membawa informasi mengenai data piutang pembayaran pajak bumi dan bangunan sektor perdesaan dan perkotaan sesuai dengan Nomor Objek Pajak yang diberikan
+	\item Kelas \textit{DatObjekPajakModif}, kelas ini akan membawa informasi mengenai data informasi objek pajak secara umum seperti tertuang pada propertinya. Tentu saja nilai yang dibawa berdasarkan Nomor Objek Pajak yang diberikan.
+	\item Kelas \textit{SpptModif}, kelas ini akan membawa informasi status tagihan pajak berdasarkan tahun pajaknya.
+\end{itemize}
+
+Demikianlah isi seluruh kelas dan \textit{interface} yang akan membangun aplikasi pada bagian ujung-belakang (\textit{backend}) agar berjalan sebagaimana mestinya.
+
+Diagram \textit{class} untuk bagian ujung-depan (\textit{frontend}) terlihat lebih sederhana lagi, gambar \ref{fig:class-dia-fe} menunjukkan diagram tersebut beserta hubungan keterkaitan antar kelasnya :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/class-diagram-fe}
+	\caption{Diagram \textit{Class} Bagian Ujung-Depan (\textit{frontend})}
+	\label{fig:class-dia-fe}
+\end{figure}
+
+Pada bagian ujung depan (\textit{frontend}), aplikasi akan berakar pada kelas \texttt{AppModule}, kelas \texttt{AppRoutingModule} yang akan mengatur bagaimana tiap komponen kelas (dalam hal ini halaman) akan berganti-ganti sesuai dengan kejadian yang diinginkan oleh pengguna. 
+
+Kelas \texttt{HomeComponent} dan \texttt{SpptComponent} adalah 2 (dua) kelas yang berhubungan langsung dengan tampilan aplikasi (\textit{view}), keduanya akan dikontrol langsung oleh kelas \texttt{AppRoutingModule} bilamana halaman yang ditampilkan terlebih dahulu, apakah \texttt{HomeComponent} atau \texttt{SpptComponent}.
+
+Kelas \texttt{HomeComponent} sebetulnya kelas yang bertugas menjadi tampilan utama aplikasi, artinya begitu ada \textit{browser} yang melakukan akses, halaman dari kelas \texttt{HomeComponent} ini akan tampil terlebih dahulu menyambut pengguna.
+
+Kelas \texttt{SpptComponent} nanti akan menampilkan informasi yang diminta oleh pengguna berdasarkan Nomor Objek Pajak yang telah dikirimkan melalui formulir atau komponen yang tersedia.
+
+\subsubsection{Diagram \textit{Package}}
+
+Diagram ini akan menunjukan struktur desain sistem pada level \textit{package}, diagramnya adalah seperti pada gambar \ref{fig:package-dia} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/package-diagram}
+	\caption{Diagram \textit{Package}}
+	\label{fig:package-dia}
+\end{figure}
+
+\textit{Package} \texttt{controller} akan menggunakan paket \texttt{util} sebagai respon data ke klien dengan cara mengakses paket \texttt{service} dan paket \texttt{repo} berdasarkan Nomor Objek Pajak yang dikirimkan oleh klien, kemudian paket \texttt{service} dan paket \texttt{repo} akan menggunakan paket \texttt{entity} karena Spring Data JPA dalam melakukan akses data ke sistem basis data akan selalu mengembalikan nilai kedalam kelas-kelas pemetaan pada paket \texttt{entity} ini.
+
+\subsubsection{Diagram \textit{Component}}
+
+Diagram ini memberikan gambaran hubungan antar komponen, komponen mana yang membutuhkan data dan komponen mana yang memberikan data akan terlihat jelas pada diagram komponen ini. Berikut adalah diagram komponen yang membentuk sistem ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/comp-dia-backend-1}
+	\caption{Diagram \textit{Component} Bagian 1}
+	\label{fig:comp-dia-1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/comp-dia-backend-2}
+	\caption{Diagram \textit{Component} Bagian 2}
+	\label{fig:comp-dia-2}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/comp-dia-backend-3}
+	\caption{Diagram \textit{Component} Bagian 3}
+	\label{fig:comp-dia-3}
+\end{figure}
+
+Diagram tersebut berisi komponen yang membangun sistem ini menjadi utuh, begitu ada masukkan data yang terjadi terhadap \texttt{ApiController}, maka \texttt{ApiController} akan menghubungi salah satu atau keseluruhan \textit{service} sesuai dengan \textit{request} yang diterima. Data yang diterima oleh \texttt{ApiController} sebetulnya akan berbentuk JSON, namun akan diterjemahkan otomatis oleh pustaka Jackson ke dalam kelas \texttt{JsonObject} seperti terlihat pada gambar \ref{fig:comp-dia-2}.
+
+Kemudian tiap \textit{service} akan melakukan pemanggilan data terhadap \textit{repository}-nya masing-masing yang kemudian akan dikembalikan dalam bentuk objek sesuai tabel yang diaksesnya seperti pada gambar \ref{fig:comp-dia-1} dan \ref{fig:comp-dia-2}.
+
+Hasil yang dikembalikan adalah beberapa objek dari kelas pada paket \texttt{util} seperti disebutkan pada gambar \ref{fig:comp-dia-3}.
+
+Di sisi lain, diagram \textit{component} untuk bagian ujung-depan (\textit{frontend}) ditunjukkan seperti pada gambar \ref{fig:comp-dia-fe} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/component-diagram-fe}
+	\label{fig:comp-dia-fe}
+	\caption{Diagram \textit{Component} Untuk Ujung-Depan (\textit{frontend})}
+\end{figure}
+
+Pada \texttt{AppComponent} sudah terdapat formulir untuk memasukkan Nomor Objek Pajak, yang apabila diproses maka \texttt{SpptComponent} akan melakukan \textit{request} data ke peladen API untuk memperoleh data berdasarkan Nomor Objek Pajak yang telah dimasukkan oleh pengguna, hasil dari \textit{request} ini akan ditampilkan pada \texttt{SpptComponent} pula.
+
+\subsubsection{Diagram \textit{Deployment}}
+
+Diagram ini menunjukkan arsitektur dari sistem pada saat didistribusikan dari mesin tempat untuk mengembangan dan uji coba, ke mesin produksi tempat aplikasi siap untuk melayani pengguna aslinya.
+
+Diagram ini digambarkan seperti pada gambar \ref{fig:deploy-dia} berikut :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/deploy-diagram}
+	\label{fig:deploy-dia}
+	\caption{Diagram \textit{Deployment}}
+\end{figure}
+
+Pada diagram tersebut ditunjukkan bahwa sistem aplikasi ini menggunakan 2 (dua) peladen, yang pertama untuk sistem basis data seperti ditunjukkan pada gambar yang memiliki sistem basis data (perangkat / \textit{device} di sebelah kiri), dan yang kedua adalah peladen aplikasi dengan Tomcat dan lingkungan berada dalam satu paket pada Springboot.
+
+\subsubsection{Diagram \textit{Communication}}
+
+% liat disini -> http://www.uml-diagrams.org/communication-diagrams-examples.html
+Diagram ini menggambarkan interaksi antar objek yang disertai urutan komunikasi dalam bentuk bagan yang bebas. 
+
+Untuk bagian ujung-depan (\textit{frontend}), diagram \textit{communication} diperlihatkan seperti pada gambar \ref{fig:comm-dia-fe} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/comm-dia-fe}
+	\caption{Diagram \textit{Communication} Untuk Bagian Ujung-Depan (\textit{frontend})}
+	\label{fig:comm-dia-fe}
+\end{figure}
+
+Alurnya adalah dari pengguna akan memasukkan Nomor Objek Pajak (NOP) pada kolom yang disediakan pada \texttt{AppComponent}, kemudian komponen ini akan memanggil fungsi \texttt{cekNop()} dan mengaktifkan \texttt{SpptComponent} yang secara otomatis akan memanggil fungsi \texttt{ngOnInit()}.
+
+Selanjutnya bagian ujung-depan (\textit{frontend}) akan melakukan \textit{request} ke ujung-belakang (\textit{backend}) yang kemudian ujung belakang akan memberikan data yang diminta dan ditampilkan pada \texttt{SpptComponent}.
+
+Diagram \textit{communication} yang membentuk sistem informasi pajak bumi dan bangunan sektor perdesaan dan perkotaan pada bagian ujung-belakang (\textit{backend}) ini adalah seperti pada gambar \ref{fig:comm-dia-1} dan \ref{fig:comm-dia-2} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/comm-dia-1}
+	\caption{Diagram \textit{Communication} Bagian 1}
+	\label{fig:comm-dia-1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/comm-dia-2}
+	\caption{Diagram \textit{Communication} Bagian 2}
+	\label{fig:comm-dia-2}
+\end{figure}
+
+Nomor urut 1 (satu) dan 2 (dua) pada saat \textit{Ujung Depan} (\textit{front-end}) berkomunikasi dengan peladen API (dalam hal ini komponen \texttt{ApiController}) bukan berarti urutan dari alur komunikasi melainkan identitas dari skenario. Namun untuk simbol atau angka seperti 1.1 (satu titik satu), 1.2 (satu titik dua), dan seterusnya adalah urutan komunikasi dari skenario 1 (satu) dari langkah pertama sampai langkah ke-n.
+
+Jadi untuk skenario yang ke-1 (satu), bagian \textit{ujung depan} (\textit{front-end}) akan memanggil \textit{method} \texttt{getListSppt()}  milik kelas \texttt{ApiController}, proses dari skenario ini akan memanggil \textit{method} \texttt{getSppt()} milik kelas \texttt{SpptService} (pada langkah 1.1), proses selanjutnya akan memanggil \textit{method} \texttt{findByNop()} milik kelas \texttt{SpptRepo} (pada langkah 1.2) yang akhirnya akan mengembalikan ke kelas \textit{ApiController} dan ke \textit{ujung depan} (\textit{front-end}) berupa objek dari kelas \texttt{SpptModif} (pada langkah 1.3 dan 1.4).
+
+Pada skenario ke-2, \textit{ujung depan} (\textit{front-end}) akan memanggil \textit{method} \texttt{getDataOp()} milik kelas \texttt{ApiController} dengan parameter \texttt{keyword} berisi teks \texttt{op}, prosesnya pertama akan memanggil \textit{method} \texttt{getOp()} milik kelas \texttt{DatOpService} (seperti pada langkah 2.1), kemudian proses berlanjut dengan memanggil fungsi \texttt{findOne()} dari objek kelas \texttt{DatObjekPajakRepo}, hasil dari pemanggilan \textit{method} \texttt{findOne()} ini akan dikonversi ke dalam objek kelas \texttt{DatObjekPajakModif} yang pada akhirnya akan dikembalikan ke aplikasi bagian \textit{ujung depan} (\textit{front-end}) dalam bentuk JSON.
+
+Pada skenario ke-3 di gambar \ref{fig:comm-dia-2}, aplikasi bagian \textit{ujung depan} (\textit{front-end}) akan melakukan \textit{request} ke \textit{method} \texttt{getDataOp()} dengan parameter \texttt{keyword} berisi teks \texttt{wp}. Langkah selanjutnya adalah memanggil \textit{method} \texttt{getSubjekPajak()} milik kelas \texttt{DatSubjekPajakService}, yang proses kemudian akan memanggil \textit{method} \texttt{findBySubjekPajakId()}, hasilnya kemudian akan disesuaikan masuk ke dalam kelas \texttt{DatSubjekPajakModif} yang dikembalikan ke bagian \textit{ujung depan} (\textit{front-end}).
+
+Skenario ke-4 sama saja skenario ke-3 dan ke-2, akan memanggil \textit{method} \texttt{getDataOp()} dengan parameter \texttt{keyword} berisi teks \texttt{bayar}. Langkah selanjutnya adalah memanggil \textit{method} \texttt{getPiutang()} milik kelas \texttt{SpptService} yang kemudian akan mengambil data ke sistem basis data dengan memanggil \textit{method} \texttt{findByNopAndThnPajak()} milik kelas \texttt{SpptRepo}. Hasil dari proses ini akan mengembalikan ke bagian \textit{ujung depan} (\textit{front-end}) berupa objek dari kelas \texttt{PiutangSpptModif} dalam bentuk JSON.
+
+
+\subsubsection{Diagram \textit{Activity}}
+
+Diagram ini masuk dalam kategori diagram \textit{behavior} yang menunjukkan alur kontrol atau alur objek yang dipertegas dalam urutan aktivitas dan kondisi pada alur yang terjadi. 
+
+Diagram \textit{activity} untuk bagian ujung-depan (\textit{frontend}) adalah seperti terlihat pada gambar \ref{fig:act-dia-fe} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{./resources/act-dia-fe}
+	\caption{Diagram \textit{Activity} Untuk Bagian Ujung-Depan (\textit{frontend})}
+	\label{fig:act-dia-fe}
+\end{figure}
+
+Terlihat pada diagram tersebut bahwa bagian ujung-depan (\textit{frontend}) akan melakukan 3 (tiga) kali \textit{request} atau permintaan ke peladen API, kemudian menampilkan hasil yang diberikan oleh peladen ke jendela \textit{browser}.
+
+Pada bagian ujung-belakang (\textit{backend}), diagram \textit{activity} ini akan terbagi berdasarkan skenario yang telah terbentuk pada Diagram \textit{Communication} sebelumnya.
+
+Pada skenario pertama, adalah aktivitas yang terjadi ketika ada \textit{request} daftar tagihan pajak bumi dan bangunan sektor perdesaan dan perkotaan dari klien, diagram \textit{activity} untuk skenario ini adalah seperti pada gambar \ref{fig:act-dia-1} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/activity-dia-1}
+	\caption{Diagram \textit{Activity} Untuk Ambil Daftar Tagihan}
+	\label{fig:act-dia-1}
+\end{figure}
+
+Diagram tersebut menunjukkan apabila data yang diminta oleh klien tidak ada pada sistem basis data, maka sistem akan mengembalikan nilai \texttt{null} atau kosong.
+
+Skenario yang kedua terjadi ketika ada \textit{request} data objek pajak dari klien. Diagram \textit{activity} untuk skenario kedua ini seperti terlihat pada gambar \ref{fig:act-dia-2} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/activity-dia-2}
+	\caption{Diagram \textit{Activity} Skenario Kedua}
+	\label{fig:act-dia-2}
+\end{figure}
+
+Skenario berikutnya adalah skenario ketiga, yang terjadi ketika ada \textit{request} data wajib pajak dari klien. Diagram \textit{activity} untuk skenario ini adalah seperti pada gambar \ref{fig:act-dia-3} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/activity-dia-3}
+	\caption{Diagram \textit{Activity} Untuk Skenario Ketiga}
+	\label{fig:act-dia-3}
+\end{figure}
+
+Skenario keempat terjadi ketika ada \textit{request} data pembayaran dari klien. Diagram \textit{activity} untuk skenario ini adalah seperti pada gambar \ref{fig:act-dia-4} berikut :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/activity-dia-4}
+	\caption{Diagram \textit{Activity} Untuk Skenario Keempat}
+	\label{fig:act-dia-4}
+\end{figure}
+
+\subsubsection{Diagram \textit{Sequence}}
+
+Diagram ini akan menggambarkan alur pertukaran pesan dari beberapa objek pada rentang siklus hidupnya. 
+
+Untuk bagian ujung depan (\textit{frontend}), diagram \textit{sequence} yang menggambarkan alur kontrol adalah seperti pada gambar \ref{fig:seq-dia-fe} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/seq-dia-fe}
+	\caption{Diagram \textit{Sequence} Untuk Bagian Ujung-Depan (\textit{frontend})}
+	\label{fig:seq-dia-fe}
+\end{figure}
+
+Prosesnya terlihat cukup sederhana, yaitu dari saat pengguna memasukkan Nomor Objek Pajak pada komponen yang tersedia, kemudian begitu pengguna melakukan klik pada tombol yang disediakan, maka otomatis akan memanggil fungsi \texttt{cekNop()} dengan parameter berupa Nomor Objek Pajak (NOP), kemudian aplikasi akan membuka / memanggil \texttt{SpptComponent} yang di dalamnya kemudian melakukan \textit{request} terhadap API pada peladen bagian ujung belakang (\textit{backend}).
+
+Pada bagian ujung-belakang (\textit{backend}), diagram ini pun terbentuk dari skenario-skenario yang terjadi dari diagram \textit{communication} sebelumnya.
+
+Pada skenario pertama, sistem akan memberikan daftar tagihan pajak bumi dan bangunan sektor perdesaan dan perkotaan untuk seluruh wajib pajak berdasarkan nomor objek pajak yang diminta. 
+
+Diagram \textit{sequence} untuk skenario pertama ini seperti pada gambar \ref{fig:seq-dia-1} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/seq-dia-1}
+	\label{fig:seq-dia-1}
+	\caption{Diagram \textit{Sequence} Untuk Skenario Pertama}
+\end{figure}
+
+Untuk skenario kedua, sistem akan memberikan informasi mengenai objek pajak berdasarkan nomor objek pajak yang diminta. Diagram \textit{sequence} untuk skenario ini adalah seperti pada gambar \ref{fig:seq-dia-2} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/seq-dia-2}
+	\caption{Diagram \textit{Sequence} Untuk Skenario Kedua} 
+	\label{fig:seq-dia-2}
+\end{figure}
+
+Untuk skenario ketiga, sistem akan memberikan informasi mengenai wajib pajak berdasarkan nomor objek pajak yang diminta. Diagram \textit{sequence} untuk skenario ini adalah seperti pada gambar \ref{fig:seq-dia-3} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/seq-dia-3}
+	\caption{Diagram \textit{Sequence} Untuk Skenario Ketiga}
+	\label{fig:seq-dia-3}
+\end{figure}
+
+Untuk skenario keempat, sistem akan memberikan informasi tanggal jatuh tempo dan denda (apabila ada karena keterlambatan pembayaran) untuk objek pajak berdasarkan nomor objek pajak dan tahun pajak tertentu. Diagram \textit{sequence} untuk skenario ini adalah seperti pada gambar \ref{fig:seq-dia-4} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/seq-dia-4}
+	\caption{Diagram \textit{Sequence} Untuk Skenario Keempat}
+	\label{fig:seq-dia-4}
+\end{figure}
+
+\subsection{Bagian Tampilan Aplikasi}
+
+Desain tampilan aplikasi yang diharapkan nantinya adalah seperti pada gambar \ref{fig:ui-main} dan \ref{fig:ui-content} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/main_page}
+	\label{fig:ui-main}
+	\caption{Tampilan Awal Aplikasi}
+\end{figure} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/content_page}
+	\label{fig:ui-content}
+	\caption{Tampilan Aplikasi Setelah Memperoleh Hasil}
+\end{figure}
+
+\section{BIAYA DAN JADWAL PENGEMBANGAN}
+
+\begin{enumerate}
+
+\item Biaya Pengembangan
+
+Pengembangan aplikasi ini memerlukan beberapa perangkat dan kelengkapannya seperti berikut ini :
+
+\begin{enumerate}
+	\item Peladen Sistem Basis Data
+	\item Peladen Aplikasi \textit{Web} 
+	\item Aplikasi Peladen \textit{Servlet}, dalam hal ini menggunakan Apache Tomcat yang tersedia gratis.
+	\item \textit{Driver} JDBC yang tersedia gratis.
+	\item Akses Internet
+	\item IDE, menggunakan Intellij IDEA versi \textit{Community Edition}
+\end{enumerate}
+
+Melihat ketersediaan perangkat keras dan perangkat lunak tersebut di atas sudah ada, hanya tinggal digunakan dan beberapa perangkat lunak hanya tinggal di unduh, maka tidak ada biaya yang diperlukan untuk pengembangannya.
+
+\item Jadwal Pengembangan
+
+Jadwal pengembangan untuk membangun aplikasi atau sistem informasi ini tertuang pada diagram \textit{gantt} seperti pada gambar \ref{fig:gantt-chart} berikut ini :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./resources/gantt-chart}
+	\caption{Diagram \textit{Gantt} Untuk Jadwal Pengembangan Aplikasi}
+	\label{fig:gantt-chart}
+\end{figure}
+
+\end{enumerate}
+
+\end{document}
